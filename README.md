@@ -11,16 +11,16 @@ Updates your Ruler, Heir and Consort skill points! **Yes, both your Heir and Con
 **This is without a doubt a cheat mod!**
 
 Additionally, some major mods change the Defines for the Maximum Skill Points of your ruler; No need to worry!
-I have included a template feature that configures this mod automatically! **It is hard-coded**; So:
+I have included a [Template Feature](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/Mod%20Template%20Codes.md) that configures this mod automatically! **It is hard-coded**; So:
 All that is required is an update and your selected template will auto update your targeted stats when you click the decision.
-* *If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).* *
+If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).
 
-* *NOTE: The mod can only raise your rulers stats to the highest the game allows (Normally 6)!* *
-* *You can change that in the Defines if you want, but this mod DOES NOT EDIT THE DEFINES (For Compatability)* *
+NOTE: The mod can only raise your rulers stats to the highest the game allows (Normally 6)!
+You can change that in the Defines if you want, but this mod DOES NOT EDIT THE DEFINES (For Compatability)
 
-* *Here is another Version of this mod, that uses **On Actions** to SIGNIFICANTLY reduce end of month performance impact.
+Here is another Version of this mod, that uses **On Actions** to SIGNIFICANTLY reduce end of month performance impact.
 Do note, it is almost definately NOT compatible with major map mods! But should work on most of your nearly vanilla games.
-If your mod uses these On Actions this mod is NOT compatible: on_new_monarch, on_new_heir, on_new_consort.* *
+If your mod uses these On Actions this mod is NOT compatible: on_new_monarch, on_new_heir, on_new_consort.
 
 There are 2 types of operation: 'Normal' and 'Minimum'
 - Normal (Default) = For each MP category: ADD Defined Points to each category up to the **Game Maximum**.

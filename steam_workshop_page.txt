@@ -11,7 +11,7 @@ Updates your Ruler, Heir and Consort skill points! [b]Yes, both your Heir and Co
 [b]This is without a doubt a cheat mod![/b]
 
 Additionally, some major mods change the Defines for the Maximum Skill Points of your ruler; No need to worry!
-I have included a template feature that configures this mod automatically! [b]It is hard-coded[/b]; So:
+I have included a [url=https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/Mod%20Template%20Codes.md]Template Feature[/url] that configures this mod automatically! [b]It is hard-coded[/b]; So:
 All that is required is an update and your selected template will auto update your targeted stats when you click the decision.
 [i][u]If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).[/u][/i]
 
