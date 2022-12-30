@@ -156,7 +156,6 @@ country_event = {
 	option = {
 		name = "brs_template_van"
 		trigger = { brs_not_has_template = { mod = van } }
-		brs_clr_template = yes
 		brs_set_template = { mod = van }
 		hidden_effect = { country_event = { id = brs.1002 } }
 	}
@@ -164,7 +163,6 @@ country_event = {
 		name = "brs_template_van"
 		trigger = { brs_has_template = { mod = van } }
 		highlight = yes
-		brs_clr_template = yes
 		brs_set_template = { mod = van }
 		hidden_effect = { country_event = { id = brs.1002 } }
 	}
@@ -219,7 +217,6 @@ country_event = {
 	option = {
 		name = "brs_template_van"
 		trigger = { brs_not_has_template_hidden = { mod = van } }
-		brs_clr_template = yes
 		brs_set_template = { mod = van }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
@@ -227,14 +224,12 @@ country_event = {
 		name = "brs_template_van"
 		trigger = { brs_has_template_hidden = { mod = van } }
 		highlight = yes
-		brs_clr_template = yes
 		brs_set_template = { mod = van }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
 	option = { # anbennar expanded
 		name = "brs_template_aex"
 		trigger = { brs_not_has_template_hidden = { mod = aex } }
-		brs_clr_template = yes
 		brs_set_template = { mod = aex }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
@@ -242,7 +237,6 @@ country_event = {
 		name = "brs_template_aex"
 		trigger = { brs_has_template_hidden = { mod = aex } }
 		highlight = yes
-		brs_clr_template = yes
 		brs_set_template = { mod = aex }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}

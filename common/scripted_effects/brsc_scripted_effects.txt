@@ -47,9 +47,12 @@ brs_validate = {
 # Arguments:
 # mod = <short mod template tag>
 brs_set_template = {
+	if = {
+		limit = { brs_has_any_template = yes }
+		brs_clr_template = yes
+	}
 	custom_tooltip = brs_set_template_$mod$_tt
 	hidden_effect = {
-		brs_clr_template = yes
 		set_country_flag = brs_template_used
 		set_country_flag = brs_template_$mod$
 	}
