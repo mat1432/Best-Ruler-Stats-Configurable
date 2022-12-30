@@ -9,7 +9,7 @@
  brs_back: "Back"
 # configuration menu
  brs_2_t: "Best Ruler Stats - Configuration Menu"
- brs_2_d: "You can select a ruler stat target between 0 and 16!\nStat Target Type can be either Addative (Normal), or Raise to Target (Minimum)\n\nHighlighted Options mean they are Currently Selected / Enabled."
+ brs_2_d: "[Root.GetSetupDone]You can select a ruler stat target between 0 and 16!\nStat Target Type can be either Addative (Normal), or Raise to Target (Minimum)\n\nHighlighted Options mean they are Currently Selected / Enabled."
 
  brs_2_enable: "Mod is currently §ODisabled§! §G(Enable)§!"
  brs_2_disable: "Mod is currently §GEnabled§! §O(Disable)§!"

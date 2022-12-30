@@ -1,0 +1,18 @@
+#AVIALABLE CUSTOM LOCALISATION KEYS
+#When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
+# To not display anything, you can use 'localisation_key = ""'
+# Please add one example sentence for each key.
+
+### Colony Claims Setting
+defined_text = {
+    name = GetSetupDone
+
+    text = {
+        localisation_key = brs_setup_loc1
+        trigger = { has_country_flag = brs_setup_done }
+    }
+    text = {
+        localisation_key = brs_setup_loc2
+        trigger = { NOT = { has_country_flag = brs_setup_done } }
+    }
+}
