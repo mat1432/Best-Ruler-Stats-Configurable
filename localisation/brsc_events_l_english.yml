@@ -9,7 +9,7 @@
  brs_back: "Back"
 # configuration menu
  brs_2_t: "Best Ruler Stats - Configuration Menu"
- brs_2_d: "§RSeriously Take Note!§!\nThis is the only time you will see this. Other players will also get this if on Multiplayer.\n\nSelect the first option if you have a vanilla game.\nOnly pick the second if you have Anbennar or the stat cap of rulers is exactly 9,9,9.\n\nAny other stat cap and the hidden event will happen every month (May cause lag)!\n\nIf you pick anbennar option and it doesnt work (still 6 6 6), then the setting will revert to normal for everyone."
+ brs_2_d: "You can select a ruler stat target between 0 and 16!\nStat Target Type can be either Addative (Normal), or Raise to Target (Minimum)\n\nHighlighted Options mean they are Currently Selected / Enabled."
 
  brs_2_enable: "Mod is currently §ODisabled§! §G(Enable)§!"
  brs_2_disable: "Mod is currently §GEnabled§! §O(Disable)§!"
