@@ -97,7 +97,7 @@ A: Yes
 [h3]Q: With [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1528959434]No Limits Nation Designer[/url] I can make a 50,50,50 ruler, can this mod do that?[/h3]
 A: Nope, Sorry Mate! The command [code]change_<adm|dip|mil>[/code] will only ever bring their stats up to game maximum! (Found in Defines)
 [i]If you want to edit the Defines for ruler stats, check the [url=https://eu4.paradoxwikis.com/Defines]Wiki[/url], you are looking for [code]RULER_MAX_SKILL[/code] under [code][url=https://eu4.paradoxwikis.com/Defines#NNationDesigner]NNationDesigner[/url][/code]![/i]
-[h3]Why is none of this done through the Defines?[/h3]
+[h3]Q: Why is none of this done through the Defines?[/h3]
 A: If I modify the defines, then this mod will not work with any other major mod. Since it's supposed to be the configurable, incompatibility would defeat its purpose.
 [h3]Q: Why not just hardcode it to 15 from the start?[/h3]
 A: Then the hidden background event would fire every month and error every time. To keep log files down and help wih that little bit of performance, I suggest you honestly select the correct option.
