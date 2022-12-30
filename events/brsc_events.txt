@@ -4,8 +4,8 @@ namespace = brs
 
 country_event = {
 	id = brs.1
-	title = brs_50_t
-	desc = brs_50_d
+	title = brs_1_t
+	desc = brs_1_d
 	picture = DIPLOMACY_eventPicture
 	fire_only_once = no
 	hidden = yes
@@ -189,7 +189,6 @@ country_event = {
 		hidden_effect = { set_country_flag = brs_open }
 	}
 	after = {
-		hidden_effect = { clr_country_flag = brs_open }
 	}
 	option = {
 		name = "brs_back"
@@ -248,7 +247,6 @@ country_event = {
 		hidden_effect = { set_country_flag = brs_open }
 	}
 	after = {
-		hidden_effect = { clr_country_flag = brs_open }
 	}
 	option = {
 		name = "brs_back"
@@ -365,7 +363,6 @@ country_event = {
 		hidden_effect = { set_country_flag = brs_open }
 	}
 	after = {
-		hidden_effect = { clr_country_flag = brs_open }
 	}
 	option = {
 		name = "brs_back"
@@ -514,7 +511,8 @@ country_event = {
 }
 
 ####################################################################################################
-### Auto Menu / The Actual Events
+### Auto Menus
+# Fires at game start
 country_event = {
 	id = brs.99
 	title = "brs_r_t"
@@ -536,81 +534,24 @@ country_event = {
 		country_event = { id = brs.2 }
 	}
 }
-
-# The Actual Event
+# Error Notice
 country_event = {
-	id = brs.50
-	title = brs_50_t
-	desc = brs_50_d
-	picture = DIPLOMACY_eventPicture
+	id = brs.100
+	title = brs_100_t
+	desc = brs_100_d
+	picture = OVEREXTENSION_eventPicture
 	fire_only_once = no
-	hidden = yes
-	
+	is_triggered_only = yes
 	trigger = {
 		ai = no
 		has_country_flag = brs_setup_done
+	}
+	immediate = {
+		brs_set_template_configure = { mod = van }
+	}
 
-		OR = {
-			brs_check_ruler = { value = ADM }
-			brs_check_ruler = { value = DIP }
-			brs_check_ruler = { value = MIL }
-			if = {
-				limit = { has_heir = yes }
-				brs_check_ruler = { value = adm who = heir_ }
-				brs_check_ruler = { value = dip who = heir_ }
-				brs_check_ruler = { value = mil who = heir_ }
-			}
-			if = {
-				limit = { has_consort = yes }
-				brs_check_ruler = { value = adm who = consort_ }
-				brs_check_ruler = { value = dip who = consort_ }
-				brs_check_ruler = { value = mil who = consort_ }
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
 	option = {
-		trigger = { brs_minimum_disabled = yes }
-		name = "brs_1_normal"
-		brs_update_ruler_add = { value = adm }
-		brs_update_ruler_add = { value = dip }
-		brs_update_ruler_add = { value = mil }
-		if = {
-			limit = { has_heir = yes }
-			brs_update_ruler_add = { value = adm who = heir_ }
-			brs_update_ruler_add = { value = dip who = heir_ }
-			brs_update_ruler_add = { value = mil who = heir_ }
-		}
-		if = {
-			limit = { has_consort = yes }
-			brs_update_ruler_add = { value = adm who = consort_ }
-			brs_update_ruler_add = { value = dip who = consort_ }
-			brs_update_ruler_add = { value = mil who = consort_ }
-		}
-	}
-	
-	option = {
-		trigger = { brs_minimum_enabled = yes }
-		name = "brs_1_minimum"
-		brs_update_ruler = { valueGet = ADM valueSet = adm }
-		brs_update_ruler = { valueGet = DIP valueSet = dip }
-		brs_update_ruler = { valueGet = MIL valueSet = mil }
-		if = {
-			limit = { has_heir = yes }
-			brs_update_ruler = { valueGet = adm valueSet = adm who = heir_ }
-			brs_update_ruler = { valueGet = dip valueSet = dip who = heir_ }
-			brs_update_ruler = { valueGet = mil valueSet = mil who = heir_ }
-		}
-		if = {
-			limit = { has_consort = yes }
-			brs_update_ruler = { valueGet = adm valueSet = adm who = consort_ }
-			brs_update_ruler = { valueGet = dip valueSet = dip who = consort_ }
-			brs_update_ruler = { valueGet = mil valueSet = mil who = consort_ }
-		}
+		name = "brs_100_ok"
 	}
 }
 

@@ -1,15 +1,14 @@
 l_english:
- brs_50_t: "Best Ruler Stats : Ruler Updated!"
- brs_50_d: "Our ruler received secret knoweledge of the world"
- brs_50_normal: "Excellent (Normal Addition)"
- brs_50_minimum: "Excellent (Minimum Skill)"
+ brs_1_t: "Best Ruler Stats : Ruler Updated!"
+ brs_1_d: ""
+ brs_1_normal: "Excellent (Normal Addition)"
+ brs_1_minimum: "Excellent (Minimum Skill)"
 
+# generic options
  brs_exit: "Exit"
  brs_back: "Back"
-
-
-
- brs_2_t: "Best Ruler Stats Setup"
+# configuration menu
+ brs_2_t: "Best Ruler Stats - Configuration Menu"
  brs_2_d: "§RSeriously Take Note!§!\nThis is the only time you will see this. Other players will also get this if on Multiplayer.\n\nSelect the first option if you have a vanilla game.\nOnly pick the second if you have Anbennar or the stat cap of rulers is exactly 9,9,9.\n\nAny other stat cap and the hidden event will happen every month (May cause lag)!\n\nIf you pick anbennar option and it doesnt work (still 6 6 6), then the setting will revert to normal for everyone."
 
  brs_2_enable: "Mod is currently §ODisabled§! §G(Enable)§!"
@@ -20,8 +19,8 @@ l_english:
  brs_2_a: "(Normal) I have no mods that change ruler Stat Cap."
  brs_2_b: "(9,9,9) I have Anbennar or other stat cap mod."
 
- brs_2_below6:0 "Set a Stat Target between 0 and 6"
- brs_2_above6:0 "Set a Stat Target between 7 and 16"
+ brs_2_below6: "Set a Stat Target between 0 and 6"
+ brs_2_above6: "Set a Stat Target between 7 and 16"
 
 # mod templates
  brs_template_t: "Best Ruler Stats - Known Mod Templates"
@@ -31,28 +30,35 @@ l_english:
  brs_template_aex: "Use Template: Anbennar Expanded"
 
 # Stat target menu(s)
- brs_below6_t:0 "Best Ruler Stats - Stat Target 0 to 6"
- brs_below6_d:0 "Set a Stat Target Between 0 and 6"
- brs_above6_t:0 "Best Ruler Stats - Stat Target 7 to 16"
- brs_above6_d:0 "Set a Stat Target Between 7 and 16"
- brs_change_0:0 "Set to 0"
- brs_change_1:0 "Set to 1"
- brs_change_2:0 "Set to 2"
- brs_change_3:0 "Set to 3"
- brs_change_4:0 "Set to 4"
- brs_change_5:0 "Set to 5"
- brs_change_6:0 "Set to 6"
- brs_change_7:0 "Set to 7"
- brs_change_8:0 "Set to 8"
- brs_change_9:0 "Set to 9"
- brs_change_10:0 "Set to 10"
- brs_change_11:0 "Set to 11"
- brs_change_12:0 "Set to 12"
- brs_change_13:0 "Set to 13"
- brs_change_14:0 "Set to 14"
- brs_change_15:0 "Set to 15"
- brs_change_16:0 "Set to 16"
+ brs_below6_t: "Best Ruler Stats - Stat Target 0 to 6"
+ brs_below6_d: "Set a Stat Target Between 0 and 6"
+ brs_above6_t: "Best Ruler Stats - Stat Target 7 to 16"
+ brs_above6_d: "Set a Stat Target Between 7 and 16"
+ brs_change_0: "Set to 0"
+ brs_change_1: "Set to 1"
+ brs_change_2: "Set to 2"
+ brs_change_3: "Set to 3"
+ brs_change_4: "Set to 4"
+ brs_change_5: "Set to 5"
+ brs_change_6: "Set to 6"
+ brs_change_7: "Set to 7"
+ brs_change_8: "Set to 8"
+ brs_change_9: "Set to 9"
+ brs_change_10: "Set to 10"
+ brs_change_11: "Set to 11"
+ brs_change_12: "Set to 12"
+ brs_change_13: "Set to 13"
+ brs_change_14: "Set to 14"
+ brs_change_15: "Set to 15"
+ brs_change_16: "Set to 16"
 
- brs_r_t: "Recursive or Setup Event"
+# errors and auto menus
+ brs_99_t: "Best Ruler Stats - Setup Event"
+ brs_99_d: ""
+ brs_99_a: ""
+ brs_100_t: "Error"
+ brs_100_d: "The Stat target value was out of bounds. To correct this, it was set to use the Base Game template!"
+ brs_100_ok: "OK"
+ brs_r_t: "<BRS> Recursive or Setup Event"
  brs_r_d: ""
  brs_r_a: ""

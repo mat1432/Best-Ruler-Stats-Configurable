@@ -16,10 +16,31 @@ brs_clr_minimum = {
 }
 
 # If a mod is updated and the defines for max ruler stats changes. Upon this mod updating the template will adjust the selected value.
+# NOTE: This would be an intensive check, it will only ever run when opening a menu!
 brs_validate = {
-	hidden_effect = { # reset variables using memorised templates
+	hidden_effect = {
+		# reset variables using memorised templates
         if = { limit = { has_country_flag = brs_template_van } brs_set_template_configure = { mod = van } }
         if = { limit = { has_country_flag = brs_template_aex } brs_set_template_configure = { mod = aex } }
+
+		# make sure variable is inside boundaries
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						check_variable = {
+							which = brs_target_var
+							value = 0
+						}
+					}
+					check_variable = {
+						which = brs_target_var
+						value = 17
+					}
+				}
+			}
+			brs_set_template_configure = { mod = van }
+		}
 	}
 }
 
@@ -105,6 +126,7 @@ brs_update_ruler_add = {
 				}
 			}
 			change_$who$$value$ = 1
+			change_variable = { which = temp value = 1 }
 		}
 	}
 }
