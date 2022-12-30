@@ -85,7 +85,7 @@ A: Then the hidden background event would fire every month and error every time.
 
 Inspired by [Best Ruler Stats](https://steamcommunity.com/sharedfiles/filedetails/?id=625725145) by [Paragon](https://steamcommunity.com/id/paragonnnnnnn)
 
-Check out my other Monarch Point Mod: [Greater National Focus](https://steamcommunity.com/sharedfiles/filedetails/?id=2905801426)
+Check out my other Monarch Point Mod: [Greater National Focus](https://github.com/mat1432/greater_national_focus) ([Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2905801426))
 
 [GitHub](https://github.com/mat1432/Best-Ruler-Stats-Configurable)
 Licensed under the [GNU General Public License v3.0](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/LICENSE)
