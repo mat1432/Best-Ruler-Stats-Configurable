@@ -20,8 +20,8 @@ brs_clr_minimum = {
 brs_validate = {
 	hidden_effect = {
 		# reset variables using memorised templates
-        if = { limit = { has_country_flag = brs_template_van } brs_set_template_configure = { mod = van } }
-        if = { limit = { has_country_flag = brs_template_aex } brs_set_template_configure = { mod = aex } }
+        if = { limit = { has_country_flag = brs_template_van } brs_set_template = { mod = van } }
+        if = { limit = { has_country_flag = brs_template_aex } brs_set_template = { mod = aex } }
 
 		# make sure variable is inside boundaries
 		if = {
@@ -39,7 +39,7 @@ brs_validate = {
 					}
 				}
 			}
-			brs_set_template_configure = { mod = van }
+			country_event = { id = brs.100 }
 		}
 	}
 }
@@ -53,7 +53,7 @@ brs_set_template = {
 		set_country_flag = brs_template_used
 		set_country_flag = brs_template_$mod$
 	}
-	brs_set_template_configure = { mod = $mod$ }
+	brs_set_template_configure = yes
 }
 brs_clr_template = {
 	custom_tooltip = brs_clr_template_tt
@@ -64,13 +64,10 @@ brs_clr_template = {
 	}
 }
 
-# takes the argument and converts it into the correct value
+# takes the flags and converts it into the correct value
 brs_set_template_configure = {
-	trigger_switch = {
-		on_trigger = $mod$
-		van = { brs_set_target = { a=6 } }
-		aex = { brs_set_target = { a=9 } }
-	}
+	if = { limit = { has_country_flag = brs_template_van } brs_set_target = { a=6 } }
+	if = { limit = { has_country_flag = brs_template_aex } brs_set_target = { a=9 } }
 }
 
 # sets the ruler stat target to the input value (MUST BE AN INTEGER)
@@ -78,7 +75,7 @@ brs_set_template_configure = {
 # a = <0|1|2|3|4|...|14|15>
 brs_set_target = {
 	custom_tooltip = brs_set_target_$a$_tt
-	hidden_trigger = {
+	hidden_effect = {
 		root = {
 			brs_clr_template = yes
 			set_variable = {

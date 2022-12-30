@@ -1,11 +1,9 @@
 # Written by mat1432 https://steamcommunity.com/id/mat1432/ (Steam) or https://github.com/mat1432 (GitHub)
-
 namespace = brs
-
 country_event = {
 	id = brs.1
-	title = brs_1_t
-	desc = brs_1_d
+	title = "brs_1_t"
+	desc = "brs_1_d"
 	picture = DIPLOMACY_eventPicture
 	fire_only_once = no
 	hidden = yes
@@ -107,22 +105,26 @@ country_event = {
 		name = "brs_2_enable"
 		trigger = { brs_disabled = yes }
 		brs_enable_mod = yes
+		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 	option = {
 		name = "brs_2_disable"
 		trigger = { brs_enabled = yes }
 		brs_disable_mod = yes
+		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 
 	option = {
 		name = "brs_2_minimum_e"
 		trigger = { brs_minimum_disabled = yes }
 		brs_set_minimum = yes
+		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 	option = {
 		name = "brs_2_minimum_d"
 		trigger = { brs_minimum_enabled = yes }
 		brs_clr_minimum = yes
+		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 
 	#Chose from Templates
@@ -148,7 +150,7 @@ country_event = {
 		trigger = { brs_not_has_template_hidden = { mod = van } }
 		brs_clr_template = yes
 		brs_set_template = { mod = van }
-		hidden_effect = { country_event = { id = brs.1003 } }
+		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 	option = {
 		name = "brs_template_van"
@@ -156,7 +158,7 @@ country_event = {
 		highlight = yes
 		brs_clr_template = yes
 		brs_set_template = { mod = van }
-		hidden_effect = { country_event = { id = brs.1003 } }
+		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 
 	option = {
@@ -497,13 +499,13 @@ country_event = {
 
 	option = {
 		name = "brs_change_16"
-		trigger = { NOT = { brs_is_target_setup = { a=16 b=99 } } }
+		trigger = { NOT = { brs_is_target_setup = { a=16 b=17 } } }
 		brs_set_target = { a=16 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_16"
-		trigger = { brs_is_target_setup = { a=16 b=99 } }
+		trigger = { brs_is_target_setup = { a=16 b=17 } }
 		highlight = yes
 		brs_set_target = { a=16 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -537,8 +539,8 @@ country_event = {
 # Error Notice
 country_event = {
 	id = brs.100
-	title = brs_100_t
-	desc = brs_100_d
+	title = "brs_100_t"
+	desc = "brs_100_d"
 	picture = OVEREXTENSION_eventPicture
 	fire_only_once = no
 	is_triggered_only = yes
@@ -547,7 +549,7 @@ country_event = {
 		has_country_flag = brs_setup_done
 	}
 	immediate = {
-		brs_set_template_configure = { mod = van }
+		brs_set_template = { mod = van }
 	}
 
 	option = {
