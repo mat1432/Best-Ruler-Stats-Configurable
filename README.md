@@ -22,9 +22,7 @@ All that is required is an update and your selected template will auto update yo
 
 * *Here is another Version of this mod, that uses **On Actions** to SIGNIFICANTLY reduce end of month performance impact.
 Do note, it is almost definately NOT compatible with major map mods! But should work on most of your nearly vanilla games.
-If your mod uses these On Actions this mod is NOT compatible: ```AMPL
-on_new_monarch
-```, on_new_heir, on_new_consort.* *
+If your mod uses these On Actions this mod is NOT compatible: AMPL on_new_monarch, on_new_heir, on_new_consort.* *
 
 There are 2 types of operation: 'Normal' and 'Minimum'
 - Normal (Default) = For each MP category: ADD Defined Points to each category up to the **Game Maximum**.
