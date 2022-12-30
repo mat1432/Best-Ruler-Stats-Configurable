@@ -77,6 +77,7 @@ brs_set_target = {
 	custom_tooltip = brs_set_target_$a$_tt
 	hidden_effect = {
 		root = {
+			set_country_flag = brs_template_used
 			brs_clr_template = yes
 			set_variable = {
 				which = brs_target_var
