@@ -129,5 +129,5 @@ Inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=62572514
 Check out my other Monarch Point Mod:
 https://steamcommunity.com/sharedfiles/filedetails/?id=2905801426
 
-[url=https://github.com/mat1432/]GitHub[/url]
-Licensed under the [url=https://github.com/mat1432/]GNU General Public License v3.0[/url]
+[url=https://github.com/mat1432/Best-Ruler-Stats-Configurable]GitHub[/url]
+Licensed under the [url=https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/LICENSE]GNU General Public License v3.0[/url]
