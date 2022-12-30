@@ -3,6 +3,6 @@
 1.0.0
 [list]
     [*]Foundation of the mod.
-    [*]Added GitHub Repository
-    [*]Now licensed under the GNU General Public License v3.0
+    [*]Added [url=https://github.com/mat1432/Best-Ruler-Stats-Configurable]GitHub Repository[/url]
+    [*]Now licensed under the [url=https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/LICENSE]GNU General Public License v3.0[/url]
 [/list]
