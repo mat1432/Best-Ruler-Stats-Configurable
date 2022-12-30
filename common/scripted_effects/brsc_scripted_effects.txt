@@ -113,7 +113,7 @@ brs_update_ruler = {
 # who = <|heir_|consort_>
 brs_update_ruler_add = {
 	if = { # skips many monthly iterations
-		limit = { brs_check_ruler = { value = $value$ who = $who$ } }
+		limit = { brs_check_ruler = { value = $value$ [[who] who = $who$ ] } }
 		set_variable = { which = temp value = 0 }
 		while = {
 			limit = {
