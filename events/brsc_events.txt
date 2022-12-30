@@ -92,13 +92,19 @@ country_event = {
 		}
 	}
 	after = {
-		hidden_effect = { clr_country_flag = brs_open }
 	}
 	option = {
 		name = "brs_exit"
 		trigger = {
-			hidden_trigger = { has_country_flag = brs_setup_done }
+			hidden_trigger = {
+				OR = {
+					ai = yes
+					has_country_flag = brs_setup_done
+				}
+			}
 		}
+		ai_chance = { factor = 100 }
+		hidden_effect = { clr_country_flag = brs_open }
 	}
 
 	option = {
@@ -110,6 +116,7 @@ country_event = {
 	option = {
 		name = "brs_2_disable"
 		trigger = { brs_enabled = yes }
+		highlight = yes
 		brs_disable_mod = yes
 		hidden_effect = { country_event = { id = brs.1002 } }
 	}
@@ -123,6 +130,7 @@ country_event = {
 	option = {
 		name = "brs_2_minimum_d"
 		trigger = { brs_minimum_enabled = yes }
+		highlight = yes
 		brs_clr_minimum = yes
 		hidden_effect = { country_event = { id = brs.1002 } }
 	}
@@ -147,14 +155,14 @@ country_event = {
 
 	option = {
 		name = "brs_template_van"
-		trigger = { brs_not_has_template_hidden = { mod = van } }
+		trigger = { brs_not_has_template = { mod = van } }
 		brs_clr_template = yes
 		brs_set_template = { mod = van }
 		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 	option = {
 		name = "brs_template_van"
-		trigger = { brs_has_template_hidden = { mod = van } }
+		trigger = { brs_has_template = { mod = van } }
 		highlight = yes
 		brs_clr_template = yes
 		brs_set_template = { mod = van }
