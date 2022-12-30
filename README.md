@@ -1,5 +1,6 @@
 # Best Ruler Stats (Configurable)
 Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432)
+
 1.34.* ; This Mod Does Not Need to be Updated!
 
 This Mod gives you a choice at the start of the game to configure your ruler stats boost. * *Can be changed at any time via a Decision!* *
