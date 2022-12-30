@@ -196,7 +196,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = { ai = no }
 	immediate = {
-		hidden_effect = { set_country_flag = brs_open }
+		hidden_effect = {
+			set_country_flag = brs_open
+			brs_validate = yes
+		}
 	}
 	after = {
 	}
@@ -254,7 +257,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = { ai = no }
 	immediate = {
-		hidden_effect = { set_country_flag = brs_open }
+		hidden_effect = {
+			set_country_flag = brs_open
+			brs_validate = yes
+		}
 	}
 	after = {
 	}
@@ -370,7 +376,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = { ai = no }
 	immediate = {
-		hidden_effect = { set_country_flag = brs_open }
+		hidden_effect = {
+			set_country_flag = brs_open
+			brs_validate = yes
+		}
 	}
 	after = {
 	}
@@ -555,6 +564,7 @@ country_event = {
 	trigger = {
 		ai = no
 		has_country_flag = brs_setup_done
+		# do not put validate in here. event is fired from validate script
 	}
 	immediate = {
 		brs_set_template = { mod = van }
