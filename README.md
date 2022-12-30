@@ -5,85 +5,58 @@ Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https:/
 # Best Ruler Stats (Configurable)
 1.34.5 ; This Mod Does Not Need to be Updated!
 
-This Mod gives you a choice at the start of the game to configure your ruler stats boost. [i]Can be changed at any time via a Decision![/i]
-It allows you to set a defined target for your ruler stats between [b]1 Point[/b] and [b]15 Points[/b]!
+This Mod gives you a choice at the start of the game to configure your ruler stats boost. * *Can be changed at any time via a Decision!* *
+It allows you to set a defined target for your ruler stats between **1 Point** and **15 Points**!
 
-Updates your Ruler, Heir and Consort skill points! [b]Yes, both your Heir and Consort are updated![/b]
+Updates your Ruler, Heir and Consort skill points! **Yes, both your Heir and Consort are updated!**
 
-[b]This is without a doubt a cheat mod![/b]
+**This is without a doubt a cheat mod!**
 
 Additionally, some major mods change the Defines for the Maximum Skill Points of your ruler; No need to worry!
-I have included a template feature that configures this mod automatically! [b]It is hard-coded[/b]; So:
+I have included a template feature that configures this mod automatically! **It is hard-coded**; So:
 All that is required is an update and your selected template will auto update your targeted stats when you click the decision.
-[i][u]If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).[/u][/i]
+* *[u]If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).[/u]* *
 
-[i]NOTE: The mod can only raise your rulers stats to the highest the game allows (Normally 6)![/i]
-[i]You can change that in the Defines if you want, but this mod DOES NOT EDIT THE DEFINES (For Compatability)[/i]
+* *NOTE: The mod can only raise your rulers stats to the highest the game allows (Normally 6)!* *
+* *You can change that in the Defines if you want, but this mod DOES NOT EDIT THE DEFINES (For Compatability)* *
 
-[i]Here is another Version of this mod, that uses [u]On Actions[/u] to SIGNIFICANTLY reduce end of month performance impact.
+* *Here is another Version of this mod, that uses **On Actions** to SIGNIFICANTLY reduce end of month performance impact.
 Do note, it is almost definately NOT compatible with major map mods! But should work on most of your nearly vanilla games.
-If your mod uses these On Actions this mod is NOT compatible: [code]on_new_monarch[/code], [code]on_new_heir[/code], [code]on_new_consort[/code].[/i]
+If your mod uses these On Actions this mod is NOT compatible: ```AMPL
+on_new_monarch
+```, on_new_heir, on_new_consort.* *
 
 There are 2 types of operation: 'Normal' and 'Minimum'
-[list]
-    [*]Normal (Default) = For each MP category: ADD Defined Points to each category up to the [b]Game Maximum[/b].
-    [*]Minimum = For each MP category: Use your [b]Defined Minimum[/b] or [b]Game Maximum[/b] (Whichever is lowest).
-[/list]
+- Normal (Default) = For each MP category: ADD Defined Points to each category up to the **Game Maximum**.
+- Minimum = For each MP category: Use your **Defined Minimum** or **Game Maximum** (Whichever is lowest).
 By default the mod will ADD points to each category up to the defined maximum.
 Alternatively you can configure it to use your defined selection as a minimum (CANNOT be higher than the game Defines allows!)
 
 ## Example:
-[olist]
-    [*]Say your ruler is elected as a 1, 5, 4
-    [*]You have chosen a defined target of 4
-    [*][i]In this game, maximum possible stat is 6 (like normal)[/i]
-[/olist]
+1 Say your ruler is elected as a 1, 5, 4
+2 You have chosen a defined target of 4
+3 * *In this game, maximum possible stat is 6 (like normal)* *
+
 After your ruler updates:
-[table]
-    [tr]
-        [th]Setting Type[/th]
-        [th]Normal[/th]
-        [th]Minimum[/th]
-    [/tr]
-    [tr]
-        [td]Outcome[/td]
-        [td]5, 6, 6[/td]
-        [td]4, 5, 4[/td]
-    [/tr]
-    [tr]
-        [td]Difference[/td]
-        [td]+4, +1, +2[/td]
-        [td]+3, -, -[/td]
-    [/tr]
-[/table]
+| Setting Type | Normal     | Minimum  |
+| ---          | ---        | ---      |
+| Outcome      | 5, 6, 6    | 4, 5, 4  |
+| Difference   | +4, +1, +2 | +3, -, - |
+
 ### Another Example but with [Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137):
-[olist]
-    [*]Say your ruler is elected as a 2, 8, 6
-    [*]You have chosen a defined target of 6
-    [*][i]In this game, maximum possible stat is 9 ([Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137))[/i]
-[/olist]
+1 Say your ruler is elected as a 2, 8, 6
+2 You have chosen a defined target of 6
+3 * *In this game, maximum possible stat is 9 ([Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137))* *
+
 After your ruler updates:
-[table]
-    [tr]
-        [th]Setting Type[/th]
-        [th]Normal[/th]
-        [th]Minimum[/th]
-    [/tr]
-    [tr]
-        [td]Outcome[/td]
-        [td]8, 9, 9[/td]
-        [td]6, 8, 6[/td]
-    [/tr]
-    [tr]
-        [td]Difference[/td]
-        [td]+6, +1, +3[/td]
-        [td]+4, -, -[/td]
-    [/tr]
-[/table]
+| Setting Type | Normal     | Minimum  |
+| ---          | ---        | ---      |
+| Outcome      | 8, 9, 9    | 6, 8, 6  |
+| Difference   | +6, +1, +3 | +4, -, - |
 
 ## This Mod is:
 [list]
-    [*][b]NOT Achievement Compatible! (Modifies the checksum)[/b]
+    [*]**NOT Achievement Compatible! (Modifies the checksum)**
     [*]But will work on an Ironman save.
 [/list]
 
@@ -98,7 +71,7 @@ After your ruler updates:
 A: Yes
 ### Q: With [No Limits Nation Designer](https://steamcommunity.com/sharedfiles/filedetails/?id=1528959434) I can make a 50,50,50 ruler, can this mod do that?
 A: Nope, Sorry Mate! The command [code]change_<adm|dip|mil>[/code] will only ever bring their stats up to game maximum! (Found in Defines)
-[i]If you want to edit the Defines for ruler stats, check the [Wiki](https://eu4.paradoxwikis.com/Defines), you are looking for [code]RULER_MAX_SKILL[/code] under [code][NNationDesigner](https://eu4.paradoxwikis.com/Defines#NNationDesigner)[/code]![/i]
+* *If you want to edit the Defines for ruler stats, check the [Wiki](https://eu4.paradoxwikis.com/Defines), you are looking for [code]RULER_MAX_SKILL[/code] under [code][NNationDesigner](https://eu4.paradoxwikis.com/Defines#NNationDesigner)[/code]!* *
 ### Q: Why is none of this done through the Defines?
 A: If I modify the defines, then this mod will not work with any other major mod. Since it's supposed to be the configurable, incompatibility would defeat its purpose.
 ### Q: Why not just hardcode it to 15 from the start?
@@ -115,7 +88,7 @@ A: Then the hidden background event would fire every month and error every time.
 - Should be safe for any active save game!
 
 ## AI
-- [b]The AI will never use this mod or its features![/b]
+- **The AI will never use this mod or its features!**
 - If a game is saved with any menu open, the AI will close it without changes.
 
 Inspired by [Best Ruler Stats](https://steamcommunity.com/sharedfiles/filedetails/?id=625725145) by [Paragon](https://steamcommunity.com/id/paragonnnnnnn)
