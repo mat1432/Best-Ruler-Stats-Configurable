@@ -22,9 +22,7 @@ All that is required is an update and your selected template will auto update yo
 
 * *Here is another Version of this mod, that uses **On Actions** to SIGNIFICANTLY reduce end of month performance impact.
 Do note, it is almost definately NOT compatible with major map mods! But should work on most of your nearly vanilla games.
-If your mod uses these On Actions this mod is NOT compatible: ```AMPL
-on_new_monarch
-```, on_new_heir, on_new_consort.* *
+If your mod uses these On Actions this mod is NOT compatible: on_new_monarch, on_new_heir, on_new_consort.* *
 
 There are 2 types of operation: 'Normal' and 'Minimum'
 - Normal (Default) = For each MP category: ADD Defined Points to each category up to the **Game Maximum**.
@@ -33,9 +31,9 @@ By default the mod will ADD points to each category up to the defined maximum.
 Alternatively you can configure it to use your defined selection as a minimum (CANNOT be higher than the game Defines allows!)
 
 ## Example:
-1 Say your ruler is elected as a 1, 5, 4
-2 You have chosen a defined target of 4
-3 * *In this game, maximum possible stat is 6 (like normal)* *
+- Say your ruler is elected as a 1, 5, 4
+- You have chosen a defined target of 4
+- * *In this game, maximum possible stat is 6 (like normal)* *
 
 After your ruler updates:
 | Setting Type | Normal     | Minimum  |
@@ -44,9 +42,9 @@ After your ruler updates:
 | Difference   | +4, +1, +2 | +3, -, - |
 
 ### Another Example but with [Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137):
-1 Say your ruler is elected as a 2, 8, 6
-2 You have chosen a defined target of 6
-3 * *In this game, maximum possible stat is 9 ([Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137))* *
+- Say your ruler is elected as a 2, 8, 6
+- You have chosen a defined target of 6
+- * *In this game, maximum possible stat is 9 ([Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137))* *
 
 After your ruler updates:
 | Setting Type | Normal     | Minimum  |
