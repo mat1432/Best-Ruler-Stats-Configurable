@@ -6,11 +6,11 @@ Within this entire mod, there are searchable identifiers to make things easier:
 # EDIT: Add Template flags here
 ```
 The Following files contain these tags:
-- [common/scripted_effects/brsc_scripted_effects.txt](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/common/scripted_effects/brsc_scripted_effects.txt)
-- [events/brsc_events.txt](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/events/brsc_events.txt)
-- [localisation/brsc_effect_tooltips_l_english.yml](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/localisation/brsc_effect_tooltips_l_english.yml)
-- [localisation/brsc_events_l_english.yml](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/localisation/brsc_events_l_english.yml)
-- [localisation/brsc_trigger_tooltips_l_english.yml](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/localisation/brsc_trigger_tooltips_l_english.yml)
+- [common/scripted_effects/brsc_scripted_effects.txt](/common/scripted_effects/brsc_scripted_effects.txt)
+- [events/brsc_events.txt](/events/brsc_events.txt)
+- [localisation/brsc_effect_tooltips_l_english.yml](/localisation/brsc_effect_tooltips_l_english.yml)
+- [localisation/brsc_events_l_english.yml](/localisation/brsc_events_l_english.yml)
+- [localisation/brsc_trigger_tooltips_l_english.yml](/localisation/brsc_trigger_tooltips_l_english.yml)
 
 ## List
 | Mod Name | Steam Page | Git Link | Short Tag |
