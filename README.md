@@ -15,7 +15,7 @@ Updates your Ruler, Heir and Consort skill points! **Yes, both your Heir and Con
 Additionally, some major mods change the Defines for the Maximum Skill Points of your ruler; No need to worry!
 I have included a template feature that configures this mod automatically! **It is hard-coded**; So:
 All that is required is an update and your selected template will auto update your targeted stats when you click the decision.
-* *[u]If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).[/u]* *
+* *If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).* *
 
 * *NOTE: The mod can only raise your rulers stats to the highest the game allows (Normally 6)!* *
 * *You can change that in the Defines if you want, but this mod DOES NOT EDIT THE DEFINES (For Compatability)* *
@@ -33,7 +33,7 @@ Alternatively you can configure it to use your defined selection as a minimum (C
 ## Example:
 - Say your ruler is elected as a 1, 5, 4
 - You have chosen a defined target of 4
-- * *In this game, maximum possible stat is 6 (like normal)* *
+- In this game, maximum possible stat is 6 (like normal)
 
 After your ruler updates:
 | Setting Type | Normal     | Minimum  |
@@ -44,7 +44,7 @@ After your ruler updates:
 ### Another Example but with [Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137):
 - Say your ruler is elected as a 2, 8, 6
 - You have chosen a defined target of 6
-- * *In this game, maximum possible stat is 9 ([Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137))* *
+- In this game, maximum possible stat is 9 ([Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137))
 
 After your ruler updates:
 | Setting Type | Normal     | Minimum  |
@@ -53,23 +53,19 @@ After your ruler updates:
 | Difference   | +6, +1, +3 | +4, -, - |
 
 ## This Mod is:
-[list]
-    [*]**NOT Achievement Compatible! (Modifies the checksum)**
-    [*]But will work on an Ironman save.
-[/list]
+- **NOT Achievement Compatible! (Modifies the checksum)**
+- But will work on an Ironman save.
 
-[h2]Supported Mod Templates List:[/h2]
-[list]
-    [*]Base Game (6 Max Skill)
-    [*][Anbennar Expanded (9 Max Skill)](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137)
-[/list]
+## Supported Mod Templates List:
+- Base Game (6 Max Skill)
+- [Anbennar Expanded (9 Max Skill)](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137)
 
 ## Not Yet Asked Questions / Q&A
 ### Q: Multiplayer?
 A: Yes
 ### Q: With [No Limits Nation Designer](https://steamcommunity.com/sharedfiles/filedetails/?id=1528959434) I can make a 50,50,50 ruler, can this mod do that?
-A: Nope, Sorry Mate! The command [code]change_<adm|dip|mil>[/code] will only ever bring their stats up to game maximum! (Found in Defines)
-* *If you want to edit the Defines for ruler stats, check the [Wiki](https://eu4.paradoxwikis.com/Defines), you are looking for [code]RULER_MAX_SKILL[/code] under [code][NNationDesigner](https://eu4.paradoxwikis.com/Defines#NNationDesigner)[/code]!* *
+A: Nope, Sorry Mate! The command change_<adm|dip|mil> will only ever bring their stats up to game maximum! (Found in Defines)
+* *If you want to edit the Defines for ruler stats, check the [Wiki](https://eu4.paradoxwikis.com/Defines), you are looking for RULER_MAX_SKILL under [NNationDesigner](https://eu4.paradoxwikis.com/Defines#NNationDesigner)!* *
 ### Q: Why is none of this done through the Defines?
 A: If I modify the defines, then this mod will not work with any other major mod. Since it's supposed to be the configurable, incompatibility would defeat its purpose.
 ### Q: Why not just hardcode it to 15 from the start?
