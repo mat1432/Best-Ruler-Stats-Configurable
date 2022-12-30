@@ -27,6 +27,7 @@
  brs_template_d: "Instead of using the exact game defined maximum, you can use a template to preconfigure your ruler stats for you!\nIf a template is updated during a save game, the stat target will be reflected automatically!"
  brs_template_detatch: "§ODetatch Stat Target from Template§!"
  brs_template_van: "Use Template: Base Game (Set to 6)"
+# EDIT: Add Template flags here
  brs_template_aex: "Use Template: Anbennar Expanded"
 
 # Stat target menu(s)

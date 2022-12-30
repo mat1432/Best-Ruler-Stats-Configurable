@@ -11,11 +11,15 @@
 # templates
  brs_has_any_template_tt: "Is Using a Template"
  brs_not_has_any_template_tt: "Is NOT Using a Template"
+
 # using specific template
  brs_has_template_van_tt: "Is Using Template: Base Game"
+# EDIT: Add Template flags here
  brs_has_template_aex_tt: "Is Using Template: Anbennar Expanded"
+
 # not using specific template
  brs_not_has_template_van_tt: "Is NOT Using Template: Base Game"
+# EDIT: Add Template flags here
  brs_not_has_template_aex_tt: "Is NOT Using Template: Anbennar Expanded"
 
 # has target number

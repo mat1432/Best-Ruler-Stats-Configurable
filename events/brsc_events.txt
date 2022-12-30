@@ -227,6 +227,7 @@ country_event = {
 		brs_set_template = { mod = van }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
+	# EDIT: Add Template flags here
 	option = { # anbennar expanded
 		name = "brs_template_aex"
 		trigger = { brs_not_has_template_hidden = { mod = aex } }

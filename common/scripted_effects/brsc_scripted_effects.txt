@@ -21,6 +21,7 @@ brs_validate = {
 	hidden_effect = {
 		# reset variables using memorised templates
         if = { limit = { has_country_flag = brs_template_van } brs_set_template = { mod = van } }
+		# EDIT: Add Template flags here
         if = { limit = { has_country_flag = brs_template_aex } brs_set_template = { mod = aex } }
 
 		# make sure variable is inside boundaries
@@ -63,6 +64,7 @@ brs_clr_template = {
 	hidden_effect = {
 		clr_country_flag = brs_template_used
 		clr_country_flag = brs_template_van # vanilla
+		# EDIT: Add Template flags here
 		clr_country_flag = brs_template_aex # anbennar expanded
 	}
 }
@@ -70,6 +72,7 @@ brs_clr_template = {
 # takes the flags and converts it into the correct value
 brs_set_template_configure = {
 	if = { limit = { has_country_flag = brs_template_van } brs_set_target = { a=6 } }
+	# EDIT: Add Template flags here
 	if = { limit = { has_country_flag = brs_template_aex } brs_set_target = { a=9 } }
 }
 
