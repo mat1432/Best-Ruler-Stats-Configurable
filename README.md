@@ -63,7 +63,7 @@ After your ruler updates:
 A: Yes
 ### Q: With [No Limits Nation Designer](https://steamcommunity.com/sharedfiles/filedetails/?id=1528959434) I can make a 50,50,50 ruler, can this mod do that?
 A: Nope, Sorry Mate! The command change_<adm|dip|mil> will only ever bring their stats up to game maximum! (Found in Defines)
-* *If you want to edit the Defines for ruler stats, check the [Wiki](https://eu4.paradoxwikis.com/Defines), you are looking for RULER_MAX_SKILL under [NNationDesigner](https://eu4.paradoxwikis.com/Defines#NNationDesigner)!* *
+* If you want to edit the Defines for ruler stats, check the [Wiki](https://eu4.paradoxwikis.com/Defines), you are looking for RULER_MAX_SKILL under [NNationDesigner](https://eu4.paradoxwikis.com/Defines#NNationDesigner)!
 ### Q: Why is none of this done through the Defines?
 A: If I modify the defines, then this mod will not work with any other major mod. Since it's supposed to be the configurable, incompatibility would defeat its purpose.
 ### Q: Why not just hardcode it to 15 from the start?
