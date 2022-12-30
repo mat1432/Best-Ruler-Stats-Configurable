@@ -11,7 +11,7 @@ Updates your Ruler, Heir and Consort skill points! **Yes, both your Heir and Con
 **This is without a doubt a cheat mod!**
 
 Additionally, some major mods change the Defines for the Maximum Skill Points of your ruler; No need to worry!
-I have included a [Template Feature](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/Mod%20Template%20Codes.md) that configures this mod automatically! **It is hard-coded**; So:
+I have included a [Template Feature](/Mod%20Template%20Codes.md) that configures this mod automatically! **It is hard-coded**; So:
 All that is required is an update and your selected template will auto update your targeted stats when you click the decision.
 If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).
 
@@ -87,5 +87,5 @@ Inspired by [Best Ruler Stats](https://steamcommunity.com/sharedfiles/filedetail
 
 Check out my other Monarch Point Mod: [Greater National Focus](https://github.com/mat1432/greater_national_focus) ([Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2905801426))
 
-[GitHub](https://github.com/mat1432/Best-Ruler-Stats-Configurable)
-Licensed under the [GNU General Public License v3.0](https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/LICENSE)
+[GitHub](/../../)
+Licensed under the [GNU General Public License v3.0](/LICENSE)
