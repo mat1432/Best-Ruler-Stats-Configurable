@@ -1,0 +1,15 @@
+country_decisions = {
+	brs_open_config = {
+		potential = { ai = no }
+		allow = {
+			ai = no
+			custom_trigger_tooltip = {
+				tooltip = brs_menu_not_open_tt
+				NOT = { has_country_flag = brs_open }
+			}
+		}
+		effect = {
+			country_event = { id = brs.2 }
+		}
+	}
+}

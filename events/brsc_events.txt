@@ -1,0 +1,671 @@
+# Written by mat1432 https://steamcommunity.com/id/mat1432/ (Steam) or https://github.com/mat1432 (GitHub)
+
+namespace = brs
+
+country_event = {
+	id = brs.1
+	title = brs_50_t
+	desc = brs_50_d
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = no
+	hidden = yes
+
+	trigger = {
+		ai = no
+		has_country_flag = brs_setup_done
+
+		OR = {
+			brs_check_ruler = { value = ADM }
+			brs_check_ruler = { value = DIP }
+			brs_check_ruler = { value = MIL }
+			if = {
+				limit = { has_heir = yes }
+				brs_check_ruler = { value = adm who = heir_ }
+				brs_check_ruler = { value = dip who = heir_ }
+				brs_check_ruler = { value = mil who = heir_ }
+			}
+			if = {
+				limit = { has_consort = yes }
+				brs_check_ruler = { value = adm who = consort_ }
+				brs_check_ruler = { value = dip who = consort_ }
+				brs_check_ruler = { value = mil who = consort_ }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		trigger = { brs_minimum_disabled = yes }
+		name = "brs_1_normal"
+		brs_update_ruler_add = { value = adm }
+		brs_update_ruler_add = { value = dip }
+		brs_update_ruler_add = { value = mil }
+		if = {
+			limit = { has_heir = yes }
+			brs_update_ruler_add = { value = adm who = heir_ }
+			brs_update_ruler_add = { value = dip who = heir_ }
+			brs_update_ruler_add = { value = mil who = heir_ }
+		}
+		if = {
+			limit = { has_consort = yes }
+			brs_update_ruler_add = { value = adm who = consort_ }
+			brs_update_ruler_add = { value = dip who = consort_ }
+			brs_update_ruler_add = { value = mil who = consort_ }
+		}
+	}
+
+	option = {
+		trigger = { brs_minimum_enabled = yes }
+		name = "brs_1_minimum"
+		brs_update_ruler = { valueGet = ADM valueSet = adm }
+		brs_update_ruler = { valueGet = DIP valueSet = dip }
+		brs_update_ruler = { valueGet = MIL valueSet = mil }
+		if = {
+			limit = { has_heir = yes }
+			brs_update_ruler = { valueGet = adm valueSet = adm who = heir_ }
+			brs_update_ruler = { valueGet = dip valueSet = dip who = heir_ }
+			brs_update_ruler = { valueGet = mil valueSet = mil who = heir_ }
+		}
+		if = {
+			limit = { has_consort = yes }
+			brs_update_ruler = { valueGet = adm valueSet = adm who = consort_ }
+			brs_update_ruler = { valueGet = dip valueSet = dip who = consort_ }
+			brs_update_ruler = { valueGet = mil valueSet = mil who = consort_ }
+		}
+	}
+}
+
+
+### Configuration menu
+country_event = {
+	id = brs.2
+	title = "brs_2_t"
+	desc = "brs_2_d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { ai = no }
+	immediate = {
+		hidden_effect = {
+			set_country_flag = brs_open
+			brs_validate = yes
+		}
+	}
+	after = {
+		hidden_effect = { clr_country_flag = brs_open }
+	}
+	option = {
+		name = "brs_exit"
+		trigger = {
+			hidden_trigger = { has_country_flag = brs_setup_done }
+		}
+	}
+
+	option = {
+		name = "brs_2_enable"
+		trigger = { brs_disabled = yes }
+		brs_enable_mod = yes
+	}
+	option = {
+		name = "brs_2_disable"
+		trigger = { brs_enabled = yes }
+		brs_disable_mod = yes
+	}
+
+	option = {
+		name = "brs_2_minimum_e"
+		trigger = { brs_minimum_disabled = yes }
+		brs_set_minimum = yes
+	}
+	option = {
+		name = "brs_2_minimum_d"
+		trigger = { brs_minimum_enabled = yes }
+		brs_clr_minimum = yes
+	}
+
+	#Chose from Templates
+	option = {
+		name = "brs_2_templates"
+		country_event = { id = brs.3 }
+	}
+
+	option = {
+		name = "brs_2_below6"
+		trigger = { NOT = { brs_is_target_setup = { a=0 b=7 } } }
+		country_event = { id = brs.10 }
+	}
+	option = {
+		name = "brs_2_below6"
+		trigger = { brs_is_target_setup = { a=0 b=7 } }
+		highlight = yes
+		country_event = { id = brs.10 }
+	}
+
+	option = {
+		name = "brs_template_van"
+		trigger = { brs_not_has_template_hidden = { mod = van } }
+		brs_clr_template = yes
+		brs_set_template = { mod = van }
+		hidden_effect = { country_event = { id = brs.1003 } }
+	}
+	option = {
+		name = "brs_template_van"
+		trigger = { brs_has_template_hidden = { mod = van } }
+		highlight = yes
+		brs_clr_template = yes
+		brs_set_template = { mod = van }
+		hidden_effect = { country_event = { id = brs.1003 } }
+	}
+
+	option = {
+		name = "brs_2_above6"
+		trigger = { NOT = { brs_is_target_setup = { a=7 b=16 } } }
+		country_event = { id = brs.11 }
+	}
+	option = {
+		name = "brs_2_above6"
+		trigger = { brs_is_target_setup = { a=7 b=16 } }
+		highlight = yes
+		country_event = { id = brs.11 }
+	}
+	
+	option = {
+		name = "brs_template_detatch"
+		trigger = { brs_has_any_template = yes }
+		brs_clr_template = yes
+		hidden_effect = { country_event = { id = brs.1003 } }
+	}
+}
+country_event = {
+	id = brs.3
+	title = "brs_template_t"
+	desc = "brs_template_d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { ai = no }
+	immediate = {
+		hidden_effect = { set_country_flag = brs_open }
+	}
+	after = {
+		hidden_effect = { clr_country_flag = brs_open }
+	}
+	option = {
+		name = "brs_back"
+		country_event = { id = brs.2 }
+	}
+
+	option = {
+		name = "brs_template_detatch"
+		trigger = { brs_has_any_template = yes }
+		brs_clr_template = yes
+		hidden_effect = { country_event = { id = brs.1003 } }
+	}
+
+	#Chose from Templates
+	option = {
+		name = "brs_template_van"
+		trigger = { brs_not_has_template_hidden = { mod = van } }
+		brs_clr_template = yes
+		brs_set_template = { mod = van }
+		hidden_effect = { country_event = { id = brs.1003 } }
+	}
+	option = {
+		name = "brs_template_van"
+		trigger = { brs_has_template_hidden = { mod = van } }
+		highlight = yes
+		brs_clr_template = yes
+		brs_set_template = { mod = van }
+		hidden_effect = { country_event = { id = brs.1003 } }
+	}
+	option = { # anbennar expanded
+		name = "brs_template_aex"
+		trigger = { brs_not_has_template_hidden = { mod = aex } }
+		brs_clr_template = yes
+		brs_set_template = { mod = aex }
+		hidden_effect = { country_event = { id = brs.1003 } }
+	}
+	option = { # anbennar expanded
+		name = "brs_template_aex"
+		trigger = { brs_has_template_hidden = { mod = aex } }
+		highlight = yes
+		brs_clr_template = yes
+		brs_set_template = { mod = aex }
+		hidden_effect = { country_event = { id = brs.1003 } }
+	}
+}
+
+
+country_event = {
+	id = brs.10
+	title = "brs_below6_t"
+	desc = "brs_below6_d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { ai = no }
+	immediate = {
+		hidden_effect = { set_country_flag = brs_open }
+	}
+	after = {
+		hidden_effect = { clr_country_flag = brs_open }
+	}
+	option = {
+		name = "brs_back"
+		country_event = { id = brs.2 }
+	}
+
+	option = {
+		name = "brs_change_0"
+		trigger = { NOT = { brs_is_target_setup = { a=0 b=1 } } }
+		brs_set_target = { a=0 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	option = {
+		name = "brs_change_0"
+		trigger = { brs_is_target_setup = { a=0 b=1 } }
+		highlight = yes
+		brs_set_target = { a=0 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	
+	option = {
+		name = "brs_change_1"
+		trigger = { NOT = { brs_is_target_setup = { a=1 b=2 } } }
+		brs_set_target = { a=1 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	option = {
+		name = "brs_change_1"
+		trigger = { brs_is_target_setup = { a=1 b=2 } }
+		highlight = yes
+		brs_set_target = { a=1 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	
+	option = {
+		name = "brs_change_2"
+		trigger = { NOT = { brs_is_target_setup = { a=2 b=3 } } }
+		brs_set_target = { a=2 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	option = {
+		name = "brs_change_2"
+		trigger = { brs_is_target_setup = { a=2 b=3 } }
+		highlight = yes
+		brs_set_target = { a=2 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	
+	option = {
+		name = "brs_change_3"
+		trigger = { NOT = { brs_is_target_setup = { a=3 b=4 } } }
+		brs_set_target = { a=3 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	option = {
+		name = "brs_change_3"
+		trigger = { brs_is_target_setup = { a=3 b=4 } }
+		highlight = yes
+		brs_set_target = { a=3 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	
+	option = {
+		name = "brs_change_4"
+		trigger = { NOT = { brs_is_target_setup = { a=4 b=5 } } }
+		brs_set_target = { a=4 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	option = {
+		name = "brs_change_4"
+		trigger = { brs_is_target_setup = { a=4 b=5 } }
+		highlight = yes
+		brs_set_target = { a=4 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	
+	option = {
+		name = "brs_change_5"
+		trigger = { NOT = { brs_is_target_setup = { a=5 b=6 } } }
+		brs_set_target = { a=5 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	option = {
+		name = "brs_change_5"
+		trigger = { brs_is_target_setup = { a=5 b=6 } }
+		highlight = yes
+		brs_set_target = { a=5 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+
+	option = {
+		name = "brs_change_6"
+		trigger = { NOT = { brs_is_target_setup = { a=6 b=7 } } }
+		brs_set_target = { a=6 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+	option = {
+		name = "brs_change_6"
+		trigger = { brs_is_target_setup = { a=6 b=7 } }
+		highlight = yes
+		brs_set_target = { a=6 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+	}
+}
+
+country_event = {
+	id = brs.11
+	title = "brs_above6_t"
+	desc = "brs_above6_d"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = { ai = no }
+	immediate = {
+		hidden_effect = { set_country_flag = brs_open }
+	}
+	after = {
+		hidden_effect = { clr_country_flag = brs_open }
+	}
+	option = {
+		name = "brs_back"
+		country_event = { id = brs.2 }
+	}
+
+	option = {
+		name = "brs_change_7"
+		trigger = { NOT = { brs_is_target_setup = { a=7 b=8 } } }
+		brs_set_target = { a=7 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_7"
+		trigger = { brs_is_target_setup = { a=7 b=8 } }
+		highlight = yes
+		brs_set_target = { a=7 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	
+	option = {
+		name = "brs_change_8"
+		trigger = { NOT = { brs_is_target_setup = { a=8 b=9 } } }
+		brs_set_target = { a=8 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_8"
+		trigger = { brs_is_target_setup = { a=8 b=9 } }
+		highlight = yes
+		brs_set_target = { a=8 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	
+	option = {
+		name = "brs_change_9"
+		trigger = { NOT = { brs_is_target_setup = { a=9 b=10 } } }
+		brs_set_target = { a=9 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_9"
+		trigger = { brs_is_target_setup = { a=9 b=10 } }
+		highlight = yes
+		brs_set_target = { a=9 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	
+	option = {
+		name = "brs_change_10"
+		trigger = { NOT = { brs_is_target_setup = { a=10 b=11 } } }
+		brs_set_target = { a=10 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_10"
+		trigger = { brs_is_target_setup = { a=10 b=11 } }
+		highlight = yes
+		brs_set_target = { a=10 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	
+	option = {
+		name = "brs_change_11"
+		trigger = { NOT = { brs_is_target_setup = { a=11 b=12 } } }
+		brs_set_target = { a=11 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_11"
+		trigger = { brs_is_target_setup = { a=11 b=12 } }
+		highlight = yes
+		brs_set_target = { a=11 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	
+	option = {
+		name = "brs_change_12"
+		trigger = { NOT = { brs_is_target_setup = { a=12 b=13 } } }
+		brs_set_target = { a=12 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_12"
+		trigger = { brs_is_target_setup = { a=12 b=13 } }
+		highlight = yes
+		brs_set_target = { a=12 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	
+	option = {
+		name = "brs_change_13"
+		trigger = { NOT = { brs_is_target_setup = { a=13 b=14 } } }
+		brs_set_target = { a=13 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_13"
+		trigger = { brs_is_target_setup = { a=13 b=14 } }
+		highlight = yes
+		brs_set_target = { a=13 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	
+	option = {
+		name = "brs_change_14"
+		trigger = { NOT = { brs_is_target_setup = { a=14 b=15 } } }
+		brs_set_target = { a=14 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_14"
+		trigger = { brs_is_target_setup = { a=14 b=15 } }
+		highlight = yes
+		brs_set_target = { a=14 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	
+	option = {
+		name = "brs_change_15"
+		trigger = { NOT = { brs_is_target_setup = { a=15 b=16 } } }
+		brs_set_target = { a=15 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_15"
+		trigger = { brs_is_target_setup = { a=15 b=16 } }
+		highlight = yes
+		brs_set_target = { a=15 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+
+	option = {
+		name = "brs_change_16"
+		trigger = { NOT = { brs_is_target_setup = { a=16 b=99 } } }
+		brs_set_target = { a=16 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+	option = {
+		name = "brs_change_16"
+		trigger = { brs_is_target_setup = { a=16 b=99 } }
+		highlight = yes
+		brs_set_target = { a=16 }
+		hidden_effect = { country_event = { id = brs.1011 } }
+	}
+}
+
+####################################################################################################
+### Auto Menu / The Actual Events
+country_event = {
+	id = brs.99
+	title = "brs_r_t"
+	desc = "brs_r_d"
+	hidden = yes
+	
+	trigger = {
+		ai = no
+		NOT = { has_country_flag = brs_setup_done }
+	}
+	mean_time_to_happen = { months = 1 }
+	immediate = {
+		set_country_flag = brs_setup_done
+		brs_set_template = { mod = van }
+	}
+	option = {
+		name = "brs_r_a"
+		set_country_flag = brs_open
+		country_event = { id = brs.2 }
+	}
+}
+
+# The Actual Event
+country_event = {
+	id = brs.50
+	title = brs_50_t
+	desc = brs_50_d
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = no
+	hidden = yes
+	
+	trigger = {
+		ai = no
+		has_country_flag = brs_setup_done
+
+		OR = {
+			brs_check_ruler = { value = ADM }
+			brs_check_ruler = { value = DIP }
+			brs_check_ruler = { value = MIL }
+			if = {
+				limit = { has_heir = yes }
+				brs_check_ruler = { value = adm who = heir_ }
+				brs_check_ruler = { value = dip who = heir_ }
+				brs_check_ruler = { value = mil who = heir_ }
+			}
+			if = {
+				limit = { has_consort = yes }
+				brs_check_ruler = { value = adm who = consort_ }
+				brs_check_ruler = { value = dip who = consort_ }
+				brs_check_ruler = { value = mil who = consort_ }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		trigger = { brs_minimum_disabled = yes }
+		name = "brs_1_normal"
+		brs_update_ruler_add = { value = adm }
+		brs_update_ruler_add = { value = dip }
+		brs_update_ruler_add = { value = mil }
+		if = {
+			limit = { has_heir = yes }
+			brs_update_ruler_add = { value = adm who = heir_ }
+			brs_update_ruler_add = { value = dip who = heir_ }
+			brs_update_ruler_add = { value = mil who = heir_ }
+		}
+		if = {
+			limit = { has_consort = yes }
+			brs_update_ruler_add = { value = adm who = consort_ }
+			brs_update_ruler_add = { value = dip who = consort_ }
+			brs_update_ruler_add = { value = mil who = consort_ }
+		}
+	}
+	
+	option = {
+		trigger = { brs_minimum_enabled = yes }
+		name = "brs_1_minimum"
+		brs_update_ruler = { valueGet = ADM valueSet = adm }
+		brs_update_ruler = { valueGet = DIP valueSet = dip }
+		brs_update_ruler = { valueGet = MIL valueSet = mil }
+		if = {
+			limit = { has_heir = yes }
+			brs_update_ruler = { valueGet = adm valueSet = adm who = heir_ }
+			brs_update_ruler = { valueGet = dip valueSet = dip who = heir_ }
+			brs_update_ruler = { valueGet = mil valueSet = mil who = heir_ }
+		}
+		if = {
+			limit = { has_consort = yes }
+			brs_update_ruler = { valueGet = adm valueSet = adm who = consort_ }
+			brs_update_ruler = { valueGet = dip valueSet = dip who = consort_ }
+			brs_update_ruler = { valueGet = mil valueSet = mil who = consort_ }
+		}
+	}
+}
+
+####################################################################################################
+### Recursive Menus
+country_event = {
+	id = brs.1002
+	title = "brs_r_t"
+	desc = "brs_r_d"
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = "brs_r_a"
+		set_country_flag = brs_open
+		country_event = { id = brs.2 }
+	}
+}
+country_event = {
+	id = brs.1003
+	title = "brs_r_t"
+	desc = "brs_r_d"
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = "brs_r_a"
+		set_country_flag = brs_open
+		country_event = { id = brs.3 }
+	}
+}
+
+country_event = {
+	id = brs.1010
+	title = "brs_r_t"
+	desc = "brs_r_d"
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = "brs_r_a"
+		set_country_flag = brs_open
+		country_event = { id = brs.10 }
+	}
+}
+country_event = {
+	id = brs.1011
+	title = "brs_r_t"
+	desc = "brs_r_d"
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = "brs_r_a"
+		set_country_flag = brs_open
+		country_event = { id = brs.11 }
+	}
+}

@@ -1,0 +1,8 @@
+# Made by mat1432 (Steam) https://steamcommunity.com/id/mat1432/
+
+1.0.0
+[list]
+    [*]Foundation of the mod.
+    [*]Added GitHub Repository
+    [*]Now licensed under the GNU General Public License v3.0
+[/list]

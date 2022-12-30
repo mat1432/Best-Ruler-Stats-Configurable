@@ -1,0 +1,110 @@
+brs_enable_mod = {
+	custom_tooltip = brs_enable_mod_tt
+	hidden_effect = { clr_country_flag = brs_disabled }
+}
+brs_disable_mod = {
+	custom_tooltip = brs_disable_mod_tt
+	hidden_effect = { set_country_flag = brs_disabled }
+}
+brs_set_minimum = {
+	custom_tooltip = brs_set_minimum_tt
+	hidden_effect = { set_country_flag = brs_minimum }
+}
+brs_clr_minimum = {
+	custom_tooltip = brs_clr_minimum_tt
+	hidden_effect = { clr_country_flag = brs_minimum }
+}
+
+# If a mod is updated and the defines for max ruler stats changes. Upon this mod updating the template will adjust the selected value.
+brs_validate = {
+	hidden_effect = { # reset variables using memorised templates
+        if = { limit = { has_country_flag = brs_template_van } brs_set_template_configure = { mod = van } }
+        if = { limit = { has_country_flag = brs_template_aex } brs_set_template_configure = { mod = aex } }
+	}
+}
+
+# Arguments:
+# mod = <short mod template tag>
+brs_set_template = {
+	custom_tooltip = brs_set_template_$mod$_tt
+	hidden_effect = {
+		brs_clr_template = yes
+		set_country_flag = brs_template_used
+		set_country_flag = brs_template_$mod$
+	}
+	brs_set_template_configure = { mod = $mod$ }
+}
+brs_clr_template = {
+	custom_tooltip = brs_clr_template_tt
+	hidden_effect = {
+		clr_country_flag = brs_template_used
+		clr_country_flag = brs_template_van # vanilla
+		clr_country_flag = brs_template_aex # anbennar expanded
+	}
+}
+
+# takes the argument and converts it into the correct value
+brs_set_template_configure = {
+	trigger_switch = {
+		on_trigger = $mod$
+		van = { brs_set_target = { a=6 } }
+		aex = { brs_set_target = { a=9 } }
+	}
+}
+
+# sets the ruler stat target to the input value (MUST BE AN INTEGER)
+# Arguments:
+# a = <0|1|2|3|4|...|14|15>
+brs_set_target = {
+	custom_tooltip = brs_set_target_$a$_tt
+	hidden_trigger = {
+		root = {
+			brs_clr_template = yes
+			set_variable = {
+				which = brs_target_var
+				value = $a$
+			}
+		}
+	}
+}
+
+# Arguments:
+# valueGet = <ADM|DIP|MIL|adm|dip|mil>
+# valueSet = <adm|dip|mil>
+# who = <|heir_|consort_>
+brs_update_ruler = {
+	while = {
+		limit = {
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					variable_name = ruler_skill
+					value = $who$$valueGet$
+				}
+				check_variable = {
+					which = brs_target_var
+					which = ruler_skill
+				}
+			}
+		}
+		change_$who$$valueSet$ = 1
+	}
+}
+
+# Arguments:
+# value = <adm|dip|mil>
+# who = <|heir_|consort_>
+brs_update_ruler_add = {
+	if = { # skips many monthly iterations
+		limit = { brs_check_ruler = { value = $value$ who = $who$ } }
+		set_variable = { which = temp value = 0 }
+		while = {
+			limit = {
+				check_variable = {
+					which = brs_target_var
+					which = temp
+				}
+			}
+			change_$who$$value$ = 1
+		}
+	}
+}

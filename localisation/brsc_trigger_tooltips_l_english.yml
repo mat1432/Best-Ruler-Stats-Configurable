@@ -1,0 +1,39 @@
+﻿l_english:
+# decision trigger tooltips
+ brs_menu_not_open_tt: "Menu is NOT Open"
+
+# event trigger tooltips
+ brs_enabled_tt: "Mod is currently §GEnabled§!"
+ brs_disabled_tt: "Mod is currently §ODisabled§!"
+ brs_minimum_enabled_tt: "Stats Target is currently treated §Yas a Minimum§!"
+ brs_minimum_disabled_tt: "Stats Target is currently treated §YNormally§!"
+
+# templates
+ brs_has_any_template_tt: "Is Using a Template"
+ brs_not_has_any_template_tt: "Is NOT Using a Template"
+# using specific template
+ brs_has_template_van_tt: "Is Using Template: Base Game"
+ brs_has_template_aex_tt: "Is Using Template: Anbennar Expanded"
+# not using specific template
+ brs_not_has_template_van_tt: "Is NOT Using Template: Base Game"
+ brs_not_has_template_aex_tt: "Is NOT Using Template: Anbennar Expanded"
+
+# has target number
+# brs_has_target_$a$_tt: "Has Stat Target $a$"
+ brs_has_target_0_tt: "Has Stat Target 0"
+ brs_has_target_1_tt: "Has Stat Target 1"
+ brs_has_target_2_tt: "Has Stat Target 2"
+ brs_has_target_3_tt: "Has Stat Target 3"
+ brs_has_target_4_tt: "Has Stat Target 4"
+ brs_has_target_5_tt: "Has Stat Target 5"
+ brs_has_target_6_tt: "Has Stat Target 6"
+ brs_has_target_7_tt: "Has Stat Target 7"
+ brs_has_target_8_tt: "Has Stat Target 8"
+ brs_has_target_9_tt: "Has Stat Target 9"
+ brs_has_target_10_tt: "Has Stat Target 10"
+ brs_has_target_11_tt: "Has Stat Target 11"
+ brs_has_target_12_tt: "Has Stat Target 12"
+ brs_has_target_13_tt: "Has Stat Target 13"
+ brs_has_target_14_tt: "Has Stat Target 14"
+ brs_has_target_15_tt: "Has Stat Target 15"
+ brs_has_target_16_tt: "Has Stat Target 16"

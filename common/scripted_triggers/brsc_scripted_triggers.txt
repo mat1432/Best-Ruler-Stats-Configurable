@@ -1,0 +1,139 @@
+brs_enabled = {
+	custom_trigger_tooltip = {
+		tooltip = brs_enabled_tt
+		NOT = { has_country_flag = brs_disabled }
+	}
+}
+brs_disabled = {
+	custom_trigger_tooltip = {
+		tooltip = brs_disabled_tt
+		has_country_flag = brs_disabled
+	}
+}
+
+brs_minimum_enabled = {
+	custom_trigger_tooltip = {
+		tooltip = brs_minimum_enabled_tt
+		has_country_flag = brs_minimum
+	}
+}
+brs_minimum_disabled = {
+	custom_trigger_tooltip = {
+		tooltip = brs_minimum_disabled_tt
+		NOT = { has_country_flag = brs_minimum }
+	}
+}
+
+# if any template is used. non descript, easy to call
+brs_has_any_template = {
+	custom_trigger_tooltip = {
+		tooltip = brs_has_any_template_tt
+		has_country_flag = brs_template_used
+	}
+}
+brs_not_has_any_template = {
+	custom_trigger_tooltip = {
+		tooltip = brs_not_has_any_template_tt
+		NOT = { has_country_flag = brs_template_used }
+	}
+}
+# if a specific template is used
+# Arguments:
+# mod = <short mod template tag>
+brs_has_template = {
+	custom_trigger_tooltip = {
+		tooltip = brs_has_template_$mod$_tt
+		if = {
+			limit = { brs_has_any_template = yes }
+			has_country_flag = brs_template_$mod$
+		}
+		else = {
+			always = no
+		}
+	}
+}
+# if a specific template is not used
+# Arguments:
+# mod = <short mod template tag>
+brs_not_has_template = {
+	custom_trigger_tooltip = {
+		tooltip = brs_has_template_$mod$_tt
+		if = {
+			limit = { brs_has_any_template = yes }
+			NOT = { has_country_flag = brs_template_$mod$ }
+		}
+		else = {
+			always = yes
+		}
+	}
+}
+brs_has_template_hidden = {
+	hidden_trigger = { brs_has_template = { mod = $mod$ } }
+}
+brs_not_has_template_hidden = {
+	hidden_trigger = { brs_not_has_template = { mod = $mod$ } }
+}
+
+# for menus, slightly more resources used but also checks if user has selected adything before
+# Arguments:
+# a = <0|1|2|3|4|...|14|15>
+# b = <a+1>
+brs_is_target_setup = {
+	custom_trigger_tooltip = {
+		tooltip = brs_has_target_$a$_tt
+		root = {
+			if = {
+				limit = { NOT = { has_country_flag = brs_setup_done } }
+				always = no
+			}
+			else = {
+				check_variable = {
+					which = brs_target_var
+					value = $a$
+				}
+				NOT = {
+					check_variable = {
+						which = brs_target_var
+						value = $b$
+					}
+				}
+			}
+		}
+	}
+}
+# Arguments:
+# a = <0|1|2|3|4|...|14|15>
+# b = <a+1>
+brs_is_target = {
+	custom_trigger_tooltip = {
+		tooltip = brs_has_target_$a$_tt
+		root = {
+			check_variable = {
+				which = brs_target_var
+				value = $a$
+			}
+			NOT = {
+				check_variable = {
+					which = brs_target_var
+					value = $b$
+				}
+			}
+		}
+	}
+}
+
+# Arguments:
+# value = <ADM|DIP|MIL|adm|dip|mil>
+# who = <|heir_|consort_>
+brs_check_ruler = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			variable_name = ruler_skill
+			value = $who$$value$
+		}
+		check_variable = {
+			which = brs_target_var
+			which = ruler_skill
+		}
+	}
+}

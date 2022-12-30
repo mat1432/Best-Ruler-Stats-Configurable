@@ -1,0 +1,34 @@
+﻿l_english:
+# decision effect tooltips
+
+# event effect tooltips
+ brs_enable_mod_tt: "§GEnable§! Mod"
+ brs_disable_mod_tt: "§ODisable§! Mod"
+ brs_set_minimum_tt: "We will treat the Stats Target §Yas a Minimum§!"
+ brs_clr_minimum_tt: "We will treat the Stats Target §YNormally§!"
+
+# templates
+ brs_clr_template_tt: "Detatch Stat Target From Template"
+ brs_set_template_van_tt: "Set Template: Base Game"
+ brs_set_template_aex_tt: "Set Template: Anbennar Expanded"
+
+
+# set target number
+# brs_set_target_$a$_tt: "Set Stat Target to $a$"
+ brs_set_target_0_tt: "Set Stat Target to 0"
+ brs_set_target_1_tt: "Set Stat Target to 1"
+ brs_set_target_2_tt: "Set Stat Target to 2"
+ brs_set_target_3_tt: "Set Stat Target to 3"
+ brs_set_target_4_tt: "Set Stat Target to 4"
+ brs_set_target_5_tt: "Set Stat Target to 5"
+ brs_set_target_6_tt: "Set Stat Target to 6"
+ brs_set_target_7_tt: "Set Stat Target to 7"
+ brs_set_target_8_tt: "Set Stat Target to 8"
+ brs_set_target_9_tt: "Set Stat Target to 9"
+ brs_set_target_10_tt: "Set Stat Target to 10"
+ brs_set_target_11_tt: "Set Stat Target to 11"
+ brs_set_target_12_tt: "Set Stat Target to 12"
+ brs_set_target_13_tt: "Set Stat Target to 13"
+ brs_set_target_14_tt: "Set Stat Target to 14"
+ brs_set_target_15_tt: "Set Stat Target to 15"
+ brs_set_target_16_tt: "Set Stat Target to 16"
