@@ -6,8 +6,7 @@
 This Mod gives you a choice at the start of the game to configure your ruler stats boost. [i]Can be changed at any time via a Decision![/i]
 It allows you to set a defined target for your ruler stats between [b]1 Point[/b] and [b]15 Points[/b]!
 
-Updates your Ruler, Heir [strike]and Consort[/strike] skill points! 
-[u]Updating consort skill is strange, sometimes it works half way then breaks for the rest of the game. It has been disabled for now[/u]
+Updates your [b]Ruler[/b], [b]Heir[/b] AND [b]Consort[/b] skill points!
 
 [b]This is without a doubt a cheat mod![/b]
 

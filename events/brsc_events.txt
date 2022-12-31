@@ -22,12 +22,12 @@ country_event = {
 				brs_check_ruler = { value = dip who = heir_ }
 				brs_check_ruler = { value = mil who = heir_ }
 			}
-			# if = {
-			# 	limit = { has_consort = yes }
-			# 	brs_check_ruler = { value = adm who = consort_ }
-			# 	brs_check_ruler = { value = dip who = consort_ }
-			# 	brs_check_ruler = { value = mil who = consort_ }
-			# }
+			if = {
+				limit = { has_consort = yes }
+				brs_check_ruler = { value = adm who = consort_ }
+				brs_check_ruler = { value = dip who = consort_ }
+				brs_check_ruler = { value = mil who = consort_ }
+			}
 		}
 	}
 
@@ -47,12 +47,12 @@ country_event = {
 			brs_update_ruler_add = { value = dip who = heir_ }
 			brs_update_ruler_add = { value = mil who = heir_ }
 		}
-		# if = {
-		# 	limit = { has_consort = yes }
-		# 	brs_update_ruler_add = { value = adm who = consort_ }
-		# 	brs_update_ruler_add = { value = dip who = consort_ }
-		# 	brs_update_ruler_add = { value = mil who = consort_ }
-		# }
+		if = {
+			limit = { has_consort = yes }
+			brs_update_consort_add = { value = adm }
+			brs_update_consort_add = { value = dip }
+			brs_update_consort_add = { value = mil }
+		}
 	}
 
 	option = {
@@ -67,12 +67,12 @@ country_event = {
 			brs_update_ruler = { valueGet = dip valueSet = dip who = heir_ }
 			brs_update_ruler = { valueGet = mil valueSet = mil who = heir_ }
 		}
-		# if = {
-		# 	limit = { has_consort = yes }
-		# 	brs_update_ruler = { valueGet = adm valueSet = adm who = consort_ }
-		# 	brs_update_ruler = { valueGet = dip valueSet = dip who = consort_ }
-		# 	brs_update_ruler = { valueGet = mil valueSet = mil who = consort_ }
-		# }
+		if = {
+			limit = { has_consort = yes }
+			brs_update_consort = { value = adm }
+			brs_update_consort = { value = dip }
+			brs_update_consort = { value = mil }
+		}
 	}
 }
 
@@ -143,38 +143,38 @@ country_event = {
 
 	option = {
 		name = "brs_2_below6"
-		trigger = { NOT = { brs_is_target_setup = { a=0 b=7 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=0 b=7 } } }
 		country_event = { id = brs.10 }
 	}
 	option = {
 		name = "brs_2_below6"
-		trigger = { brs_is_target_setup = { a=0 b=7 } }
+		trigger = { brs_check_target_setup = { a=0 b=7 } }
 		highlight = yes
 		country_event = { id = brs.10 }
 	}
 
 	option = {
 		name = "brs_template_van"
-		trigger = { brs_not_has_template = { mod = van } }
-		brs_set_template = { mod = van }
+		trigger = { brs_not_has_template = { a=0 b=1 } }
+		brs_set_template = { m=0 }
 		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 	option = {
 		name = "brs_template_van"
-		trigger = { brs_has_template = { mod = van } }
+		trigger = { brs_has_template = { a=0 b=1 } }
 		highlight = yes
-		brs_set_template = { mod = van }
+		brs_set_template = { m=0 }
 		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 
 	option = {
 		name = "brs_2_above6"
-		trigger = { NOT = { brs_is_target_setup = { a=7 b=16 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=7 b=16 } } }
 		country_event = { id = brs.11 }
 	}
 	option = {
 		name = "brs_2_above6"
-		trigger = { brs_is_target_setup = { a=7 b=16 } }
+		trigger = { brs_check_target_setup = { a=7 b=16 } }
 		highlight = yes
 		country_event = { id = brs.11 }
 	}
@@ -216,29 +216,29 @@ country_event = {
 	#Chose from Templates
 	option = {
 		name = "brs_template_van"
-		trigger = { brs_not_has_template_hidden = { mod = van } }
-		brs_set_template = { mod = van }
+		trigger = { brs_not_has_template_hidden = { a=0 b=1 } }
+		brs_set_template = { m=0 }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
 	option = {
 		name = "brs_template_van"
-		trigger = { brs_has_template_hidden = { mod = van } }
+		trigger = { brs_has_template_hidden = { a=0 b=1 } }
 		highlight = yes
-		brs_set_template = { mod = van }
+		brs_set_template = { m=0 }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
-	# EDIT: Add Template flags here
+	# EDIT: Templates
 	option = { # anbennar expanded
 		name = "brs_template_aex"
-		trigger = { brs_not_has_template_hidden = { mod = aex } }
-		brs_set_template = { mod = aex }
+		trigger = { brs_not_has_template_hidden = { a=1 b=2 } }
+		brs_set_template = { m=1 }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
 	option = { # anbennar expanded
 		name = "brs_template_aex"
-		trigger = { brs_has_template_hidden = { mod = aex } }
+		trigger = { brs_has_template_hidden = { a=1 b=2 } }
 		highlight = yes
-		brs_set_template = { mod = aex }
+		brs_set_template = { m=1 }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
 }
@@ -266,13 +266,13 @@ country_event = {
 
 	option = {
 		name = "brs_change_0"
-		trigger = { NOT = { brs_is_target_setup = { a=0 b=1 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=0 b=1 } } }
 		brs_set_target = { a=0 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 	}
 	option = {
 		name = "brs_change_0"
-		trigger = { brs_is_target_setup = { a=0 b=1 } }
+		trigger = { brs_check_target_setup = { a=0 b=1 } }
 		highlight = yes
 		brs_set_target = { a=0 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -280,13 +280,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_1"
-		trigger = { NOT = { brs_is_target_setup = { a=1 b=2 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=1 b=2 } } }
 		brs_set_target = { a=1 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 	}
 	option = {
 		name = "brs_change_1"
-		trigger = { brs_is_target_setup = { a=1 b=2 } }
+		trigger = { brs_check_target_setup = { a=1 b=2 } }
 		highlight = yes
 		brs_set_target = { a=1 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -294,13 +294,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_2"
-		trigger = { NOT = { brs_is_target_setup = { a=2 b=3 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=2 b=3 } } }
 		brs_set_target = { a=2 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 	}
 	option = {
 		name = "brs_change_2"
-		trigger = { brs_is_target_setup = { a=2 b=3 } }
+		trigger = { brs_check_target_setup = { a=2 b=3 } }
 		highlight = yes
 		brs_set_target = { a=2 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -308,13 +308,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_3"
-		trigger = { NOT = { brs_is_target_setup = { a=3 b=4 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=3 b=4 } } }
 		brs_set_target = { a=3 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 	}
 	option = {
 		name = "brs_change_3"
-		trigger = { brs_is_target_setup = { a=3 b=4 } }
+		trigger = { brs_check_target_setup = { a=3 b=4 } }
 		highlight = yes
 		brs_set_target = { a=3 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -322,13 +322,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_4"
-		trigger = { NOT = { brs_is_target_setup = { a=4 b=5 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=4 b=5 } } }
 		brs_set_target = { a=4 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 	}
 	option = {
 		name = "brs_change_4"
-		trigger = { brs_is_target_setup = { a=4 b=5 } }
+		trigger = { brs_check_target_setup = { a=4 b=5 } }
 		highlight = yes
 		brs_set_target = { a=4 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -336,13 +336,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_5"
-		trigger = { NOT = { brs_is_target_setup = { a=5 b=6 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=5 b=6 } } }
 		brs_set_target = { a=5 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 	}
 	option = {
 		name = "brs_change_5"
-		trigger = { brs_is_target_setup = { a=5 b=6 } }
+		trigger = { brs_check_target_setup = { a=5 b=6 } }
 		highlight = yes
 		brs_set_target = { a=5 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -350,13 +350,13 @@ country_event = {
 
 	option = {
 		name = "brs_change_6"
-		trigger = { NOT = { brs_is_target_setup = { a=6 b=7 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=6 b=7 } } }
 		brs_set_target = { a=6 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 	}
 	option = {
 		name = "brs_change_6"
-		trigger = { brs_is_target_setup = { a=6 b=7 } }
+		trigger = { brs_check_target_setup = { a=6 b=7 } }
 		highlight = yes
 		brs_set_target = { a=6 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -385,13 +385,13 @@ country_event = {
 
 	option = {
 		name = "brs_change_7"
-		trigger = { NOT = { brs_is_target_setup = { a=7 b=8 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=7 b=8 } } }
 		brs_set_target = { a=7 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_7"
-		trigger = { brs_is_target_setup = { a=7 b=8 } }
+		trigger = { brs_check_target_setup = { a=7 b=8 } }
 		highlight = yes
 		brs_set_target = { a=7 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -399,13 +399,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_8"
-		trigger = { NOT = { brs_is_target_setup = { a=8 b=9 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=8 b=9 } } }
 		brs_set_target = { a=8 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_8"
-		trigger = { brs_is_target_setup = { a=8 b=9 } }
+		trigger = { brs_check_target_setup = { a=8 b=9 } }
 		highlight = yes
 		brs_set_target = { a=8 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -413,13 +413,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_9"
-		trigger = { NOT = { brs_is_target_setup = { a=9 b=10 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=9 b=10 } } }
 		brs_set_target = { a=9 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_9"
-		trigger = { brs_is_target_setup = { a=9 b=10 } }
+		trigger = { brs_check_target_setup = { a=9 b=10 } }
 		highlight = yes
 		brs_set_target = { a=9 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -427,13 +427,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_10"
-		trigger = { NOT = { brs_is_target_setup = { a=10 b=11 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=10 b=11 } } }
 		brs_set_target = { a=10 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_10"
-		trigger = { brs_is_target_setup = { a=10 b=11 } }
+		trigger = { brs_check_target_setup = { a=10 b=11 } }
 		highlight = yes
 		brs_set_target = { a=10 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -441,13 +441,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_11"
-		trigger = { NOT = { brs_is_target_setup = { a=11 b=12 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=11 b=12 } } }
 		brs_set_target = { a=11 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_11"
-		trigger = { brs_is_target_setup = { a=11 b=12 } }
+		trigger = { brs_check_target_setup = { a=11 b=12 } }
 		highlight = yes
 		brs_set_target = { a=11 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -455,13 +455,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_12"
-		trigger = { NOT = { brs_is_target_setup = { a=12 b=13 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=12 b=13 } } }
 		brs_set_target = { a=12 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_12"
-		trigger = { brs_is_target_setup = { a=12 b=13 } }
+		trigger = { brs_check_target_setup = { a=12 b=13 } }
 		highlight = yes
 		brs_set_target = { a=12 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -469,13 +469,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_13"
-		trigger = { NOT = { brs_is_target_setup = { a=13 b=14 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=13 b=14 } } }
 		brs_set_target = { a=13 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_13"
-		trigger = { brs_is_target_setup = { a=13 b=14 } }
+		trigger = { brs_check_target_setup = { a=13 b=14 } }
 		highlight = yes
 		brs_set_target = { a=13 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -483,13 +483,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_14"
-		trigger = { NOT = { brs_is_target_setup = { a=14 b=15 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=14 b=15 } } }
 		brs_set_target = { a=14 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_14"
-		trigger = { brs_is_target_setup = { a=14 b=15 } }
+		trigger = { brs_check_target_setup = { a=14 b=15 } }
 		highlight = yes
 		brs_set_target = { a=14 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -497,13 +497,13 @@ country_event = {
 	
 	option = {
 		name = "brs_change_15"
-		trigger = { NOT = { brs_is_target_setup = { a=15 b=16 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=15 b=16 } } }
 		brs_set_target = { a=15 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_15"
-		trigger = { brs_is_target_setup = { a=15 b=16 } }
+		trigger = { brs_check_target_setup = { a=15 b=16 } }
 		highlight = yes
 		brs_set_target = { a=15 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -511,13 +511,13 @@ country_event = {
 
 	option = {
 		name = "brs_change_16"
-		trigger = { NOT = { brs_is_target_setup = { a=16 b=17 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=16 b=17 } } }
 		brs_set_target = { a=16 }
 		hidden_effect = { country_event = { id = brs.1011 } }
 	}
 	option = {
 		name = "brs_change_16"
-		trigger = { brs_is_target_setup = { a=16 b=17 } }
+		trigger = { brs_check_target_setup = { a=16 b=17 } }
 		highlight = yes
 		brs_set_target = { a=16 }
 		hidden_effect = { country_event = { id = brs.1011 } }
@@ -540,7 +540,7 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 	immediate = {
 		set_country_flag = brs_setup_done
-		brs_set_template = { mod = van }
+		brs_set_template = { m=0 }
 	}
 	option = {
 		name = "brs_r_a"
@@ -562,11 +562,32 @@ country_event = {
 		# do not put validate in here. event is fired from validate script
 	}
 	immediate = {
-		brs_set_template = { mod = van }
+		brs_set_template = { m=0 }
 	}
 
 	option = {
 		name = "brs_100_ok"
+	}
+}
+# Error Notice
+country_event = {
+	id = brs.101
+	title = "brs_101_t"
+	desc = "brs_101_d"
+	picture = OVEREXTENSION_eventPicture
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		ai = no
+		has_country_flag = brs_setup_done
+		# do not put validate in here. event is fired from validate script
+	}
+	immediate = {
+		brs_set_template = { m=0 }
+	}
+
+	option = {
+		name = "brs_101_ok"
 	}
 }
 

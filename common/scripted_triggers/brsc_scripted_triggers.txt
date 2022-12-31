@@ -24,45 +24,53 @@ brs_minimum_disabled = {
 	}
 }
 
+
+
 # if any template is used. non descript, easy to call
 brs_has_any_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_any_template_tt
-		root={has_country_flag = brs_template_used}
+		root = { has_country_flag = brs_template_used }
 	}
 }
 brs_not_has_any_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_not_has_any_template_tt
-		root={NOT = { has_country_flag = brs_template_used }}
+		root = { NOT = { has_country_flag = brs_template_used } }
 	}
 }
+
 # if a specific template is used
 # Arguments:
-# mod = <short mod template tag>
+# a = mod code
+# b = a+1
 brs_has_template = {
 	custom_trigger_tooltip = {
-		tooltip = brs_has_template_$mod$_tt
+		tooltip = brs_has_template_$a$_tt
 		root={
-		if = {
-			limit = { brs_has_any_template = yes }
-			has_country_flag = brs_template_$mod$
+			if = {
+				limit = { brs_has_any_template = yes }
+				brs_check_template = { a=$a$ b=$b$ }
+				# has_country_flag = brs_template_$mod$
+			}
+			else = {
+				always = no
+			}
 		}
-		else = {
-			always = no
-		}}
 	}
 }
 # if a specific template is not used
 # Arguments:
-# mod = <short mod template tag>
+# a = mod code
+# b = a+1
 brs_not_has_template = {
 	custom_trigger_tooltip = {
-		tooltip = brs_has_template_$mod$_tt
+		tooltip = brs_has_template_$a$_tt
 		root={
 		if = {
 			limit = { brs_has_any_template = yes }
-			NOT = { has_country_flag = brs_template_$mod$ }
+			NOT = { brs_check_template = { a=$a$ b=$b$ } }
+			# NOT = { has_country_flag = brs_template_$mod$ }
 		}
 		else = {
 			always = yes
@@ -70,17 +78,17 @@ brs_not_has_template = {
 	}
 }
 brs_has_template_hidden = {
-	hidden_trigger = { brs_has_template = { mod = $mod$ } }
+	hidden_trigger = { brs_has_template = { a=$a$ b=$b$ } }
 }
 brs_not_has_template_hidden = {
-	hidden_trigger = { brs_not_has_template = { mod = $mod$ } }
+	hidden_trigger = { brs_not_has_template = { a=$a$ b=$b$ } }
 }
 
 # for menus, slightly more resources used but also checks if user has selected adything before
 # Arguments:
 # a = <0|1|2|3|4|...|14|15>
 # b = <a+1>
-brs_is_target_setup = {
+brs_check_target_setup = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_target_$a$_tt
 		root = {
@@ -103,24 +111,40 @@ brs_is_target_setup = {
 		}
 	}
 }
-# Arguments:
-# a = <0|1|2|3|4|...|14|15>
-# b = <a+1>
-brs_is_target = {
-	custom_trigger_tooltip = {
-		tooltip = brs_has_target_$a$_tt
+
+check_var = {
+	hidden_trigger = {
 		root = {
 			check_variable = {
-				which = brs_target_var
+				which = $which$
 				value = $a$
 			}
 			NOT = {
 				check_variable = {
-					which = brs_target_var
+					which = $which$
 					value = $b$
 				}
 			}
 		}
+	}
+}
+
+# Arguments:
+# a = <0|1|2|3|4|...|14|15>
+# b = <a+1>
+brs_check_target = {
+	custom_trigger_tooltip = {
+		tooltip = brs_has_target_$a$_tt
+		check_var = { which = brs_target_var a = $a$ b = $b$ }
+	}
+}
+# Arguments:
+# a = <0|1|2|3|4|...|14|15>
+# b = <a+1>
+brs_check_template = {
+	custom_trigger_tooltip = {
+		tooltip = brs_has_template_$a$_tt
+		check_var = { which = brs_template_var a = $a$ b = $b$ }
 	}
 }
 

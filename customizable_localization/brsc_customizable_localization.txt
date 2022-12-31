@@ -3,16 +3,51 @@
 # To not display anything, you can use 'localisation_key = ""'
 # Please add one example sentence for each key.
 
-### Colony Claims Setting
+### Get Setup text
 defined_text = {
     name = GetSetupDone
 
     text = {
-        localisation_key = brs_setup_loc1
-        trigger = { has_country_flag = brs_setup_done }
-    }
-    text = {
-        localisation_key = brs_setup_loc2
+        localisation_key = brs_GetSetupDone_loc1
         trigger = { NOT = { has_country_flag = brs_setup_done } }
     }
+    text = {
+        localisation_key = brs_GetSetupDone_loc2
+        trigger = { has_country_flag = brs_setup_done }
+    }
+}
+
+defined_text = {
+	name = GetTemplate
+	text = {
+		localisation_key = brs_GetTemplate_loc1
+		trigger = { brs_has_any_template = yes }
+	}
+	text = {
+		localisation_key = brs_GetTemplate_loc2
+		trigger = { brs_not_has_any_template = yes }
+	}
+}
+# EDIT: Templates
+defined_text = {
+	name = GetTemplateSpecific
+	text = {
+		localisation_key = brs_GetTemplateSpecific_0
+		trigger = { brs_check_template = {a=0 b=1} }
+	}
+	text = {
+		localisation_key = brs_GetTemplateSpecific_1
+		trigger = { brs_check_template = {a=1 b=2} }
+	}
+}
+defined_text = {
+	name = GetStatTarget
+	text = {
+		localisation_key = brs_GetStatTarget_loc1
+        trigger = { has_country_flag = brs_setup_done }
+	}
+	text = {
+		localisation_key = brs_GetStatTarget_loc2
+        trigger = { NOT = { has_country_flag = brs_setup_done } }
+	}
 }

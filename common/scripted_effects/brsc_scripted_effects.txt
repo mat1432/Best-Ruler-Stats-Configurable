@@ -19,12 +19,27 @@ brs_clr_minimum = {
 # NOTE: This would be an intensive check, it will only ever run when opening a menu!
 brs_validate = {
 	hidden_effect = {
-		# reset variables using memorised templates
-        if = { limit = { has_country_flag = brs_template_van } brs_set_template = { mod = van } }
-		# EDIT: Add Template flags here
-        if = { limit = { has_country_flag = brs_template_aex } brs_set_template = { mod = aex } }
+		# EDIT: Templates
+		# checks if variable is negative, or above [1+] the maximum
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						check_variable = {
+							which = brs_template_var
+							value = 0
+						}
+					}
+					check_variable = {
+						which = brs_template_var
+						value = 2
+					}
+				}
+			}
+			country_event = { id = brs.101 }
+		}
 
-		# make sure variable is inside boundaries
+		# make sure stat target is inside boundaries
 		if = {
 			limit = {
 				OR = {
@@ -47,15 +62,17 @@ brs_validate = {
 
 # Arguments:
 # mod = <short mod template tag>
+# m = <0|1|...>
 brs_set_template = {
 	if = {
 		limit = { brs_has_any_template = yes }
 		brs_clr_template = yes
 	}
-	custom_tooltip = brs_set_template_$mod$_tt
+	custom_tooltip = brs_set_template_$m$_tt
 	hidden_effect = {
 		set_country_flag = brs_template_used
-		set_country_flag = brs_template_$mod$
+		set_variable = { which = brs_template_var value = $m$ }
+		# set_country_flag = brs_template_$mod$
 	}
 	brs_set_template_configure = yes
 }
@@ -63,17 +80,15 @@ brs_clr_template = {
 	custom_tooltip = brs_clr_template_tt
 	hidden_effect = {
 		clr_country_flag = brs_template_used
-		clr_country_flag = brs_template_van # vanilla
-		# EDIT: Add Template flags here
-		clr_country_flag = brs_template_aex # anbennar expanded
+		set_variable = { which = brs_template_var value = 0 }
 	}
 }
 
-# takes the flags and converts it into the correct value
+# takes the mod code and converts it into the correct value
 brs_set_template_configure = {
-	if = { limit = { has_country_flag = brs_template_van } brs_set_target = { a=6 } }
-	# EDIT: Add Template flags here
-	if = { limit = { has_country_flag = brs_template_aex } brs_set_target = { a=9 } }
+	if = { limit = { brs_has_template = { a=0 b=1 } } brs_set_target = { a=6 } }
+	# EDIT: Templates
+	if = { limit = { brs_has_template = { a=1 b=2 } } brs_set_target = { a=9 } }
 }
 
 # sets the ruler stat target to the input value (MUST BE AN INTEGER)
@@ -98,6 +113,7 @@ brs_set_target = {
 # valueGet = <ADM|DIP|MIL|adm|dip|mil>
 # valueSet = <adm|dip|mil>
 # who = <|heir_|consort_>
+# type = <|while|if>
 brs_update_ruler = {
 	while = {
 		limit = {
@@ -122,7 +138,7 @@ brs_update_ruler = {
 # who = <|heir_|consort_>
 brs_update_ruler_add = {
 	if = { # skips many monthly iterations
-		limit = { brs_check_ruler = { value = $value$ [[who] who = $who$ ] } }
+		limit = { brs_check_ruler = { value = $value$ [[who]who = $who$] } }
 		set_variable = { which = temp value = 1 }
 		while = {
 			limit = {
@@ -135,4 +151,49 @@ brs_update_ruler_add = {
 			change_variable = { which = temp value = 1 }
 		}
 	}
+}
+
+
+
+brs_update_consort = {
+	if = {
+		limit = { brs_check_ruler = { value = $value$ who = consort_ } }
+		set_variable = {
+			which = ruler_skill
+			which = brs_target_var
+		}
+		brs_consort_helper = { value = $value$ }
+	}
+}
+brs_update_consort_add = {
+	export_to_variable = {
+		which = ruler_skill
+		value = consort_$value$
+	}
+	if = {
+		limit = { check_variable = { which = brs_target_var which = ruler_skill } }
+		change_variable = { which = ruler_skill which = brs_target_var }
+		brs_consort_helper = { value = $value$ }
+	}
+}
+
+# change_consort_x sets the skill to $value$, unlike change_x which adds $value$ to current skill
+brs_consort_helper = {
+	if = { limit = { check_variable = { which = ruler_skill value = 0 } } change_consort_$value$ = 0 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 1 } } change_consort_$value$ = 1 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 2 } } change_consort_$value$ = 2 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 3 } } change_consort_$value$ = 3 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 4 } } change_consort_$value$ = 4 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 5 } } change_consort_$value$ = 5 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 6 } } change_consort_$value$ = 6 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 7 } } change_consort_$value$ = 7 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 8 } } change_consort_$value$ = 8 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 9 } } change_consort_$value$ = 9 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 10 } } change_consort_$value$ = 10 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 11 } } change_consort_$value$ = 11 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 12 } } change_consort_$value$ = 12 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 13 } } change_consort_$value$ = 13 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 14 } } change_consort_$value$ = 14 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 15 } } change_consort_$value$ = 15 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 16 } } change_consort_$value$ = 16 }
 }

@@ -10,7 +10,7 @@
 # templates
  brs_clr_template_tt: "Detatch Stat Target From Template"
  brs_set_template_van_tt: "Set Template: Base Game"
-# EDIT: Add Template flags here
+# EDIT: Templates
  brs_set_template_aex_tt: "Set Template: Anbennar Expanded"
 
 
