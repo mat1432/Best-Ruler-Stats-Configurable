@@ -18,9 +18,10 @@ If you find mods have changed their defines, or want me to add a new mod to the 
 NOTE: The mod can only raise your rulers stats to the highest the game allows (Normally 6)!
 You can change that in the Defines if you want, but this mod DOES NOT EDIT THE DEFINES (For Compatability)
 
-Here is another Version of this mod, that uses **On Actions** to SIGNIFICANTLY reduce end of month performance impact.
+[i]Here is another Version of this mod, that uses [u]On Actions[/u] to SIGNIFICANTLY reduce end of month performance impact.
 Do note, it is almost definately NOT compatible with major map mods! But should work on most of your nearly vanilla games.
-If your mod uses these On Actions this mod is NOT compatible: on_new_monarch, on_new_heir, on_new_consort.
+If your mod uses these On Actions this mod is NOT compatible: on_new_monarch, on_new_heir, on_new_consort.[/i]
+Not finished yet!
 
 There are 2 types of operation: 'Normal' and 'Minimum'
 - Normal (Default) = For each MP category: ADD Defined Points to each category up to the **Game Maximum**.
@@ -87,5 +88,5 @@ Inspired by [Best Ruler Stats](https://steamcommunity.com/sharedfiles/filedetail
 
 Check out my other Monarch Point Mod: [Greater National Focus](https://github.com/mat1432/greater_national_focus) ([Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2905801426))
 
-[GitHub](/../../)
+[GitHub Repository](/../../)
 Licensed under the [GNU General Public License v3.0](/LICENSE)
