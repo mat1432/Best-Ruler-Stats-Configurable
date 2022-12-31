@@ -56,7 +56,7 @@ After your ruler updates:
 
 ## Supported Mod Templates List:
 - Base Game (6 Max Skill)
-- [Anbennar Expanded (9 Max Skill)](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137)
+- [Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137) (9 Max Skill)
 
 ## Not Yet Asked Questions / Q&A
 ### Q: Multiplayer?

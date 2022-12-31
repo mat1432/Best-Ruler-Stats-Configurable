@@ -6,7 +6,8 @@
 This Mod gives you a choice at the start of the game to configure your ruler stats boost. [i]Can be changed at any time via a Decision![/i]
 It allows you to set a defined target for your ruler stats between [b]1 Point[/b] and [b]15 Points[/b]!
 
-Updates your Ruler, Heir and Consort skill points! [b]Yes, both your Heir and Consort are updated![/b]
+Updates your Ruler, Heir [strike]and Consort[/strike] skill points! 
+[u]Updating consort skill is strange, sometimes it works half way then breaks for the rest of the game. It has been disabled for now[/u]
 
 [b]This is without a doubt a cheat mod![/b]
 
@@ -88,7 +89,7 @@ After your ruler updates:
 [h2]Supported Mod Templates List:[/h2]
 [list]
     [*]Base Game (6 Max Skill)
-    [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137]Anbennar Expanded (9 Max Skill)[/url]
+    [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137]Anbennar Expanded[/url] (9 Max Skill)
 [/list]
 
 [h2]Not Yet Asked Questions / Q&A[/h2]
