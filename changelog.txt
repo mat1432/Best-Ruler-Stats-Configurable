@@ -1,5 +1,11 @@
 # Made by mat1432 (Steam) https://steamcommunity.com/id/mat1432/
 
+1.0.1
+[list]
+    [*]Updated Steam Workshop Page
+    [*]Updated descriptor
+[/list]
+
 1.0.0
 [list]
     [*]Foundation of the mod.
