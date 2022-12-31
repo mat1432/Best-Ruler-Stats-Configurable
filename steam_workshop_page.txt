@@ -12,10 +12,11 @@ Updates your [b]Ruler[/b], [b]Heir[/b] AND [b]Consort[/b] skill points!
 Additionally, some major mods change the Defines for the Maximum Skill Points of your ruler; No need to worry!
 I have included a [url=https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/Mod%20Template%20Codes.md]Template Feature[/url] that configures this mod automatically! [b]It is hard-coded[/b]; So:
 All that is required is an update and your selected template will auto update your targeted stats when you click the decision.
+
 [i][u]If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).[/u][/i]
 
-[i]NOTE: The mod can only raise your rulers stats to the highest the game allows (Normally 6)![/i]
-[i]You can change that in the Defines if you want, but this mod DOES NOT EDIT THE DEFINES (For Compatability)[/i]
+
+[i]This mod DOES NOT EDIT THE DEFINES (For Compatability)[/i]
 
 There are 2 types of operation: 'Normal' and 'Minimum'
 [list]
@@ -47,30 +48,6 @@ After your ruler updates:
         [td]Difference[/td]
         [td]+4, +1, +2[/td]
         [td]+3, -, -[/td]
-    [/tr]
-[/table]
-[h3]Another Example but with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137]Anbennar Expanded[/url]:[/h3]
-[olist]
-    [*]Say your ruler is elected as a 2, 8, 6
-    [*]You have chosen a defined target of 6
-    [*][i]In this game, maximum possible stat is 9 ([url=https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137]Anbennar Expanded[/url])[/i]
-[/olist]
-After your ruler updates:
-[table]
-    [tr]
-        [th]Setting Type[/th]
-        [th]Normal[/th]
-        [th]Minimum[/th]
-    [/tr]
-    [tr]
-        [td]Outcome[/td]
-        [td]8, 9, 9[/td]
-        [td]6, 8, 6[/td]
-    [/tr]
-    [tr]
-        [td]Difference[/td]
-        [td]+6, +1, +3[/td]
-        [td]+4, -, -[/td]
     [/tr]
 [/table]
 
