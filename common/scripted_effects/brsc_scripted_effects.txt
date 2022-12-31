@@ -88,6 +88,7 @@ brs_set_template_configure = {
 	if = { limit = { brs_has_template = { a=0 b=1 } } brs_set_target = { a=6 } }
 	# EDIT: Templates
 	if = { limit = { brs_has_template = { a=1 b=2 } } brs_set_target = { a=9 } }
+	
 	hidden_effect = { set_country_flag = brs_template_used }
 }
 
