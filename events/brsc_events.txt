@@ -22,12 +22,12 @@ country_event = {
 				brs_check_ruler = { value = dip who = heir_ }
 				brs_check_ruler = { value = mil who = heir_ }
 			}
-			if = {
-				limit = { has_consort = yes }
-				brs_check_ruler = { value = adm who = consort_ }
-				brs_check_ruler = { value = dip who = consort_ }
-				brs_check_ruler = { value = mil who = consort_ }
-			}
+			# if = {
+			# 	limit = { has_consort = yes }
+			# 	brs_check_ruler = { value = adm who = consort_ }
+			# 	brs_check_ruler = { value = dip who = consort_ }
+			# 	brs_check_ruler = { value = mil who = consort_ }
+			# }
 		}
 	}
 
@@ -47,12 +47,12 @@ country_event = {
 			brs_update_ruler_add = { value = dip who = heir_ }
 			brs_update_ruler_add = { value = mil who = heir_ }
 		}
-		if = {
-			limit = { has_consort = yes }
-			brs_update_ruler_add = { value = adm who = consort_ }
-			brs_update_ruler_add = { value = dip who = consort_ }
-			brs_update_ruler_add = { value = mil who = consort_ }
-		}
+		# if = {
+		# 	limit = { has_consort = yes }
+		# 	brs_update_ruler_add = { value = adm who = consort_ }
+		# 	brs_update_ruler_add = { value = dip who = consort_ }
+		# 	brs_update_ruler_add = { value = mil who = consort_ }
+		# }
 	}
 
 	option = {
@@ -67,12 +67,12 @@ country_event = {
 			brs_update_ruler = { valueGet = dip valueSet = dip who = heir_ }
 			brs_update_ruler = { valueGet = mil valueSet = mil who = heir_ }
 		}
-		if = {
-			limit = { has_consort = yes }
-			brs_update_ruler = { valueGet = adm valueSet = adm who = consort_ }
-			brs_update_ruler = { valueGet = dip valueSet = dip who = consort_ }
-			brs_update_ruler = { valueGet = mil valueSet = mil who = consort_ }
-		}
+		# if = {
+		# 	limit = { has_consort = yes }
+		# 	brs_update_ruler = { valueGet = adm valueSet = adm who = consort_ }
+		# 	brs_update_ruler = { valueGet = dip valueSet = dip who = consort_ }
+		# 	brs_update_ruler = { valueGet = mil valueSet = mil who = consort_ }
+		# }
 	}
 }
 
