@@ -64,17 +64,14 @@ brs_validate = {
 # mod = <short mod template tag>
 # m = <0|1|...>
 brs_set_template = {
-	# if = {
-	# 	limit = { brs_has_any_template = yes }
-	# 	brs_clr_template = yes
-	# }
-	custom_tooltip = brs_set_template_$m$_tt
-	hidden_effect = {
-		set_country_flag = brs_template_used
-		set_variable = { which = brs_template_var value = $m$ }
-		# set_country_flag = brs_template_$mod$
+	if = {
+		limit = { brs_has_any_template = yes }
+		brs_clr_template = yes
 	}
+	custom_tooltip = brs_set_template_$m$_tt
+	hidden_effect = { set_variable = { which = brs_template_var value = $m$ } }
 	brs_set_template_configure = yes
+	hidden_effect = { set_country_flag = brs_template_used }
 }
 brs_clr_template = {
 	custom_tooltip = brs_clr_template_tt
@@ -89,7 +86,7 @@ brs_set_template_configure = {
 	if = { limit = { brs_has_template = { a=0 b=1 } } brs_set_target = { a=6 } }
 	# EDIT: Templates
 	if = { limit = { brs_has_template = { a=1 b=2 } } brs_set_target = { a=9 } }
-	set_country_flag = brs_template_used
+	hidden_effect = { set_country_flag = brs_template_used }
 }
 
 # sets the ruler stat target to the input value (MUST BE AN INTEGER)
