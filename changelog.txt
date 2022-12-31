@@ -3,6 +3,7 @@
 1.0.1b
 [list]
     [*]Credited Myself to my code
+    [*]Improved Mod Pages
 [/list]
 
 1.0.1
