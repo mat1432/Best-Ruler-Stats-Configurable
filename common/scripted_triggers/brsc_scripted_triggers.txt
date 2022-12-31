@@ -30,13 +30,13 @@ brs_minimum_disabled = {
 brs_has_any_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_any_template_tt
-		root = { has_country_flag = brs_template_used }
+		has_country_flag = brs_template_used
 	}
 }
 brs_not_has_any_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_not_has_any_template_tt
-		root = { NOT = { has_country_flag = brs_template_used } }
+		NOT = { has_country_flag = brs_template_used }
 	}
 }
 
@@ -48,33 +48,18 @@ brs_has_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_template_$a$_tt
 		root={
-			if = {
-				limit = { brs_has_any_template = yes }
-				brs_check_template = { a=$a$ b=$b$ }
-				# has_country_flag = brs_template_$mod$
-			}
-			else = {
-				always = no
-			}
+			brs_has_any_template = yes
+			brs_check_template = { a=$a$ b=$b$ }
 		}
 	}
 }
-# if a specific template is not used
-# Arguments:
-# a = mod code
-# b = a+1
 brs_not_has_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_template_$a$_tt
 		root={
-		if = {
-			limit = { brs_has_any_template = yes }
+			brs_has_any_template = yes
 			NOT = { brs_check_template = { a=$a$ b=$b$ } }
-			# NOT = { has_country_flag = brs_template_$mod$ }
 		}
-		else = {
-			always = yes
-		}}
 	}
 }
 brs_has_template_hidden = {
@@ -83,6 +68,8 @@ brs_has_template_hidden = {
 brs_not_has_template_hidden = {
 	hidden_trigger = { brs_not_has_template = { a=$a$ b=$b$ } }
 }
+
+
 
 # for menus, slightly more resources used but also checks if user has selected adything before
 # Arguments:
@@ -112,7 +99,7 @@ brs_check_target_setup = {
 	}
 }
 
-check_var = {
+brs_check_var = {
 	hidden_trigger = {
 		root = {
 			check_variable = {
@@ -135,7 +122,7 @@ check_var = {
 brs_check_target = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_target_$a$_tt
-		check_var = { which = brs_target_var a = $a$ b = $b$ }
+		brs_check_var = { which = brs_target_var a = $a$ b = $b$ }
 	}
 }
 # Arguments:
@@ -144,7 +131,7 @@ brs_check_target = {
 brs_check_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_template_$a$_tt
-		check_var = { which = brs_template_var a = $a$ b = $b$ }
+		brs_check_var = { which = brs_template_var a = $a$ b = $b$ }
 	}
 }
 
