@@ -17,7 +17,7 @@ I have included a [Template Feature](/Mod%20Template%20Codes.md) that configures
 All that is required is an update and your selected template will auto update your targeted stats when you click the decision.
 If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).
 
-*Here is another Version of this mod, that uses [u]On Actions[/u] to SIGNIFICANTLY reduce end of month performance impact.*
+*Here is another Version of this mod, that uses **On Actions** to SIGNIFICANTLY reduce end of month performance impact.*
 *Do note, it is almost definately NOT compatible with major map mods! But should work on most of your nearly vanilla games.*
 *If your mod uses these On Actions this mod is NOT compatible: on_new_monarch, on_new_heir, on_new_consort.*
 **Not finished yet!**
