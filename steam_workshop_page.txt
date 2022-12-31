@@ -7,7 +7,7 @@ It allows you to set a defined target for your ruler stats between [b]1 Point[/b
 
 Updates your [b]Ruler[/b], [b]Heir[/b] AND [b]Consort[/b] skill points!
 
-[b]This is without a doubt a cheat mod![/b]
+[b]This is a cheat mod![/b]
 
 Additionally, some major mods change the Defines for the Maximum Skill Points of your ruler; No need to worry!
 I have included a [url=https://github.com/mat1432/Best-Ruler-Stats-Configurable/blob/main/Mod%20Template%20Codes.md]Template Feature[/url] that configures this mod automatically! [b]It is hard-coded[/b]; So:
