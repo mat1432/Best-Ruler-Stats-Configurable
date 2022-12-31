@@ -19,8 +19,8 @@
  brs_2_a: "(Normal) I have no mods that change ruler Stat Cap."
  brs_2_b: "(9,9,9) I have Anbennar or other stat cap mod."
 
- brs_2_below6: "Set a Stat Target between §Y0§ and §Y6§!"
- brs_2_above6: "Set a Stat Target between §Y7§ and §Y16§"
+ brs_2_below6: "Set a Stat Target between §Y0§! and §Y6§!"
+ brs_2_above6: "Set a Stat Target between §Y7§! and §Y16§!"
 
 # mod templates
  brs_template_t: "Best Ruler Stats - Known Mod Templates"
