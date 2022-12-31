@@ -1,4 +1,4 @@
-version="1.0.0"
+version="1.0.1"
 tags={
 	"Missions And Decisions"
 	"Utilities"
@@ -8,3 +8,4 @@ tags={
 name="Best Ruler Stats (Configurable)"
 picture="thumbnail.png"
 supported_version="1.34.*"
+remote_file_id="2909893816"
