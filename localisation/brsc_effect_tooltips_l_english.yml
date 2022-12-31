@@ -9,9 +9,9 @@
 
 # templates
  brs_clr_template_tt: "Detatch Stat Target From Template"
- brs_set_template_van_tt: "Set Template: Base Game"
+ brs_set_template_0_tt: "Set Template: Base Game"
 # EDIT: Templates
- brs_set_template_aex_tt: "Set Template: Anbennar Expanded"
+ brs_set_template_1_tt: "Set Template: Anbennar Expanded"
 
 
 # set target number

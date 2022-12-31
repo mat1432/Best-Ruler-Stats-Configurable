@@ -154,13 +154,13 @@ country_event = {
 	}
 
 	option = {
-		name = "brs_template_van"
+		name = "brs_template_0"
 		trigger = { brs_not_has_template = { a=0 b=1 } }
 		brs_set_template = { m=0 }
 		hidden_effect = { country_event = { id = brs.1002 } }
 	}
 	option = {
-		name = "brs_template_van"
+		name = "brs_template_0"
 		trigger = { brs_has_template = { a=0 b=1 } }
 		highlight = yes
 		brs_set_template = { m=0 }
@@ -215,13 +215,13 @@ country_event = {
 
 	#Chose from Templates
 	option = {
-		name = "brs_template_van"
+		name = "brs_template_0"
 		trigger = { brs_not_has_template_hidden = { a=0 b=1 } }
 		brs_set_template = { m=0 }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
 	option = {
-		name = "brs_template_van"
+		name = "brs_template_0"
 		trigger = { brs_has_template_hidden = { a=0 b=1 } }
 		highlight = yes
 		brs_set_template = { m=0 }
@@ -229,13 +229,13 @@ country_event = {
 	}
 	# EDIT: Templates
 	option = { # anbennar expanded
-		name = "brs_template_aex"
+		name = "brs_template_1"
 		trigger = { brs_not_has_template_hidden = { a=1 b=2 } }
 		brs_set_template = { m=1 }
 		hidden_effect = { country_event = { id = brs.1003 } }
 	}
 	option = { # anbennar expanded
-		name = "brs_template_aex"
+		name = "brs_template_1"
 		trigger = { brs_has_template_hidden = { a=1 b=2 } }
 		highlight = yes
 		brs_set_template = { m=1 }

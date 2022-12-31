@@ -178,22 +178,23 @@ brs_update_consort_add = {
 }
 
 # change_consort_x sets the skill to $value$, unlike change_x which adds $value$ to current skill
+# back to front because check_variable does a greater than or equal to
 brs_consort_helper = {
-	if = { limit = { check_variable = { which = ruler_skill value = 0 } } change_consort_$value$ = 0 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 1 } } change_consort_$value$ = 1 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 2 } } change_consort_$value$ = 2 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 3 } } change_consort_$value$ = 3 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 4 } } change_consort_$value$ = 4 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 5 } } change_consort_$value$ = 5 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 6 } } change_consort_$value$ = 6 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 7 } } change_consort_$value$ = 7 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 8 } } change_consort_$value$ = 8 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 9 } } change_consort_$value$ = 9 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 10 } } change_consort_$value$ = 10 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 11 } } change_consort_$value$ = 11 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 12 } } change_consort_$value$ = 12 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 13 } } change_consort_$value$ = 13 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 14 } } change_consort_$value$ = 14 }
+	if = { limit = { check_variable = { which = ruler_skill value = 16 } } change_consort_$value$ = 16 }
 	else_if = { limit = { check_variable = { which = ruler_skill value = 15 } } change_consort_$value$ = 15 }
-	else_if = { limit = { check_variable = { which = ruler_skill value = 16 } } change_consort_$value$ = 16 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 14 } } change_consort_$value$ = 14 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 13 } } change_consort_$value$ = 13 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 12 } } change_consort_$value$ = 12 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 11 } } change_consort_$value$ = 11 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 10 } } change_consort_$value$ = 10 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 9 } } change_consort_$value$ = 9 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 8 } } change_consort_$value$ = 8 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 7 } } change_consort_$value$ = 7 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 6 } } change_consort_$value$ = 6 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 5 } } change_consort_$value$ = 5 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 4 } } change_consort_$value$ = 4 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 3 } } change_consort_$value$ = 3 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 2 } } change_consort_$value$ = 2 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 1 } } change_consort_$value$ = 1 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 0 } } change_consort_$value$ = 0 }
 }
