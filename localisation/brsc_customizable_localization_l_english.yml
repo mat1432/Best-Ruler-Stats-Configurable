@@ -2,7 +2,7 @@
  brs_GetSetupDone_loc1: "§BFirst time Setup: Please select a stat target\nThe Exit button will appear after a Stat Target is chosen§!\n\n"
  brs_GetSetupDone_loc2: ""
 
- brs_GetTemplate_loc1: "\nCurrent Template: [Root.brs_template_var.GetValue]"
+ brs_GetTemplate_loc1: "\nCurrent Template: [Root.GetTemplateSpecific]"
  brs_GetTemplate_loc2: ""
 
 # EDIT: Templates
