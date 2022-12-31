@@ -1,3 +1,5 @@
+# Written by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
+
 brs_enable_mod = {
 	custom_tooltip = brs_enable_mod_tt
 	hidden_effect = { clr_country_flag = brs_disabled }

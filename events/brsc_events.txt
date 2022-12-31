@@ -1,4 +1,5 @@
-# Written by mat1432 https://steamcommunity.com/id/mat1432/ (Steam) or https://github.com/mat1432 (GitHub)
+# Written by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
+
 namespace = brs
 country_event = {
 	id = brs.1
