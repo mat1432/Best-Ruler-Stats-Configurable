@@ -6,4 +6,5 @@ tags={
 	"Gameplay"
 }
 name="Best Ruler Stats (Configurable)"
+picture="thumbnail.png"
 supported_version="1.34.*"
