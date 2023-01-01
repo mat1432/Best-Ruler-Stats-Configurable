@@ -1,7 +1,7 @@
 # Best Ruler Stats (Configurable)
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
-<img src="/thumbnail.png" style="float:right;width:200px;height:200px;" />
+<img src="/thumbnail.png" style="float:right;" />
 
 **1.34.X ; This Mod Does Not Need to be Updated!**
 
