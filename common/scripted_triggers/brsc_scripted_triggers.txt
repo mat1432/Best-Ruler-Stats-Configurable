@@ -110,12 +110,14 @@ brs_check_var = {
 				which = $which$
 				value = $a$
 			}
+			[[b]
 			NOT = {
 				check_variable = {
 					which = $which$
 					value = $b$
 				}
 			}
+			]
 		}
 	}
 }
@@ -126,7 +128,7 @@ brs_check_var = {
 brs_check_target = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_target_$a$_tt
-		brs_check_var = { which = brs_target_var a = $a$ b = $b$ }
+		brs_check_var = { which = brs_target_var a = $a$ [[b] b = $b$ ] }
 	}
 }
 # Arguments:
@@ -135,7 +137,7 @@ brs_check_target = {
 brs_check_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_template_$a$_tt
-		brs_check_var = { which = brs_template_var a = $a$ b = $b$ }
+		brs_check_var = { which = brs_template_var a = $a$ [[b] b = $b$ ] }
 	}
 }
 
