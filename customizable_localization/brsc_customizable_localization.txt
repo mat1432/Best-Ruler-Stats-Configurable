@@ -20,6 +20,18 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetStatTarget
+	text = {
+		localisation_key = brs_GetStatTarget_loc1
+        trigger = { has_country_flag = brs_setup_done }
+	}
+	text = {
+		localisation_key = brs_GetStatTarget_loc2
+        trigger = { NOT = { has_country_flag = brs_setup_done } }
+	}
+}
+
+defined_text = {
 	name = GetTemplate
 	text = {
 		localisation_key = brs_GetTemplate_loc1
@@ -40,16 +52,5 @@ defined_text = {
 	text = {
 		localisation_key = brs_GetTemplateSpecific_1
 		trigger = { brs_check_template = {a=1 b=2} }
-	}
-}
-defined_text = {
-	name = GetStatTarget
-	text = {
-		localisation_key = brs_GetStatTarget_loc1
-        trigger = { has_country_flag = brs_setup_done }
-	}
-	text = {
-		localisation_key = brs_GetStatTarget_loc2
-        trigger = { NOT = { has_country_flag = brs_setup_done } }
 	}
 }
