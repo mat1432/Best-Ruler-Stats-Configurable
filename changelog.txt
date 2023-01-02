@@ -1,5 +1,10 @@
 # Made by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
+1.0.1d
+[list]
+    [*]Fixed Templates background validation
+[/list]
+
 1.0.1c
 [list]
     [*]Fixed Customisable Localisation
