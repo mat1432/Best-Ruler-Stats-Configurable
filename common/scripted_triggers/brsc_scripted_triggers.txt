@@ -56,8 +56,10 @@ brs_has_template = {
 brs_not_has_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_template_$a$_tt
-		has_country_flag = brs_template_used
-		NOT = { brs_check_template = { a=$a$ b=$b$ } }
+		OR = {
+			NOT = { has_country_flag = brs_template_used }
+			NOT = { brs_check_template = { a=$a$ b=$b$ } }
+		}
 	}
 }
 brs_has_template_hidden = {
