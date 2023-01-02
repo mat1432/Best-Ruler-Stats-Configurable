@@ -86,16 +86,6 @@ brs_clr_template = {
 	}
 }
 
-# takes the mod code and converts it into the correct value
-brs_set_template_configure = {
-	if = { limit = { brs_check_template = { a=0 b=1 } } brs_set_target2 = { a=6 } }
-	# EDIT: Templates
-	if = { limit = { brs_check_template = { a=1 b=2 } } brs_set_target2 = { a=9 } }
-
-	hidden_effect = { set_variable = { which = brs_template_var value = $m$ } }
-	hidden_effect = { set_country_flag = brs_template_used }
-}
-
 # sets the ruler stat target to the input value (MUST BE AN INTEGER)
 # Arguments:
 # a = <0|1|2|3|4|...|14|15>
