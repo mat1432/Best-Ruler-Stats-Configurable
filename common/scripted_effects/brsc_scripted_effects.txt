@@ -62,8 +62,8 @@ brs_validate = {
 	}
 }
 
+# back to front to improve check speed
 # Arguments:
-# mod = <short mod template tag>
 # m = <0|1|...>
 brs_set_template = {
 	if = {
@@ -72,7 +72,10 @@ brs_set_template = {
 	}
 	custom_tooltip = brs_set_template_$m$_tt
 	hidden_effect = { set_variable = { which = brs_template_var value = $m$ } }
-	brs_set_template_configure = yes
+	# EDIT: Templates
+
+	if = { limit = { brs_check_template = { a=1 } } brs_set_target2 = { a=9 } } # anbennar expanded
+	else_if = { limit = { brs_check_template = { a=0 } } brs_set_target2 = { a=6 } } # vanilla
 	hidden_effect = { set_country_flag = brs_template_used }
 }
 brs_clr_template = {
@@ -85,10 +88,11 @@ brs_clr_template = {
 
 # takes the mod code and converts it into the correct value
 brs_set_template_configure = {
-	if = { limit = { brs_has_template = { a=0 b=1 } } brs_set_target = { a=6 } }
+	if = { limit = { brs_check_template = { a=0 b=1 } } brs_set_target2 = { a=6 } }
 	# EDIT: Templates
-	if = { limit = { brs_has_template = { a=1 b=2 } } brs_set_target = { a=9 } }
-	
+	if = { limit = { brs_check_template = { a=1 b=2 } } brs_set_target2 = { a=9 } }
+
+	hidden_effect = { set_variable = { which = brs_template_var value = $m$ } }
 	hidden_effect = { set_country_flag = brs_template_used }
 }
 
@@ -98,13 +102,22 @@ brs_set_template_configure = {
 brs_set_target = {
 	custom_tooltip = brs_set_target_$a$_tt
 	hidden_effect = {
-		root = {
-			set_country_flag = brs_setup_done
-			brs_clr_template = yes
-			set_variable = {
-				which = brs_target_var
-				value = $a$
-			}
+		set_country_flag = brs_setup_done
+		brs_clr_template = yes
+		set_variable = {
+			which = brs_target_var
+			value = $a$
+		}
+	}
+}
+# for set templates, does not clear variable
+brs_set_target2 = {
+	custom_tooltip = brs_set_target_$a$_tt
+	hidden_effect = {
+		set_country_flag = brs_setup_done
+		set_variable = {
+			which = brs_target_var
+			value = $a$
 		}
 	}
 }
