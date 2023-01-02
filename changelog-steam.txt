@@ -2,7 +2,7 @@
 
 1.0.1d
 [list]
-    [*]Refactored Templates background validation
+    [*]Refactored changing templates code
 [/list]
 
 1.0.1c

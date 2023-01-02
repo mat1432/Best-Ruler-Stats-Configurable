@@ -2,7 +2,7 @@
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
 ## 1.0.1d
-* Refactored Templates background validation
+* Refactored changing templates code
 
 ## 1.0.1c
 * Fixed Customisable Localisation
