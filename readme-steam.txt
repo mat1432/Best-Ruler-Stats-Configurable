@@ -20,6 +20,7 @@ All that is required is an update and your selected template will auto update yo
 
 [i]This mod DOES NOT EDIT THE DEFINES (For Compatability)[/i]
 
+[h2]How It Works[/h2]
 There are 2 types of operation: 'Normal' and 'Minimum'
 [list]
     [*]Normal (Default) = For each MP category: ADD Defined Points to each category up to the [b]Game Maximum[/b].

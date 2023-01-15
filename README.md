@@ -14,6 +14,7 @@ This Mod is completely dynamic and should be compatible with just about every ma
 
 **This is a cheat mod!**
 
+## How It Works
 Additionally, some major mods change the Defines for the Maximum Skill Points of your ruler; No need to worry!
 I have included a [Template Feature](/Mod%20Template%20Codes.md) that configures this mod automatically! **It is hard-coded**; So:
 All that is required is an update and your selected template will auto update your targeted stats when you click the decision.
