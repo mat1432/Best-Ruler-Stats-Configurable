@@ -65,8 +65,8 @@ I have included a [url=https://github.com/mat1432/Best-Ruler-Stats-Configurable/
 [h3]The Defines[/h3]
 [i]This mod DOES NOT EDIT THE DEFINES[/i]
 Reason being, is to ensure likely compatability with other mods.
-[h4]If you want to edit the Defines[/h4]
-Check the [url=https://eu4.paradoxwikis.com/Defines]Wiki[/url], you are looking for RULER_MAX_SKILL under [url=https://eu4.paradoxwikis.com/Defines#NNationDesigner]NNationDesigner[/url]![/i]
+[b]If you want to edit the Defines[/b]
+Check the [url=https://eu4.paradoxwikis.com/Defines]Wiki[/url], you are looking for RULER_MAX_SKILL under [url=https://eu4.paradoxwikis.com/Defines#NNationDesigner]NNationDesigner[/url]!
 [h3]On Actions[/h3]
 [i]This mod does NOT use On Actions[/i]
 Like above, to ensure likely compatability.
