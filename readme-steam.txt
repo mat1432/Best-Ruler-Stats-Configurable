@@ -70,7 +70,7 @@ Check the [url=https://eu4.paradoxwikis.com/Defines]Wiki[/url], you are looking 
 [h3]On Actions[/h3]
 [i]This mod does NOT use On Actions[/i]
 Like above, to ensure likely compatability.
-Though, I am considering adding a second vesion of this mod that uses strictly On Actions.
+Though, I am considering adding a second vesion of this mod that uses strictly On Actions. (No guarantee)
 The theory is it will boost performance (marginally) by only running its complex checks when Rulers ascend, heirs are born/elected and consorts are added. (AKA Event-based scripting)
 
 [h2]Not Yet Asked Questions / Q&A[/h2]
