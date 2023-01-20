@@ -112,19 +112,22 @@ brs_set_target2 = {
 	}
 }
 
+# why are there two?
+# When the game parses an empty argument (no argument) in a trigger, if it is the first character of a value, the game will throw an error and ignore the command!
+
+# brs_update_ruler_add	= normal
+# brs_update_ruler		= raise to minimum
+
 # for this to work properly it would have to be a do_while loop. but paradox doesnt support that. fix: add 1 point to exported current ruler skill
-# Arguments:
-# valueGet = <ADM|DIP|MIL|adm|dip|mil>
-# valueSet = <adm|dip|mil>
-# who = <|heir_|consort_>
-# type = <|while|if>
+
+# value = <adm|dip|mil>
 brs_update_ruler = {
 	while = {
 		limit = {
 			variable_arithmetic_trigger = {
 				export_to_variable = {
 					variable_name = ruler_skill
-					value = $who$$valueGet$
+					value = $value$
 				}
 				change_variable = { which = ruler_skill value = 1 }
 				check_variable = {
@@ -133,16 +136,13 @@ brs_update_ruler = {
 				}
 			}
 		}
-		change_$who$$valueSet$ = 1
+		change_$value$ = 1
 	}
 }
-
-# Arguments:
 # value = <adm|dip|mil>
-# who = <|heir_|consort_>
 brs_update_ruler_add = {
 	if = { # skips many monthly iterations
-		limit = { brs_check_ruler = { value = $value$ [[who]who = $who$] } }
+		limit = { brs_check_ruler = { value = $value$ } }
 		set_variable = { which = temp value = 1 }
 		while = {
 			limit = {
@@ -151,17 +151,53 @@ brs_update_ruler_add = {
 					which = temp
 				}
 			}
-			change_$who$$value$ = 1
+			change_$value$ = 1
 			change_variable = { which = temp value = 1 }
 		}
 	}
 }
 
 
+brs_update_heir = {
+	while = {
+		limit = {
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					variable_name = ruler_skill
+					value = heir_$value$
+				}
+				change_variable = { which = ruler_skill value = 1 }
+				check_variable = {
+					which = brs_target_var
+					which = ruler_skill
+				}
+			}
+		}
+		change_heir_$value$ = 1
+	}
+}
+brs_update_heir_add = {
+	if = { # skips many monthly iterations
+		limit = { brs_check_heir = { value = $value$ } }
+		set_variable = { which = temp value = 1 }
+		while = {
+			limit = {
+				check_variable = {
+					which = brs_target_var
+					which = temp
+				}
+			}
+			change_heir_$value$ = 1
+			change_variable = { which = temp value = 1 }
+		}
+	}
+}
 
+
+# change_consort_value sets the value to the input, instead of adding input to ruler
 brs_update_consort = {
 	if = {
-		limit = { brs_check_ruler = { value = $value$ who = consort_ } }
+		limit = { brs_check_consort = { value = $value$ } }
 		set_variable = {
 			which = ruler_skill
 			which = brs_target_var

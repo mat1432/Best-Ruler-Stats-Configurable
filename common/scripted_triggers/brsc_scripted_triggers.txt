@@ -141,14 +141,42 @@ brs_check_template = {
 	}
 }
 
+# why are there two?
+# When the game parses an empty argument (no argument) in a trigger, if it is the first character of a value, the game will throw an error and ignore the command!
+
 # Arguments:
-# value = <ADM|DIP|MIL|adm|dip|mil>
-# who = <|heir_|consort_>
+# value = <ADM|DIP|MIL>
 brs_check_ruler = {
 	variable_arithmetic_trigger = {
 		export_to_variable = {
 			variable_name = ruler_skill
-			value = $who$$value$
+			value = $value$
+		}
+		check_variable = {
+			which = brs_target_var
+			which = ruler_skill
+		}
+	}
+}
+# value = <adm|dip|mil>
+brs_check_heir = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			variable_name = ruler_skill
+			value = heir_$value$
+		}
+		check_variable = {
+			which = brs_target_var
+			which = ruler_skill
+		}
+	}
+}
+# value = <adm|dip|mil>
+brs_check_consort = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			variable_name = ruler_skill
+			value = consort_$value$
 		}
 		check_variable = {
 			which = brs_target_var

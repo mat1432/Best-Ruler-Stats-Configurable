@@ -15,14 +15,14 @@
  brs_not_has_any_template_tt: "Is NOT Using a Template"
 
 # using specific template
- brs_has_template_0_tt: "Is Using Template: Base Game"
+ brs_has_template_0_tt: "Is Using Template: §YBase Game§!"
 # EDIT: Templates
- brs_has_template_1_tt: "Is Using Template: Anbennar Expanded"
+ brs_has_template_1_tt: "Is Using Template: §YAnbennar Expanded§!"
 
 # not using specific template
- brs_not_has_template_0_tt: "Is NOT Using Template: Base Game"
+ brs_not_has_template_0_tt: "Is NOT Using Template: §YBase Game§!"
 # EDIT: Templates
- brs_not_has_template_1_tt: "Is NOT Using Template: Anbennar Expanded"
+ brs_not_has_template_1_tt: "Is NOT Using Template: §YAnbennar Expanded§!"
 
 # has target number
 # brs_has_target_$a$_tt: "Has Stat Target $a$"

@@ -1,5 +1,13 @@
 # Made by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
+1.0.2
+[list]
+    [*]Bug Fix: Your Ruler can now get updated when they are the only claimant
+    [*]Recursive event options now show tooltip for reopening itself
+    [*]Rulers now update immediately upon exiting the main menu.
+    [*]Minor imporvements to use of colours in tooltips.
+[/list]
+
 1.0.1d
 [list]
     [*]Refactored changing templates code

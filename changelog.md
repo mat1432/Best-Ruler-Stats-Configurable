@@ -1,6 +1,18 @@
 # Changelog
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
+## 1.0.2 (Not Yet Released)
+* Bug Fix: Your Ruler can now get updated when they are the only claimant
+* Recursive event options now show tooltip for reopening itself
+* Rulers now update immediately upon exiting the main menu.
+* Minor imporvements to use of colours in tooltips.
+### Notes
+* Ruler Bug Fix details:
+  * When the game parses an empty argument (no argument) in a trigger, if it is the first character of a value, the game will throw an error and ignore the command.
+  * This presented an opportunity to simplify the code. Hence, there are now:
+    * six different change ruler effect scripts: **brs_update_ruler**, **brs_update_ruler_min**, **brs_update_heir**, **brs_update_heir_min**, **brs_update_consort**, and **brs_update_consort_min**; and
+    * three different check ruler trigger scripts: **brs_check_ruler**, **brs_check_heir**, and **brs_check_consort**.
+
 ## 1.0.1d
 * Refactored changing templates code
 
