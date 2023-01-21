@@ -11,6 +11,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = { brs_setup_oncheck = yes }
 			country_event = { id = brs.2 }
 		}
 	}

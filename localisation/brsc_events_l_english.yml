@@ -1,7 +1,7 @@
-﻿l_english:
+﻿l_english:\n[Root.GetStatType]
 # Written by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
- brs_1_t: "Best Ruler Stats : Ruler Updated!"
+ brs_1_t: "£brsdynasty££adm£ Ruler Update"
  brs_1_d: ""
  brs_1_normal: "Excellent (Normal Addition)"
  brs_1_minimum: "Excellent (Minimum Skill)"
@@ -10,33 +10,33 @@
  brs_exit: "Exit"
  brs_back: "Back"
 # configuration menu
- brs_2_t: "Best Ruler Stats - Configuration Menu"
- brs_2_d: "[Root.GetSetupDone]You can select a ruler stat target between 0 and 16!\nStat Target Type can be either Addative (Normal), or Raise to Target (Minimum)\n\nHighlighted Options mean they are Currently Selected / Enabled.\n[Root.GetStatTarget][Root.GetTemplate]"
+ brs_2_t: "£brsdynasty££adm£ Best Ruler Stats - Configuration Menu"
+ brs_2_d: "[Root.GetSetupDone]You can select a ruler stat target between 0 and 16!\nStat Target Type can be either Addative (Normal), or Raise to Target (Minimum)\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
 
  brs_2_enable: "Mod is currently §ODisabled§! §G(Enable)§!"
  brs_2_disable: "Mod is currently §GEnabled§! §O(Disable)§!"
- brs_2_minimum_e: "Change Stat Type Setting to §YMinimum§!"
- brs_2_minimum_d: "Change Stat Type Setting to §YNormal§!"
+ brs_2_minimum_e: "Change §YStat Type§Y Setting to §YMinimum§!"
+ brs_2_minimum_d: "Change §YStat Type§Y Setting to §YNormal§!"
  brs_2_templates: "§MKnown Mod Templates§!"
- brs_2_a: "(Normal) I have no mods that change ruler Stat Cap."
- brs_2_b: "(9,9,9) I have Anbennar or other stat cap mod."
-
- brs_2_below6: "Set a Stat Target between §Y0§! and §Y6§!"
- brs_2_above6: "Set a Stat Target between §Y7§! and §Y16§!"
+ brs_2_hometemplate_0: "[BRSBaseGameTemplate] §M(6)§!"
+ brs_2_specific: "Set a specific §YStat Target§Y§Y between §Y0§! and §Y16§!"
 
 # mod templates
- brs_template_t: "Best Ruler Stats - Known Mod Templates"
- brs_template_d: "Instead of using the exact game defined maximum, you can use a template to preconfigure your ruler stats for you!\nIf a template is updated during a save game, the stat target will be reflected automatically!\n[Root.GetStatTarget][Root.GetTemplate]"
- brs_template_detatch: "§ODetatch Stat Target from Template§!"
- brs_template_0: "Use Template: Base Game (Set to §Y6§!)"
+ brs_template_t: "£brsdynasty££adm£ Known Mod Templates"
+ brs_template_d: "Instead of using the exact game defined maximum, you can use a template to preconfigure your ruler stats for you!\nIf a template is updated during a save game, the stat target will be reflected automatically!\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
+ brs_template_Detach: "§ODetach Stat Target from Template§!"
+ brs_template_0: "Use Template: §YBase Game§!"
 # EDIT: Templates
- brs_template_1: "Use Template: Anbennar Expanded"
+ brs_template_1: "Use Template: §YAnbennar Expanded§!"
 
 # Stat target menu(s)
- brs_below6_t: "Best Ruler Stats - Stat Target 0 to 6"
- brs_below6_d: "Set a Stat Target Between 0 and 6.\nThis will automatically remove any selected template.\n[Root.GetStatTarget][Root.GetTemplate]"
- brs_above6_t: "Best Ruler Stats - Stat Target 7 to 16"
- brs_above6_d: "Set a Stat Target Between 7 and 16.\nThis will automatically remove any selected template.\n[Root.GetStatTarget][Root.GetTemplate]"
+#  brs_below6_t: "£brsdynasty££adm£ Stat Target between 0 and 6"
+#  brs_below6_d: "Set a Stat Target between 0 and 6.\nThis will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
+#  brs_above6_t: "£brsdynasty££adm£ Stat Target between 7 and 16"
+#  brs_above6_d: "Set a Stat Target between 7 and 16.\nThis will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
+
+ brs_specific_t: "£brsdynasty££adm£ Set a specific Stat Target"
+ brs_specific_d: "This will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
  brs_change_0: "Set to §Y0§!"
  brs_change_1: "Set to §Y1§!"
  brs_change_2: "Set to §Y2§!"
@@ -56,7 +56,7 @@
  brs_change_16: "Set to §Y16§!"
 
 # errors and auto menus
- brs_99_t: "Best Ruler Stats - Setup Event"
+ brs_99_t: "£brsdynasty££adm£ Best Ruler Stats - Setup Event"
  brs_99_d: ""
  brs_99_a: ""
  brs_100_t: "Error"
@@ -65,6 +65,6 @@
  brs_101_t: "Error"
  brs_101_d: "The Template value was out of bounds. To correct this, it was set to use the Base Game template!"
  brs_101_ok: "OK"
- brs_r_t: "<BRS> Recursive or Setup Event"
+ brs_r_t: "£brsdynasty££adm£ <BRS> Recursive or Setup Event"
  brs_r_d: ""
  brs_r_a: ""

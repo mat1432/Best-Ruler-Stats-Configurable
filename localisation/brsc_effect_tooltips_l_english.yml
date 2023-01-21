@@ -10,7 +10,7 @@
  brs_clr_minimum_tt: "We will treat the Stats Target §YNormally§!"
 
 # templates
- brs_clr_template_tt: "§ODetatch Stat Target From Template§!"
+ brs_clr_template_tt: "§ODetach Stat Target From Template§!"
  brs_set_template_0_tt: "§GSet Template§!: §YBase Game§!"
 # EDIT: Templates
  brs_set_template_1_tt: "§GSet Template§!: §YAnbennar Expanded§!"

@@ -1,12 +1,18 @@
 # Written by mat1432 https://steamcommunity.com/id/mat1432/ (Steam) https://github.com/mat1432/Colonial_Partitioning (GitHub)
 spriteTypes = {
-	# need to remove theocracy tribe and nomad government icon
+	# need to remove theocracy tribe and nomad government icons
+	# spriteType = {
+	# 	name = "GFX_text_brsmonarcy"
+	# 	texturefile = "gfx/interface/icon_legitimacy.dds"
+	# 	noOfFrames = 1
+	# }
+	# spriteType = {
+	# 	name = "GFX_text_brsrepublic"
+	# 	texturefile = "gfx/interface/icon_legitimacy.dds"
+	# 	noOfFrames = 2
+	# }
 	spriteType = {
-		name = "GFX_text_brsmonarcy"
-		texturefile = "gfx/interface/icon_legitimacy.dds"
-	}
-	spriteType = {
-		name = "GFX_text_brsrepublic"
-		texturefile = "gfx/interface/icon_legitimacy.dds"
+		name = "GFX_text_brsdynasty"
+		texturefile = "gfx/interface/icon_diplomacy_dynastic.dds"
 	}
 }

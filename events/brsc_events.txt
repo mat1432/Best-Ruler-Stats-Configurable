@@ -152,30 +152,25 @@ country_event = {
 	#Chose from Templates
 	option = {
 		name = "brs_2_templates"
+		trigger = { brs_has_any_template = no }
+		country_event = { id = brs.3 }
+	}
+	option = {
+		name = "brs_2_templates"
+		trigger = { brs_has_any_template = yes }
+		highlight = yes
 		country_event = { id = brs.3 }
 	}
 
 	option = {
-		name = "brs_2_below6"
-		trigger = { NOT = { brs_check_target_setup = { a=0 b=7 } } }
-		country_event = { id = brs.10 }
-	}
-	option = {
-		name = "brs_2_below6"
-		trigger = { brs_check_target_setup = { a=0 b=7 } }
-		highlight = yes
-		country_event = { id = brs.10 }
-	}
-
-	option = {
-		name = "brs_template_0"
+		name = "brs_2_hometemplate_0"
 		trigger = { brs_not_has_template = { a=0 b=1 } }
 		brs_set_template = { m=0 }
 		hidden_effect = { country_event = { id = brs.1002 } }
 		tooltip = { country_event = { id = brs.2 } }
 	}
 	option = {
-		name = "brs_template_0"
+		name = "brs_2_hometemplate_0"
 		trigger = { brs_has_template = { a=0 b=1 } }
 		highlight = yes
 		brs_set_template = { m=0 }
@@ -184,19 +179,21 @@ country_event = {
 	}
 
 	option = {
-		name = "brs_2_above6"
-		trigger = { NOT = { brs_check_target_setup = { a=7 b=16 } } }
-		country_event = { id = brs.11 }
+		name = "brs_2_specific"
+		# trigger = { NOT = { brs_check_target_setup = { a=0 b=17 } } }
+		trigger = { hidden_trigger = { brs_has_any_template = yes } }
+		country_event = { id = brs.10 }
 	}
 	option = {
-		name = "brs_2_above6"
-		trigger = { brs_check_target_setup = { a=7 b=16 } }
+		name = "brs_2_specific"
+		# trigger = { brs_check_target_setup = { a=0 b=17 } }
+		trigger = { hidden_trigger = { brs_has_any_template = no } }
 		highlight = yes
-		country_event = { id = brs.11 }
+		country_event = { id = brs.10 }
 	}
 	
 	option = {
-		name = "brs_template_detatch"
+		name = "brs_template_detach"
 		trigger = { brs_has_any_template = yes }
 		brs_clr_template = yes
 		hidden_effect = { country_event = { id = brs.1002 } }
@@ -223,7 +220,7 @@ country_event = {
 	}
 
 	option = {
-		name = "brs_template_detatch"
+		name = "brs_template_detach"
 		trigger = { brs_has_any_template = yes }
 		brs_clr_template = yes
 		hidden_effect = { country_event = { id = brs.1003 } }
@@ -267,8 +264,8 @@ country_event = {
 
 country_event = {
 	id = brs.10
-	title = "brs_below6_t"
-	desc = "brs_below6_d"
+	title = "brs_specific_t"
+	desc = "brs_specific_d"
 	picture = DIPLOMACY_eventPicture
 	is_triggered_only = yes
 	trigger = { ai = no }
@@ -396,186 +393,165 @@ country_event = {
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
 	}
-}
-
-country_event = {
-	id = brs.11
-	title = "brs_above6_t"
-	desc = "brs_above6_d"
-	picture = DIPLOMACY_eventPicture
-	is_triggered_only = yes
-	trigger = { ai = no }
-	immediate = {
-		hidden_effect = {
-			set_country_flag = brs_open
-			brs_validate = yes
-		}
-	}
-	after = {
-	}
-	option = {
-		name = "brs_back"
-		country_event = { id = brs.2 }
-	}
-
+	
 	option = {
 		name = "brs_change_7"
 		trigger = { NOT = { brs_check_target_setup = { a=7 b=8 } } }
 		brs_set_target = { a=7 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_7"
 		trigger = { brs_check_target_setup = { a=7 b=8 } }
 		highlight = yes
 		brs_set_target = { a=7 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	
 	option = {
 		name = "brs_change_8"
 		trigger = { NOT = { brs_check_target_setup = { a=8 b=9 } } }
 		brs_set_target = { a=8 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_8"
 		trigger = { brs_check_target_setup = { a=8 b=9 } }
 		highlight = yes
 		brs_set_target = { a=8 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	
 	option = {
 		name = "brs_change_9"
 		trigger = { NOT = { brs_check_target_setup = { a=9 b=10 } } }
 		brs_set_target = { a=9 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_9"
 		trigger = { brs_check_target_setup = { a=9 b=10 } }
 		highlight = yes
 		brs_set_target = { a=9 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	
 	option = {
 		name = "brs_change_10"
-		trigger = { NOT = { brs_check_target_setup = { a=10 b=11 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=10 b=10 } } }
 		brs_set_target = { a=10 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_10"
-		trigger = { brs_check_target_setup = { a=10 b=11 } }
+		trigger = { brs_check_target_setup = { a=10 b=10 } }
 		highlight = yes
 		brs_set_target = { a=10 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	
 	option = {
 		name = "brs_change_11"
 		trigger = { NOT = { brs_check_target_setup = { a=11 b=12 } } }
 		brs_set_target = { a=11 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_11"
 		trigger = { brs_check_target_setup = { a=11 b=12 } }
 		highlight = yes
 		brs_set_target = { a=11 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	
 	option = {
 		name = "brs_change_12"
 		trigger = { NOT = { brs_check_target_setup = { a=12 b=13 } } }
 		brs_set_target = { a=12 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_12"
 		trigger = { brs_check_target_setup = { a=12 b=13 } }
 		highlight = yes
 		brs_set_target = { a=12 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	
 	option = {
 		name = "brs_change_13"
 		trigger = { NOT = { brs_check_target_setup = { a=13 b=14 } } }
 		brs_set_target = { a=13 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_13"
 		trigger = { brs_check_target_setup = { a=13 b=14 } }
 		highlight = yes
 		brs_set_target = { a=13 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	
 	option = {
 		name = "brs_change_14"
 		trigger = { NOT = { brs_check_target_setup = { a=14 b=15 } } }
 		brs_set_target = { a=14 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_14"
 		trigger = { brs_check_target_setup = { a=14 b=15 } }
 		highlight = yes
 		brs_set_target = { a=14 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	
 	option = {
 		name = "brs_change_15"
 		trigger = { NOT = { brs_check_target_setup = { a=15 b=16 } } }
 		brs_set_target = { a=15 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_15"
 		trigger = { brs_check_target_setup = { a=15 b=16 } }
 		highlight = yes
 		brs_set_target = { a=15 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 
 	option = {
 		name = "brs_change_16"
 		trigger = { NOT = { brs_check_target_setup = { a=16 b=17 } } }
 		brs_set_target = { a=16 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_16"
 		trigger = { brs_check_target_setup = { a=16 b=17 } }
 		highlight = yes
 		brs_set_target = { a=16 }
-		hidden_effect = { country_event = { id = brs.1011 } }
-		tooltip = { country_event = { id = brs.11 } }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
 	}
 }
 
@@ -689,16 +665,16 @@ country_event = {
 		country_event = { id = brs.10 }
 	}
 }
-country_event = {
-	id = brs.1011
-	title = "brs_r_t"
-	desc = "brs_r_d"
-	is_triggered_only = yes
-	hidden = yes
+# country_event = {
+# 	id = brs.1011
+# 	title = "brs_r_t"
+# 	desc = "brs_r_d"
+# 	is_triggered_only = yes
+# 	hidden = yes
 	
-	option = {
-		name = "brs_r_a"
-		set_country_flag = brs_open
-		country_event = { id = brs.11 }
-	}
-}
+# 	option = {
+# 		name = "brs_r_a"
+# 		set_country_flag = brs_open
+# 		country_event = { id = brs.11 }
+# 	}
+# }

@@ -1,32 +1,50 @@
 # Written by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
-#AVIALABLE CUSTOM LOCALISATION KEYS
-#When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
-# To not display anything, you can use 'localisation_key = ""'
-# Please add one example sentence for each key.
+# Global keys
+defined_text = {
+	name = BRSBaseGameTemplate
+	text = {
+		localisation_key = brs_template_0
+		trigger = { always = yes }
+	}
+}
+
+# Country keys
 
 ### Get Setup text
 defined_text = {
     name = GetSetupDone
 
     text = {
-        localisation_key = brs_GetSetupDone_loc1
+        localisation_key = brs_GetSetupDone_notdone
         trigger = { NOT = { has_country_flag = brs_setup_done } }
     }
     text = {
-        localisation_key = brs_GetSetupDone_loc2
+        localisation_key = brs_GetSetupDone_done
         trigger = { has_country_flag = brs_setup_done }
     }
 }
 
 defined_text = {
+	name = GetStatType
+	text = {
+		localisation_key = brs_GetStatType_add
+        trigger = { brs_minimum_disabled = yes }
+	}
+	text = {
+		localisation_key = brs_GetStatType_min
+        trigger = { brs_minimum_enabled = yes }
+	}
+}
+
+defined_text = {
 	name = GetStatTarget
 	text = {
-		localisation_key = brs_GetStatTarget_loc1
+		localisation_key = brs_GetStatTarget_enabled
         trigger = { has_country_flag = brs_setup_done }
 	}
 	text = {
-		localisation_key = brs_GetStatTarget_loc2
+		localisation_key = brs_GetStatTarget_disabled
         trigger = { NOT = { has_country_flag = brs_setup_done } }
 	}
 }
@@ -34,11 +52,11 @@ defined_text = {
 defined_text = {
 	name = GetTemplate
 	text = {
-		localisation_key = brs_GetTemplate_loc1
+		localisation_key = brs_GetTemplate_enabled
 		trigger = { brs_has_any_template = yes }
 	}
 	text = {
-		localisation_key = brs_GetTemplate_loc2
+		localisation_key = brs_GetTemplate_disabled
 		trigger = { brs_not_has_any_template = yes }
 	}
 }

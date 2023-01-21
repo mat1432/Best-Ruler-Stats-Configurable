@@ -1,11 +1,16 @@
 # Changelog
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
-## 1.0.2 (Not Yet Released)
-* Bug Fix: Your Ruler can now get updated when they are the only claimant
+## 1.0.2
+* Major Bug Fix: Your Ruler can now get updated when they are the only claimant
+* Added Dynasty Icon and Admin Power Icon to prefix decisions and events
 * Recursive event options now show tooltip for reopening itself
 * Rulers now update immediately upon exiting the main menu.
+* Combined both specific stat target menus
+* Opening the menu for the first time via a decision now also configures itself for the 'Base Game Template' automatically.
 * Minor imporvements to use of colours in tooltips.
+* Minor Bug Fix: Removed tooltip 'detach from template' when changing template, and moved it to 'set stat target' when a template is already in use.
+* Fixed typos
 ### Notes
 * Ruler Bug Fix details:
   * When the game parses an empty argument (no argument) in a trigger, if it is the first character of a value, the game will throw an error and ignore the command.

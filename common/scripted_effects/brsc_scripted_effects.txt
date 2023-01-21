@@ -61,15 +61,23 @@ brs_validate = {
 		}
 	}
 }
+brs_setup_oncheck = {
+	hidden_effect = {
+		if = {
+			limit = {
+				ai = no
+				NOT = { has_country_flag = brs_setup_done }
+			}
+			set_country_flag = brs_setup_done
+			brs_set_template = { m=0 }
+		}
+	}
+}
 
 # back to front to improve check speed
 # Arguments:
 # m = <0|1|...>
 brs_set_template = {
-	if = {
-		limit = { brs_has_any_template = yes }
-		brs_clr_template = yes
-	}
 	custom_tooltip = brs_set_template_$m$_tt
 	hidden_effect = { set_variable = { which = brs_template_var value = $m$ } }
 	# EDIT: Templates
@@ -90,10 +98,13 @@ brs_clr_template = {
 # Arguments:
 # a = <0|1|2|3|4|...|14|15>
 brs_set_target = {
+	if = {
+		limit = { brs_has_any_template = yes }
+		brs_clr_template = yes
+	}
 	custom_tooltip = brs_set_target_$a$_tt
 	hidden_effect = {
 		set_country_flag = brs_setup_done
-		brs_clr_template = yes
 		set_variable = {
 			which = brs_target_var
 			value = $a$

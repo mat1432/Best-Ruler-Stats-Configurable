@@ -1,14 +1,21 @@
 ﻿l_english:
 # Written by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
- brs_GetSetupDone_loc1: "§BFirst time Setup: Please select a stat target\nThe Exit button will appear after a Stat Target is chosen§!\n\n"
- brs_GetSetupDone_loc2: ""
+##########
+# Global Keys
+##########
+# Country Keys
+ brs_GetSetupDone_notdone: "§BFirst time Setup: Please select a stat target\nThe Exit button will appear after a Stat Target is chosen§!\n\n"
+ brs_GetSetupDone_done: ""
 
- brs_GetStatTarget_loc1: "\nCurrent Stat Target: [Root.brs_target_var.GetValue]"
- brs_GetStatTarget_loc2: ""
+ brs_GetStatType_add: "\nCurrent Stat Type: §YAddative§!"
+ brs_GetStatType_min: "\nCurrent Stat Type: §YMinimum§!"
 
- brs_GetTemplate_loc1: "\nCurrent Template: [Root.GetTemplateSpecific]"
- brs_GetTemplate_loc2: ""
+ brs_GetStatTarget_enabled: "\nCurrent Stat Target: [Root.brs_target_var.GetValue]"
+ brs_GetStatTarget_disabled: ""
+
+ brs_GetTemplate_enabled: "\nCurrent Template: [Root.GetTemplateSpecific]"
+ brs_GetTemplate_disabled: ""
 
 # EDIT: Templates
  brs_GetTemplateSpecific_0: "Base Game"
