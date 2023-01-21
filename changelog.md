@@ -1,6 +1,9 @@
 # Changelog
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
+## 1.0.2b
+* Major Bug Fix: Localisation fixed, and mod loading issue fixed
+
 ## 1.0.2
 * Major Bug Fix: Your Ruler can now get updated when they are the only claimant
 * Added Dynasty Icon and Admin Power Icon to prefix decisions and events

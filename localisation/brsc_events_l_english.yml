@@ -1,4 +1,4 @@
-﻿l_english:\n[Root.GetStatType]
+﻿l_english:
 # Written by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
  brs_1_t: "£brsdynasty££adm£ Ruler Update"
@@ -24,7 +24,7 @@
 # mod templates
  brs_template_t: "£brsdynasty££adm£ Known Mod Templates"
  brs_template_d: "Instead of using the exact game defined maximum, you can use a template to preconfigure your ruler stats for you!\nIf a template is updated during a save game, the stat target will be reflected automatically!\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
- brs_template_Detach: "§ODetach Stat Target from Template§!"
+ brs_template_detach: "§ODetach Stat Target from Template§!"
  brs_template_0: "Use Template: §YBase Game§!"
 # EDIT: Templates
  brs_template_1: "Use Template: §YAnbennar Expanded§!"

@@ -1,5 +1,10 @@
 # Made by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
+1.0.2b
+[list]
+    [*]Major Bug Fix: Localisation fixed, and mod loading issue fixed
+[/list]
+
 1.0.2
 [list]
     [*]Major Bug Fix: Your Ruler can now get updated when they are the only claimant
