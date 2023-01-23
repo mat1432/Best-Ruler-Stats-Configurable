@@ -30,7 +30,8 @@ There are 2 types of operation: 'Normal' and 'Minimum'
 After your ruler updates:
 | Setting Type | Normal     | Minimum  |
 | ---          | ---        | ---      |
-| Outcome      | 5, 6, 6    | 4, 5, 4  |
+| Before       | 1, 5, 4    | 1, 5, 4  |
+| After        | 5, 6, 6    | 4, 5, 4  |
 | Difference   | +4, +1, +2 | +3, -, - |
 
 ### Another Example but with [Anbennar Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137):
@@ -41,7 +42,8 @@ After your ruler updates:
 After your ruler updates:
 | Setting Type | Normal     | Minimum  |
 | ---          | ---        | ---      |
-| Outcome      | 8, 9, 9    | 6, 8, 6  |
+| Before       | 2, 8, 6    | 2, 8, 6  |
+| After        | 8, 9, 9    | 6, 8, 6  |
 | Difference   | +6, +1, +3 | +4, -, - |
 
 ## This Mod is:
