@@ -5,7 +5,7 @@
 Updates your [b]Ruler[/b], [b]Heir[/b] AND [b]Consort[/b] skill points!
 
 This Mod gives you a choice at the start of the game to configure your ruler stats boost. [i]Can be changed at any time via a Decision![/i]
-It allows you to set a defined target for your ruler stats between [b]1 Point[/b] and [b]16 Points[/b]!
+It allows you to set a defined target for your ruler stats between [b]1 Point[/b] and [b]20 Points[/b]!
 This means you can configure your ruler to have max stats with any mod that changes max ruler stats!
 
 This Mod is completely dynamic and should be compatible with just about every major mod.
