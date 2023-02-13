@@ -11,7 +11,7 @@
  brs_back: "Back"
 # configuration menu
  brs_2_t: "£brsdynasty££adm£ Best Ruler Stats - Configuration Menu"
- brs_2_d: "[Root.GetSetupDone]You can select a ruler stat target between 0 and 16!\nStat Target Type can be either Addative (Normal), or Raise to Target (Minimum)\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
+ brs_2_d: "[Root.GetSetupDone]You can select a ruler stat target between 0 and 20!\nStat Target Type can be either Addative (Normal), or Raise to Target (Minimum)\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
 
  brs_2_enable: "Mod is currently §ODisabled§! §G(Enable)§!"
  brs_2_disable: "Mod is currently §GEnabled§! §O(Disable)§!"
@@ -19,7 +19,7 @@
  brs_2_minimum_d: "Change §YStat Type§Y Setting to §YNormal§!"
  brs_2_templates: "§MKnown Mod Templates§!"
  brs_2_hometemplate_0: "[BRSBaseGameTemplate] §M(6)§!"
- brs_2_specific: "Set a specific §YStat Target§Y§Y between §Y0§! and §Y16§!"
+ brs_2_specific: "Set a specific §YStat Target§Y§Y between §Y0§! and §Y20§!"
 
 # mod templates
  brs_template_t: "£brsdynasty££adm£ Known Mod Templates"
@@ -30,11 +30,6 @@
  brs_template_1: "Use Template: §YAnbennar Expanded§!"
 
 # Stat target menu(s)
-#  brs_below6_t: "£brsdynasty££adm£ Stat Target between 0 and 6"
-#  brs_below6_d: "Set a Stat Target between 0 and 6.\nThis will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
-#  brs_above6_t: "£brsdynasty££adm£ Stat Target between 7 and 16"
-#  brs_above6_d: "Set a Stat Target between 7 and 16.\nThis will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
-
  brs_specific_t: "£brsdynasty££adm£ Set a specific Stat Target"
  brs_specific_d: "This will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
  brs_change_0: "Set to §Y0§!"
