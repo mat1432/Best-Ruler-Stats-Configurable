@@ -444,14 +444,14 @@ country_event = {
 	
 	option = {
 		name = "brs_change_10"
-		trigger = { NOT = { brs_check_target_setup = { a=10 b=10 } } }
+		trigger = { NOT = { brs_check_target_setup = { a=10 b=11 } } }
 		brs_set_target = { a=10 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
 	}
 	option = {
 		name = "brs_change_10"
-		trigger = { brs_check_target_setup = { a=10 b=10 } }
+		trigger = { brs_check_target_setup = { a=10 b=11 } }
 		highlight = yes
 		brs_set_target = { a=10 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -550,6 +550,70 @@ country_event = {
 		trigger = { brs_check_target_setup = { a=16 b=17 } }
 		highlight = yes
 		brs_set_target = { a=16 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
+	}
+	
+	option = {
+		name = "brs_change_17"
+		trigger = { NOT = { brs_check_target_setup = { a=17 b=18 } } }
+		brs_set_target = { a=17 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
+	}
+	option = {
+		name = "brs_change_17"
+		trigger = { brs_check_target_setup = { a=17 b=18 } }
+		highlight = yes
+		brs_set_target = { a=17 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
+	}
+	
+	option = {
+		name = "brs_change_18"
+		trigger = { NOT = { brs_check_target_setup = { a=18 b=19 } } }
+		brs_set_target = { a=18 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
+	}
+	option = {
+		name = "brs_change_18"
+		trigger = { brs_check_target_setup = { a=18 b=19 } }
+		highlight = yes
+		brs_set_target = { a=18 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
+	}
+	
+	option = {
+		name = "brs_change_19"
+		trigger = { NOT = { brs_check_target_setup = { a=19 b=20 } } }
+		brs_set_target = { a=19 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
+	}
+	option = {
+		name = "brs_change_19"
+		trigger = { brs_check_target_setup = { a=19 b=20 } }
+		highlight = yes
+		brs_set_target = { a=19 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
+	}
+	
+	option = {
+		name = "brs_change_20"
+		trigger = { NOT = { brs_check_target_setup = { a=20 b=21 } } }
+		brs_set_target = { a=20 }
+		hidden_effect = { country_event = { id = brs.1010 } }
+		tooltip = { country_event = { id = brs.10 } }
+	}
+	option = {
+		name = "brs_change_20"
+		trigger = { brs_check_target_setup = { a=20 b=21 } }
+		highlight = yes
+		brs_set_target = { a=20 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
 	}

@@ -54,6 +54,10 @@
  brs_change_14: "Set to §Y14§!"
  brs_change_15: "Set to §Y15§!"
  brs_change_16: "Set to §Y16§!"
+ brs_change_17: "Set to §Y17§!"
+ brs_change_18: "Set to §Y18§!"
+ brs_change_19: "Set to §Y19§!"
+ brs_change_20: "Set to §Y20§!"
 
 # errors and auto menus
  brs_99_t: "£brsdynasty££adm£ Best Ruler Stats - Setup Event"

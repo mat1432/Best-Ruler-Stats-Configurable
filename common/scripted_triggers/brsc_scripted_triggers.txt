@@ -123,7 +123,7 @@ brs_check_var = {
 }
 
 # Arguments:
-# a = <0|1|2|3|4|...|14|15>
+# a = <0|1|2|3|4|...|14|15|...>
 # b = <a+1>
 brs_check_target = {
 	custom_trigger_tooltip = {
@@ -132,7 +132,7 @@ brs_check_target = {
 	}
 }
 # Arguments:
-# a = <0|1|2|3|4|...|14|15>
+# a = <0|1|2|3|4|...|14|15|...>
 # b = <a+1>
 brs_check_template = {
 	custom_trigger_tooltip = {
