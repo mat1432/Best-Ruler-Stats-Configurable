@@ -2,8 +2,15 @@
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
 ## 1.0.3
-* Minor Bug Fix: Chosing a stat target of 10 now works correctly.
+* Bug Fix: Chosing a stat target of 10 now works correctly.
 * Added selections 17 to 20.
+* Added ludicrous mode; 0 to 100
+  * *The button is likely temporary, I know how to improve this and collapse it dynamically, I just need time to develop the mod.*
+  * Only if enabled:
+    * This **will not** affect the background monthly **check** event performance.
+    * This **will** affect the background monthly **change** event performance.
+* Minor Bug Fix: Menu tooltips now show up on 'Detatch Template' button on the config menu
+* Minor Bug Fix: Tooltip colours and intuitive language
 
 ## 1.0.2b
 * Major Bug Fix: Localisation fixed, and mod loading issue fixed

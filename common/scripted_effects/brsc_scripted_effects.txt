@@ -43,6 +43,26 @@ brs_validate = {
 
 		# make sure stat target is inside boundaries
 		if = {
+			limit = { brs_optionsxt_en = yes }
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							check_variable = {
+								which = brs_target_var
+								value = 0
+							}
+						}
+						check_variable = {
+							which = brs_target_var
+							value = 101
+						}
+					}
+				}
+				country_event = { id = brs.100 }
+			}
+		}
+		else_if = {
 			limit = {
 				OR = {
 					NOT = {
@@ -228,8 +248,9 @@ brs_update_consort_add = {
 	}
 }
 
-# change_consort_x sets the skill to $value$, unlike change_x which adds $value$ to current skill
+# change_consort_$ behaves like set
 # back to front because check_variable does a greater than or equal to
+# it is verly long because the change_$ calls cannot accept variable output
 brs_consort_helper = {
 	if = { limit = { check_variable = { which = ruler_skill value = 20 } } change_consort_$value$ = 20 }
 	else_if = { limit = { check_variable = { which = ruler_skill value = 19 } } change_consort_$value$ = 19 }

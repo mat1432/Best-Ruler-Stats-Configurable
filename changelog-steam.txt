@@ -2,8 +2,19 @@
 
 1.0.3
 [list]
-    [*]Minor Bug Fix: Chosing a stat target of 10 now works correctly.
+    [*]Bug Fix: Chosing a stat target of 10 now works correctly.
     [*]Added selections 17 to 20.
+    [*]Added ludicrous mode; 0 to 100.
+    [list]
+        [*][i]The button is likely temporary, I know how to improve this and collapse it dynamically, I just need time to develop the mod.[/i]
+        [*]Only if enabled:
+        [list]
+            [*]This [b]will not[/b] affect the background monthly [b]check[/b] event performance.
+            [*]This [b]will[/b] affect the background monthly [b]change[/b] event performance.
+        [/list]
+    [/list]
+    [*]Minor Bug Fix: Menu tooltips now show up on 'Detatch Template' button on the config menu
+    [*]Minor Bug Fix: Tooltip colours and intuitive language
 [/list]
 
 1.0.2b
