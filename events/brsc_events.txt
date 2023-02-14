@@ -242,16 +242,14 @@ country_event = {
 		name = "brs_2_options_xt_enable"
 		trigger = { brs_optionsxt_dis = yes }
 		brs_enable_optionsxt = yes
-		custom_tooltip = brs_optionsxt_warning_tt
 		hidden_effect = { country_event = { id = brs.1002 } }
 		tooltip = { country_event = { id = brs.2 } }
 	}
 	option = {
-		name = "brs_2_specific_xt_disable"
+		name = "brs_2_options_xt_disable"
 		trigger = { brs_optionsxt_en = yes }
 		highlight = yes
 		brs_disable_optionsxt = yes
-		custom_tooltip = brs_optionsxt_warning_tt
 		hidden_effect = { country_event = { id = brs.1002 } }
 		tooltip = { country_event = { id = brs.2 } }
 	}

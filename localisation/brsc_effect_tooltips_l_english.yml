@@ -14,6 +14,8 @@
  brs_optionsxt_warning_tt: "§MLudicrous Mode§! modifies the hidden event to check between 0 and 100, where normally the mod checks 0 to 20.\nThe hidden checks for ruler and heir are unchanged, only consort checks were modified (clausewitz engine limitations)"
  brs_optionsxt_tempnote_tt: "I am considering using a layered check that automatically expands ludicrous mode. I don't have much time so implementing this will have to wait."
 
+ brs_optionsxt_disable_tt: "§ODisable§! §MLudicrous Mode§!"
+
 # set target number
 # brs_set_target_$a$_tt: "§GSet Stat Target§! to §Y$a$§!"
  brs_set_target_0_tt: "§GSet Stat Target§! to §Y0§!"

@@ -2,11 +2,22 @@
 
 brs_enable_optionsxt = {
 	custom_tooltip = brs_enable_optionsxt_tt
+	custom_tooltip = brs_optionsxt_warning_tt
 	hidden_effect = { set_country_flag = brs_optionsxt }
 }
 brs_disable_optionsxt = {
 	custom_tooltip = brs_disable_optionsxt_tt
+	custom_tooltip = brs_optionsxt_warning_tt
 	hidden_effect = { clr_country_flag = brs_optionsxt }
+	if = {
+		limit = {
+			check_variable = {
+				which = brs_target_var
+				value = 21
+			}
+		}
+		brs_set_template = { m=0 }
+	}
 }
 
 # why are there two?

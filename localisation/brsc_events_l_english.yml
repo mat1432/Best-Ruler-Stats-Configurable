@@ -23,7 +23,7 @@
  brs_2_specific_xt: "Set a specific §YStat Target§! between §Y0§! and §Y100§!"
 
  brs_2_options_xt_enable: "§GEnable§! §MLudicrous Mode§!"
- brs_2_specific_xt_disable: "§ODisable§! §MLudicrous Mode§!"
+ brs_2_options_xt_disable: "§ODisable§! §MLudicrous Mode§!"
 
 # Stat target menu(s)
  brs_specific_t: "£brsdynasty££adm£ Set a specific Stat Target"

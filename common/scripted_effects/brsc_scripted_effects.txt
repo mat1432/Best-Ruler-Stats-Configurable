@@ -98,6 +98,11 @@ brs_setup_oncheck = {
 # Arguments:
 # m = <0|1|...>
 brs_set_template = {
+	if = {
+		limit = { brs_optionsxt_en = yes }
+		custom_tooltip = brs_optionsxt_disable_tt
+		hidden_effect = { brs_disable_optionsxt = yes }
+	}
 	custom_tooltip = brs_set_template_$m$_tt
 	hidden_effect = { set_variable = { which = brs_template_var value = $m$ } }
 	# EDIT: Templates
