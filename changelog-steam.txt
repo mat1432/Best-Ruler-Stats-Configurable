@@ -1,5 +1,10 @@
 # Made by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
+1.0.3a
+[list]
+    [*]Stat target now slowly autocorrects itself to the game defines each time the hidden event fires.
+[/list]
+
 1.0.3
 [list]
     [*]Bug Fix: Chosing a stat target of 10 now works correctly.
