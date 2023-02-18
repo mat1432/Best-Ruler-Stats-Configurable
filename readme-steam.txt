@@ -82,7 +82,8 @@ The theory is it will boost performance (marginally) by only running its complex
 [h3]Q: Multiplayer?[/h3]
 A: Yes
 [h3]Q: With [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1528959434]No Limits Nation Designer[/url] I can make a 50,50,50 ruler, can this mod do that?[/h3]
-A: Nope, Sorry Mate! The command change_<adm|dip|mil> will only ever bring their stats up to game maximum! (Found in Defines)
+A: [strike]Nope, Sorry Mate![/strike] The command change_<adm|dip|mil> will only ever bring their stats up to game maximum! (Found in Defines)
+Edit: Yes, only if you have a mod that changes the defines to expand ruler stats! The mod supports up to 100 stat points.
 [h3]Q: Why not just hardcode it to 15 from the start?[/h3]
 A: Then the hidden background event would fire every month and error every time. To keep log files down and help wih that little bit of performance, I suggest you honestly select the correct option.
 
