@@ -37,7 +37,7 @@ country_event = {
 	}
 
 	after = {
-		if = {
+		while = {
 			# only 1 check is required
 			limit = {
 				variable_arithmetic_trigger = {

@@ -2,7 +2,7 @@
 
 1.0.3a
 [list]
-    [*]Stat target now slowly autocorrects itself to the game defines each time the hidden event fires.
+    [*]Stat target now autocorrects itself to the game defines each time the hidden event fires.
 [/list]
 
 1.0.3
