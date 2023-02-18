@@ -36,6 +36,37 @@ country_event = {
 		months = 1
 	}
 
+	after = {
+		if = {
+			# only 1 check is required
+			limit = {
+				variable_arithmetic_trigger = {
+					export_to_variable = {
+						variable_name = ruler_skill
+						value = ADM
+					}
+					change_variable = {
+						which = ruler_skill
+						value = 1
+					}
+					check_variable = {
+						which = brs_target_var
+						which = ruler_skill
+					}
+				}
+			}
+			# player chose wrong, chose 1 smaller
+			if = {
+				limit = { brs_has_any_template = yes }
+				brs_clr_template = yes
+			}
+			subtract_variable = {
+				which = brs_target_var
+				value = 1
+			}
+		}
+	}
+
 	option = {
 		trigger = { brs_minimum_disabled = yes }
 		name = "brs_1_normal"
