@@ -37,8 +37,7 @@ country_event = {
 	}
 
 	after = {
-		while = {
-			# only 1 check is required
+		if = {
 			limit = {
 				variable_arithmetic_trigger = {
 					export_to_variable = {
@@ -55,14 +54,30 @@ country_event = {
 					}
 				}
 			}
-			# player chose wrong, chose 1 smaller
 			if = {
 				limit = { brs_has_any_template = yes }
-				brs_clr_template = yes
+				clr_country_flag = brs_template_used
 			}
-			subtract_variable = {
+			export_to_variable = {
+				variable_name = ruler_skill
+				value = ADM
+			}
+			set_variable = {
 				which = brs_target_var
-				value = 1
+				which = ruler_skill
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = brs_target_var
+							value = 21
+						}
+					}
+					brs_optionsxt_enabled = yes
+				}
+				brs_disable_optionsxt = yes
 			}
 		}
 	}

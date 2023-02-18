@@ -85,7 +85,8 @@ A: Yes
 A: [strike]Nope, Sorry Mate![/strike] The command change_<adm|dip|mil> will only ever bring their stats up to game maximum! (Found in Defines)
 Edit: Yes, only if you have a mod that changes the defines to expand ruler stats! The mod supports up to 100 stat points.
 [h3]Q: Why not just hardcode it to 15 from the start?[/h3]
-A: Then the hidden background event would fire every month and error every time. To keep log files down and help wih that little bit of performance, I suggest you honestly select the correct option.
+A: [strike]Then the hidden background event would fire every month and error every time. To keep log files down and help wih that little bit of performance, I suggest you honestly select the correct option.[/strike]
+Edit: The mod now immeidately autocorrects itself from your selection to the game defined maximum.
 
 [h2]Install and Uninstall Compatibility[/h2]
 [h3]Forwards Compatability[/h3]
