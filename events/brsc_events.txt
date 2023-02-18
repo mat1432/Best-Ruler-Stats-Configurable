@@ -79,6 +79,11 @@ country_event = {
 				}
 				brs_disable_optionsxt = yes
 			}
+
+			if = {
+				limit = { brs_check_var = { which=brs_target_var a=6 b=7 } }
+				brs_set_template = { m=0 }
+			}
 		}
 	}
 
