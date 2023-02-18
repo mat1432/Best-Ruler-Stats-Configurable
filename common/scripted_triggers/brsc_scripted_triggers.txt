@@ -13,15 +13,15 @@ brs_disabled = {
 	}
 }
 
-brs_optionsxt_en = {
+brs_optionsxt_enabled = {
 	custom_trigger_tooltip = {
-		tooltip = brs_optionsxt_en_tt
+		tooltip = brs_optionsxt_enabled_tt
 		has_country_flag = brs_optionsxt
 	}
 }
-brs_optionsxt_dis = {
+brs_optionsxt_disabled = {
 	custom_trigger_tooltip = {
-		tooltip = brs_optionsxt_dis_tt
+		tooltip = brs_optionsxt_disabled_tt
 		NOT = { has_country_flag = brs_optionsxt }
 	}
 }

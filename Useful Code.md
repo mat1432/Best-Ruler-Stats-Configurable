@@ -29,7 +29,7 @@ namespace OptionGenerator
                 if (x>20)
                 {
                     Console.WriteLine("\ttrigger = {");
-                    Console.WriteLine("\t\tbrs_optionsxt_en = yes");
+                    Console.WriteLine("\t\tbrs_optionsxt_enabled = yes");
                     Console.WriteLine("\t\tNOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
                     Console.WriteLine("\t}");
                 }
@@ -46,7 +46,7 @@ namespace OptionGenerator
                 if (x>20)
                 {
                     Console.WriteLine("\ttrigger = {");
-                    Console.WriteLine("\t\tbrs_optionsxt_en = yes");
+                    Console.WriteLine("\t\tbrs_optionsxt_enabled = yes");
                     Console.WriteLine("\t\tbrs_check_target_setup = { a=" + x + " b=" + (x + 1) + " }");
                     Console.WriteLine("\t}");
                 }

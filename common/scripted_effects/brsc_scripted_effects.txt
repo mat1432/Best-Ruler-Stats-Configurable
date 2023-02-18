@@ -17,6 +17,7 @@ brs_clr_minimum = {
 	hidden_effect = { clr_country_flag = brs_minimum }
 }
 
+
 # If a mod is updated and the defines for max ruler stats changes. Upon this mod updating the template will adjust the selected value.
 # NOTE: This would be an intensive check, it will only ever run when opening a menu!
 brs_validate = {
@@ -43,7 +44,7 @@ brs_validate = {
 
 		# make sure stat target is inside boundaries
 		if = {
-			limit = { brs_optionsxt_en = yes }
+			limit = { brs_optionsxt_enabled = yes }
 			if = {
 				limit = {
 					OR = {
@@ -99,8 +100,8 @@ brs_setup_oncheck = {
 # m = <0|1|...>
 brs_set_template = {
 	if = {
-		limit = { brs_optionsxt_en = yes }
-		custom_tooltip = brs_optionsxt_disable_tt
+		limit = { brs_optionsxt_enabled = yes }
+		custom_tooltip = brs_optionsxt_disabledable_tt
 		hidden_effect = { brs_disable_optionsxt = yes }
 	}
 	custom_tooltip = brs_set_template_$m$_tt

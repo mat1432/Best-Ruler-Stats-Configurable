@@ -9,8 +9,8 @@
  brs_disabled_tt: "Mod is currently §ODisabled§!"
  brs_minimum_enabled_tt: "Stats Target is currently treated §Yas a Minimum§!"
  brs_minimum_disabled_tt: "Stats Target is currently treated §YNormally§!"
- brs_optionsxt_en_tt: "§MLudicrous Mode§! is currently §GEnabled§!"
- brs_optionsxt_dis_tt: "§MLudicrous Mode§! is currently §ODisabled§!"
+ brs_optionsxt_enabled_tt: "§MLudicrous Mode§! is currently §GEnabled§!"
+ brs_optionsxt_disabled_tt: "§MLudicrous Mode§! is currently §ODisabled§!"
 
 # has target number
 # brs_has_target_$a$_tt: "Has Stat Target $a$"
