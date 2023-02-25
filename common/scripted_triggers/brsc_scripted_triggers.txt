@@ -119,10 +119,12 @@ brs_check_target_setup = {
 brs_check_var = {
 	hidden_trigger = {
 		root = {
+			[[a]
 			check_variable = {
 				which = $which$
 				value = $a$
 			}
+			]
 			[[b]
 			NOT = {
 				check_variable = {

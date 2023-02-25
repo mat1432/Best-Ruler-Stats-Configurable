@@ -1,6 +1,12 @@
 # Changelog
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
+## 1.0.4 (WIP)
+* Collapsed ludicrous mode dynamically.
+* Added options 100 to 200
+* Added detect max skill mechanic
+* Base game template reformed to max skill template.
+
 ## 1.0.3a
 * Stat target now autocorrects itself to the game defines each time the hidden event fires.
 

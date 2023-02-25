@@ -95,6 +95,58 @@ brs_setup_oncheck = {
 	}
 }
 
+brs_perform_test = {
+	hidden_effect = {
+		export_to_variable = {
+			which = ruler_skill_backup
+			value = ADM
+		}
+		change_adm = 1024
+		# if game does not allow 7 or above, after adding 1024, the exported Admin skill will be 6.
+		export_to_variable = {
+			which = brs_maxskill
+			value = ADM
+		}
+		# save detected maximum into stockholm (province) (global scope would be best, this is second best)
+		1 = {
+			# brs_maxskill here is different to the one set earlier. "PREV" will grab the variable in the previous scope of the same name as the first argument
+			set_variable = {
+				which = brs_maxskill
+				which = PREV
+			}
+		}
+
+		# restore admin skill to backup. Get difference between backup and current.
+		subtract_variable = {
+			which = brs_maxskill
+			which = ruler_skill_backup
+		}
+		#remove added excess points / while (brs_maxskill >= 1)
+		while = {
+			limit = { check_variable = { which = brs_maxskill value = 1 } }
+
+			# fastest subtraction technique for unknown large values
+			if = { limit = { check_variable = { which = brs_maxskill value = 512 } } brs_test_helper = { a=512 } }
+			else_if = { limit = { check_variable = { which = brs_maxskill value = 256 } } brs_test_helper = { a=256 } }
+			else_if = { limit = { check_variable = { which = brs_maxskill value = 128 } } brs_test_helper = { a=128 } }
+			else_if = { limit = { check_variable = { which = brs_maxskill value = 64 } } brs_test_helper = { a=64 } }
+			else_if = { limit = { check_variable = { which = brs_maxskill value = 32 } } brs_test_helper = { a=32 } }
+			else_if = { limit = { check_variable = { which = brs_maxskill value = 16 } } brs_test_helper = { a=16 } }
+			else_if = { limit = { check_variable = { which = brs_maxskill value = 8 } } brs_test_helper = { a=8 } }
+			else_if = { limit = { check_variable = { which = brs_maxskill value = 4 } } brs_test_helper = { a=4 } }
+			else_if = { limit = { check_variable = { which = brs_maxskill value = 2 } } brs_test_helper = { a=2 } }
+			else = { brs_test_helper = { a=1 } }
+		}
+	}
+}
+brs_test_helper = {
+	change_adm = -$a$
+	subtract_variable = {
+		which = brs_maxskill
+		value = $a$
+	}
+}
+
 # back to front to improve check speed
 # Arguments:
 # m = <0|1|...>
@@ -109,7 +161,8 @@ brs_set_template = {
 	# EDIT: Templates
 
 	if = { limit = { brs_check_template = { a=1 } } brs_set_target2 = { a=9 } } # anbennar expanded
-	else_if = { limit = { brs_check_template = { a=0 } } brs_set_target2 = { a=6 } } # vanilla
+	# else_if = { limit = { brs_check_template = { a=0 } } brs_set_target2 = { a=6 } } # vanilla
+	else = { brs_set_target_maxskill = yes } # max skill
 	hidden_effect = { set_country_flag = brs_template_used }
 }
 brs_clr_template = {
@@ -145,6 +198,18 @@ brs_set_target2 = {
 		set_variable = {
 			which = brs_target_var
 			value = $a$
+		}
+	}
+}
+
+brs_set_target_maxskill = {
+	custom_tooltip = brs_set_target_maxskill_tt
+	hidden_effect = {
+		set_country_flag = brs_setup_done
+
+		set_variable = {
+			which = brs_target_var
+			value = brs_maxskill
 		}
 	}
 }
@@ -239,7 +304,10 @@ brs_update_consort = {
 			which = ruler_skill
 			which = brs_target_var
 		}
-		brs_consort_helper = { value = $value$ }
+		if = { limit = { check_variable = { which = brs_target_var value = 101 } } brs_consort_helper100 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 71 } } brs_consort_helper70 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 41 } } brs_consort_helper40 = { value = $value$ } }
+		else = { brs_consort_helper = { value = $value$ } }
 	}
 }
 brs_update_consort_add = {
@@ -250,7 +318,10 @@ brs_update_consort_add = {
 	if = {
 		limit = { check_variable = { which = brs_target_var which = ruler_skill } }
 		change_variable = { which = ruler_skill which = brs_target_var }
-		brs_consort_helper = { value = $value$ }
+		if = { limit = { check_variable = { which = brs_target_var value = 101 } } brs_consort_helper100 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 71 } } brs_consort_helper70 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 41 } } brs_consort_helper40 = { value = $value$ } }
+		else = { brs_consort_helper = { value = $value$ } }
 	}
 }
 
@@ -258,7 +329,13 @@ brs_update_consort_add = {
 # back to front because check_variable does a greater than or equal to
 # it is verly long because the change_$ calls cannot accept variable output
 brs_consort_helper = {
-	if = { limit = { check_variable = { which = ruler_skill value = 20 } } change_consort_$value$ = 20 }
+	if = { limit = { check_variable = { which = ruler_skill value = 26 } } change_consort_$value$ = 26 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 25 } } change_consort_$value$ = 25 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 24 } } change_consort_$value$ = 24 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 23 } } change_consort_$value$ = 23 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 22 } } change_consort_$value$ = 22 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 21 } } change_consort_$value$ = 21 }
+	else_if = { limit = { check_variable = { which = ruler_skill value = 20 } } change_consort_$value$ = 20 }
 	else_if = { limit = { check_variable = { which = ruler_skill value = 19 } } change_consort_$value$ = 19 }
 	else_if = { limit = { check_variable = { which = ruler_skill value = 18 } } change_consort_$value$ = 18 }
 	else_if = { limit = { check_variable = { which = ruler_skill value = 17 } } change_consort_$value$ = 17 }
