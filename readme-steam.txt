@@ -5,7 +5,7 @@
 Updates your [b]Ruler[/b], [b]Heir[/b] AND [b]Consort[/b] skill points!
 
 This Mod gives you a choice at the start of the game to configure your ruler stats boost. [i]Can be changed at any time via a Decision![/i]
-It allows you to set a defined target for your ruler stats between [b]1 Point[/b] and [b]20 Points[/b]!
+It allows you to set a defined target for your ruler stats between [b]1 Point[/b] and [b]200 Points[/b]!
 This means you can configure your ruler to have max stats with any mod that changes max ruler stats!
 
 This Mod is completely dynamic and should be compatible with just about every major mod.
@@ -62,7 +62,7 @@ I have included a [url=https://github.com/mat1432/Best-Ruler-Stats-Configurable/
 [i][u]If you find mods have changed their defines, or want me to add a new mod to the templates list; Please post in the Discussion (not comments).[/u][/i]
 [h3]Supported Mod Templates List[/h3]
 [list]
-    [*]Base Game (6 Max Skill)
+    [*]Max Skill (Autoatically Detects the Game Defined Maximum)
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137]Anbennar Expanded[/url] (9 Max Skill)
 [/list]
 

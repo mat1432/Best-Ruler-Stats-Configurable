@@ -4,8 +4,8 @@
 ## 1.0.4 (WIP)
 * Collapsed ludicrous mode dynamically.
 * Added options 100 to 200
-* Added detect max skill mechanic
-* Base game template reformed to max skill template.
+* Added auto-detect max skill mechanic.
+  * This is automatically used and is forced to run at game start replacing the default static template of 6.
 
 ## 1.0.3a
 * Stat target now autocorrects itself to the game defines each time the hidden event fires.

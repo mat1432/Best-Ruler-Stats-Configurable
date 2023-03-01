@@ -9,6 +9,18 @@ defined_text = {
 	}
 }
 
+defined_text = { # might be unnecessary
+	name = GetDetectedMaxSkill
+	text = {
+		localisation_key = brs_GetDetectedMaxSkill
+		trigger = { has_global_flag = brs_setup }
+	}
+	text = {
+		localisation_key = brs_GetDetectedMaxSkill_0
+		trigger = { NOT = { has_global_flag = brs_setup } }
+	}
+}
+
 # Country keys
 
 ### Get Setup text

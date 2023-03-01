@@ -13,19 +13,6 @@ brs_disabled = {
 	}
 }
 
-brs_optionsxt_enabled = {
-	custom_trigger_tooltip = {
-		tooltip = brs_optionsxt_enabled_tt
-		has_country_flag = brs_optionsxt
-	}
-}
-brs_optionsxt_disabled = {
-	custom_trigger_tooltip = {
-		tooltip = brs_optionsxt_disabled_tt
-		NOT = { has_country_flag = brs_optionsxt }
-	}
-}
-
 brs_minimum_enabled = {
 	custom_trigger_tooltip = {
 		tooltip = brs_minimum_enabled_tt

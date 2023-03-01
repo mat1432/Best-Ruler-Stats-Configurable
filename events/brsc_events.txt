@@ -183,36 +183,12 @@ country_event = {
 
 	option = {
 		name = "brs_2_specific"
-		trigger = {
-			brs_optionsxt_disabled = yes
-			hidden_trigger = { brs_has_any_template = yes }
-		}
+		trigger = { hidden_trigger = { brs_has_any_template = yes } }
 		country_event = { id = brs.10 }
 	}
 	option = {
 		name = "brs_2_specific"
-		trigger = {
-			brs_optionsxt_disabled = yes
-			hidden_trigger = { brs_has_any_template = no }
-		}
-		highlight = yes
-		country_event = { id = brs.10 }
-	}
-	
-	option = {
-		name = "brs_2_specific_xt"
-		trigger = {
-			brs_optionsxt_enabled = yes
-			hidden_trigger = { brs_has_any_template = yes }
-		}
-		country_event = { id = brs.10 }
-	}
-	option = {
-		name = "brs_2_specific_xt"
-		trigger = {
-			brs_optionsxt_enabled = yes
-			hidden_trigger = { brs_has_any_template = no }
-		}
+		trigger = { hidden_trigger = { brs_has_any_template = no } }
 		highlight = yes
 		country_event = { id = brs.10 }
 	}
@@ -298,14 +274,7 @@ country_event = {
 country_event = {
 	id = brs.10
 	title = "brs_specific_t"
-	desc = {
-		trigger = { brs_optionsxt_disabled = yes }
-		desc = "brs_specific_d"
-	}
-	desc = {
-		trigger = { brs_optionsxt_enabled = yes }
-		desc = "brs_specific_d_xt"
-	}
+	desc = "brs_specific_d"
 	picture = DIPLOMACY_eventPicture
 	is_triggered_only = yes
 	trigger = { ai = no }
@@ -3731,10 +3700,10 @@ country_event = {
 
 	trigger = {
 		ai = no
+		NOT = { has_global_flag = brs_setup }
 	}
 	mean_time_to_happen = { days = 1 }
 	immediate = {
-		set_global_flag = brs_setup
 		brs_perform_test = yes
 	}
 	after = {
@@ -3759,28 +3728,34 @@ country_event = {
 	title = "brs_99_t"
 	desc = "brs_99_d"
 
+	is_triggered_only = yes
 	trigger = {
 		ai = no
 		has_global_flag = brs_setup
 		NOT = { has_country_flag = brs_setup_done }
 	}
-	mean_time_to_happen = { months = 1 }
 	immediate = {
 		hidden_effect = {
 			set_country_flag = brs_open
-			set_country_flag = brs_setup_done
 		}
 	}
 	option = {
 		name = "brs_99_maxskill"
+		ai_chance = { factor = 100 }
 		hidden_effect = {
 			clr_country_flag = brs_open
+			set_country_flag = brs_setup_done
 		}
 		brs_set_template = { m=0 }
-		brs_set_target_maxskill = yes
+		# brs_set_target_maxskill = yes
 	}
 	option = {
 		name = "brs_99_configure"
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			set_country_flag = brs_setup_done
+		}
+		brs_set_target_onlyset = { a=6 }
 		country_event = { id = brs.2 }
 	}
 }

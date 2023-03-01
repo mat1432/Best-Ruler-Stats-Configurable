@@ -42,39 +42,19 @@ brs_validate = {
 			country_event = { id = brs.101 }
 		}
 
-		# make sure stat target is inside boundaries
+		# update local stat target with global max skill
 		if = {
-			limit = { brs_optionsxt_enabled = yes }
-			if = {
-				limit = {
-					OR = {
-						NOT = {
-							check_variable = {
-								which = brs_target_var
-								value = 0
-							}
-						}
-						check_variable = {
-							which = brs_target_var
-							value = 101
-						}
-					}
-				}
-				country_event = { id = brs.100 }
-			}
+			limit = { brs_has_template = { m=0 } }
+			brs_set_target_maxskill = yes
 		}
-		else_if = {
+
+		# make sure stat target is zero or positive
+		if = {
 			limit = {
-				OR = {
-					NOT = {
-						check_variable = {
-							which = brs_target_var
-							value = 0
-						}
-					}
+				NOT = {
 					check_variable = {
 						which = brs_target_var
-						value = 21
+						value = 0
 					}
 				}
 			}
@@ -88,6 +68,10 @@ brs_setup_oncheck = {
 			limit = {
 				ai = no
 				NOT = { has_country_flag = brs_setup_done }
+			}
+			if = {
+				limit = { NOT = { has_global_flag = brs_setup } }
+				brs_perform_test = yes
 			}
 			set_country_flag = brs_setup_done
 			brs_set_template = { m=0 }
@@ -114,6 +98,10 @@ brs_perform_test = {
 				which = brs_maxskill
 				which = PREV
 			}
+			set_variable = { # for country calls to province
+				which = brs_target_var
+				which = brs_maxskill
+			}
 		}
 
 		# restore admin skill to backup. Get difference between backup and current.
@@ -137,6 +125,7 @@ brs_perform_test = {
 			else_if = { limit = { check_variable = { which = brs_maxskill value = 2 } } brs_test_helper = { a=2 } }
 			else = { brs_test_helper = { a=1 } }
 		}
+		set_global_flag = brs_setup
 	}
 }
 brs_test_helper = {
@@ -151,17 +140,12 @@ brs_test_helper = {
 # Arguments:
 # m = <0|1|...>
 brs_set_template = {
-	if = {
-		limit = { brs_optionsxt_enabled = yes }
-		custom_tooltip = brs_optionsxt_disabledable_tt
-		hidden_effect = { brs_disable_optionsxt = yes }
-	}
 	custom_tooltip = brs_set_template_$m$_tt
 	hidden_effect = { set_variable = { which = brs_template_var value = $m$ } }
 	# EDIT: Templates
 
-	if = { limit = { brs_check_template = { a=1 } } brs_set_target2 = { a=9 } } # anbennar expanded
-	# else_if = { limit = { brs_check_template = { a=0 } } brs_set_target2 = { a=6 } } # vanilla
+	if = { limit = { brs_check_template = { a=1 } } brs_set_target_onlyset = { a=9 } } # anbennar expanded
+	# else_if = { limit = { brs_check_template = { a=0 } } brs_set_target_onlyset = { a=6 } } # vanilla
 	else = { brs_set_target_maxskill = yes } # max skill
 	hidden_effect = { set_country_flag = brs_template_used }
 }
@@ -191,7 +175,7 @@ brs_set_target = {
 	}
 }
 # for set templates, does not clear variable
-brs_set_target2 = {
+brs_set_target_onlyset = {
 	custom_tooltip = brs_set_target_$a$_tt
 	hidden_effect = {
 		set_country_flag = brs_setup_done
@@ -206,10 +190,13 @@ brs_set_target_maxskill = {
 	custom_tooltip = brs_set_target_maxskill_tt
 	hidden_effect = {
 		set_country_flag = brs_setup_done
-
-		set_variable = {
-			which = brs_target_var
-			value = brs_maxskill
+		1 = {
+			root = {
+				set_variable = {
+					which = brs_target_var
+					value = PREV
+				}
+			}
 		}
 	}
 }
@@ -304,9 +291,10 @@ brs_update_consort = {
 			which = ruler_skill
 			which = brs_target_var
 		}
-		if = { limit = { check_variable = { which = brs_target_var value = 101 } } brs_consort_helper100 = { value = $value$ } }
-		else_if = { limit = { check_variable = { which = brs_target_var value = 71 } } brs_consort_helper70 = { value = $value$ } }
-		else_if = { limit = { check_variable = { which = brs_target_var value = 41 } } brs_consort_helper40 = { value = $value$ } }
+		if = { limit = { check_variable = { which = brs_target_var value = 101 } } brs_consort_helper200 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 71 } } brs_consort_helper100 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 41 } } brs_consort_helper70 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 21 } } brs_consort_helper40 = { value = $value$ } }
 		else = { brs_consort_helper = { value = $value$ } }
 	}
 }
@@ -318,9 +306,10 @@ brs_update_consort_add = {
 	if = {
 		limit = { check_variable = { which = brs_target_var which = ruler_skill } }
 		change_variable = { which = ruler_skill which = brs_target_var }
-		if = { limit = { check_variable = { which = brs_target_var value = 101 } } brs_consort_helper100 = { value = $value$ } }
-		else_if = { limit = { check_variable = { which = brs_target_var value = 71 } } brs_consort_helper70 = { value = $value$ } }
-		else_if = { limit = { check_variable = { which = brs_target_var value = 41 } } brs_consort_helper40 = { value = $value$ } }
+		if = { limit = { check_variable = { which = brs_target_var value = 101 } } brs_consort_helper200 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 71 } } brs_consort_helper100 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 41 } } brs_consort_helper70 = { value = $value$ } }
+		else_if = { limit = { check_variable = { which = brs_target_var value = 21 } } brs_consort_helper40 = { value = $value$ } }
 		else = { brs_consort_helper = { value = $value$ } }
 	}
 }
