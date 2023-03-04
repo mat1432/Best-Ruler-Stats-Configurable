@@ -7,7 +7,7 @@
 
 Updates your **Ruler**, **Heir** and **Consort** skill points!
 
-This Mod gives you a choice at the start of the game to configure your ruler stats boost. * *Can be changed at any time via a Decision!* *
+This Mod detects the maximum possible stats, and gives you a choice to adopt that, or configure a stat profile manually!
 It allows you to set a defined target for your ruler stats between **1 Point** and **200 Points**!
 This means you can configure your ruler to have max stats with any mod that changes max ruler stats!
 
@@ -82,7 +82,7 @@ A: ~~Nope, Sorry Mate!~~ The command *change_<adm|dip|mil>* will only ever bring
 Edit: Yes, only if you have a mod that changes the defines to expand ruler stats! The mod supports up to 100 stat points.
 ### Q: Why not just hardcode it to 15 from the start?
 A: ~~Then the hidden background event would fire every month and error every time. To keep log files down and help wih that little bit of performance, I suggest you honestly select the correct option.~~
-Edit: The mod now immeidately autocorrects itself from your selection to the game defined maximum.
+Edit: The mod now the game defined maximum, and configures itself to that.
 
 ## Install and Uninstall Compatibility
 ### Forwards Compatability
