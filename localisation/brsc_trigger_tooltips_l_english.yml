@@ -54,6 +54,7 @@
  brs_has_target_38_tt: "Has Stat Target §Y38§!"
  brs_has_target_39_tt: "Has Stat Target §Y39§!"
  brs_has_target_40_tt: "Has Stat Target §Y40§!"
+# 70
  brs_has_target_41_tt: "Has Stat Target §Y41§!"
  brs_has_target_42_tt: "Has Stat Target §Y42§!"
  brs_has_target_43_tt: "Has Stat Target §Y43§!"
@@ -84,7 +85,7 @@
  brs_has_target_68_tt: "Has Stat Target §Y68§!"
  brs_has_target_69_tt: "Has Stat Target §Y69§!"
  brs_has_target_70_tt: "Has Stat Target §Y70§!"
-# 70
+# 100
  brs_has_target_71_tt: "Has Stat Target §Y71§!"
  brs_has_target_72_tt: "Has Stat Target §Y72§!"
  brs_has_target_73_tt: "Has Stat Target §Y73§!"
@@ -115,7 +116,7 @@
  brs_has_target_98_tt: "Has Stat Target §Y98§!"
  brs_has_target_99_tt: "Has Stat Target §Y99§!"
  brs_has_target_100_tt: "Has Stat Target §Y100§!"
-# 100
+# 200
  brs_has_target_101_tt: "Has Stat Target §Y101§!"
  brs_has_target_102_tt: "Has Stat Target §Y102§!"
  brs_has_target_103_tt: "Has Stat Target §Y103§!"
@@ -216,7 +217,6 @@
  brs_has_target_198_tt: "Has Stat Target §Y198§!"
  brs_has_target_199_tt: "Has Stat Target §Y199§!"
  brs_has_target_200_tt: "Has Stat Target §Y200§!"
-# 200
 
 # mod templates
  brs_has_any_template_tt: "Is Using a Template"

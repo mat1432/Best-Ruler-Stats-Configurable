@@ -32,6 +32,7 @@
  brs_specific_d: "This will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
  brs_change_showall: "Show All Options ([BRSMaxSupportedChoice])"
  brs_change_showmaxskill: "Show All Options up to Max Skill ([Root.brs_maxskill.GetValue])"
+
  brs_change_0: "Set to §Y0§!"
  brs_change_1: "Set to §Y1§!"
  brs_change_2: "Set to §Y2§!"
@@ -53,7 +54,7 @@
  brs_change_18: "Set to §Y18§!"
  brs_change_19: "Set to §Y19§!"
  brs_change_20: "Set to §Y20§!"
-# 20
+# 40
  brs_change_21: "Set to §Y21§!"
  brs_change_22: "Set to §Y22§!"
  brs_change_23: "Set to §Y23§!"
@@ -74,7 +75,7 @@
  brs_change_38: "Set to §Y38§!"
  brs_change_39: "Set to §Y39§!"
  brs_change_40: "Set to §Y40§!"
-# 40
+# 70
  brs_change_41: "Set to §Y41§!"
  brs_change_42: "Set to §Y42§!"
  brs_change_43: "Set to §Y43§!"
@@ -105,7 +106,7 @@
  brs_change_68: "Set to §Y68§!"
  brs_change_69: "Set to §Y69§!"
  brs_change_70: "Set to §Y70§!"
-# 70
+# 100
  brs_change_71: "Set to §Y71§!"
  brs_change_72: "Set to §Y72§!"
  brs_change_73: "Set to §Y73§!"
@@ -136,7 +137,7 @@
  brs_change_98: "Set to §Y98§!"
  brs_change_99: "Set to §Y99§!"
  brs_change_100: "Set to §Y100§!"
-# 100
+# 200
  brs_change_101: "Set to §Y101§!"
  brs_change_102: "Set to §Y102§!"
  brs_change_103: "Set to §Y103§!"
@@ -237,8 +238,6 @@
  brs_change_198: "Set to §Y198§!"
  brs_change_199: "Set to §Y199§!"
  brs_change_200: "Set to §Y200§!"
-# 200
-
 
 # auto menus
  brs_90_t: "£brsdynasty££adm£ Best Ruler Stats - Detect Max Skill Startup Event"

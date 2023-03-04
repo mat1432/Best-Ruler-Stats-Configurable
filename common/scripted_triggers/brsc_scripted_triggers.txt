@@ -143,6 +143,7 @@ brs_check_template = {
 	}
 }
 
+# requires using brs_load_maxskill_locally
 # potential tooltips I may consider using
 #tooltip = brs_maxskill_exact_$a$
 #tooltip = brs_maxskill_atleast_$a$
@@ -154,10 +155,8 @@ brs_check_maxskill = {
 			limit = { has_country_flag = brs_showalloptions }
 			always = yes
 		}
-		else = { 
-			1 = {
-				brs_check_var = { which = brs_template_var [[a] a = $a$ ] [[b] b = $b$ ] }
-			}
+		else = {
+			brs_check_var = { which = brs_maxskill [[a] a = $a$ ] [[b] b = $b$ ] }
 		}
 	}
 }

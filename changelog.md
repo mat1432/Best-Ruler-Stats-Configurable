@@ -1,7 +1,8 @@
 # Changelog
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
-## 1.0.4 (WIP)
+## 1.1.0
+* The mod now automatically detects the maximum possible ruler stats.
 * Collapsed ludicrous mode dynamically.
 * Added options 100 to 200
 * Added auto-detect max skill mechanic.

@@ -33,7 +33,7 @@
  brs_set_target_18_tt: "§GSet Stat Target§! to §Y18§!"
  brs_set_target_19_tt: "§GSet Stat Target§! to §Y19§!"
  brs_set_target_20_tt: "§GSet Stat Target§! to §Y20§!"
-# 20
+# 40
  brs_set_target_21_tt: "§GSet Stat Target§! to §Y21§!"
  brs_set_target_22_tt: "§GSet Stat Target§! to §Y22§!"
  brs_set_target_23_tt: "§GSet Stat Target§! to §Y23§!"
@@ -54,7 +54,7 @@
  brs_set_target_38_tt: "§GSet Stat Target§! to §Y38§!"
  brs_set_target_39_tt: "§GSet Stat Target§! to §Y39§!"
  brs_set_target_40_tt: "§GSet Stat Target§! to §Y40§!"
-# 40
+# 70
  brs_set_target_41_tt: "§GSet Stat Target§! to §Y41§!"
  brs_set_target_42_tt: "§GSet Stat Target§! to §Y42§!"
  brs_set_target_43_tt: "§GSet Stat Target§! to §Y43§!"
@@ -85,7 +85,7 @@
  brs_set_target_68_tt: "§GSet Stat Target§! to §Y68§!"
  brs_set_target_69_tt: "§GSet Stat Target§! to §Y69§!"
  brs_set_target_70_tt: "§GSet Stat Target§! to §Y70§!"
-# 70
+# 100
  brs_set_target_71_tt: "§GSet Stat Target§! to §Y71§!"
  brs_set_target_72_tt: "§GSet Stat Target§! to §Y72§!"
  brs_set_target_73_tt: "§GSet Stat Target§! to §Y73§!"
@@ -116,7 +116,7 @@
  brs_set_target_98_tt: "§GSet Stat Target§! to §Y98§!"
  brs_set_target_99_tt: "§GSet Stat Target§! to §Y99§!"
  brs_set_target_100_tt: "§GSet Stat Target§! to §Y100§!"
-# 100
+# 200
  brs_set_target_101_tt: "§GSet Stat Target§! to §Y101§!"
  brs_set_target_102_tt: "§GSet Stat Target§! to §Y102§!"
  brs_set_target_103_tt: "§GSet Stat Target§! to §Y103§!"
@@ -217,7 +217,6 @@
  brs_set_target_198_tt: "§GSet Stat Target§! to §Y198§!"
  brs_set_target_199_tt: "§GSet Stat Target§! to §Y199§!"
  brs_set_target_200_tt: "§GSet Stat Target§! to §Y200§!"
-# 200
 
 # mod templates
  brs_clr_template_tt: "§ODetach Stat Target From Template§!"
