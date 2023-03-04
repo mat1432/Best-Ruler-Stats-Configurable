@@ -13,19 +13,6 @@ brs_disabled = {
 	}
 }
 
-brs_optionsxt_enabled = {
-	custom_trigger_tooltip = {
-		tooltip = brs_optionsxt_enabled_tt
-		has_country_flag = brs_optionsxt
-	}
-}
-brs_optionsxt_disabled = {
-	custom_trigger_tooltip = {
-		tooltip = brs_optionsxt_disabled_tt
-		NOT = { has_country_flag = brs_optionsxt }
-	}
-}
-
 brs_minimum_enabled = {
 	custom_trigger_tooltip = {
 		tooltip = brs_minimum_enabled_tt
@@ -119,10 +106,12 @@ brs_check_target_setup = {
 brs_check_var = {
 	hidden_trigger = {
 		root = {
+			[[a]
 			check_variable = {
 				which = $which$
 				value = $a$
 			}
+			]
 			[[b]
 			NOT = {
 				check_variable = {
@@ -151,6 +140,30 @@ brs_check_template = {
 	custom_trigger_tooltip = {
 		tooltip = brs_has_template_$a$_tt
 		brs_check_var = { which = brs_template_var a = $a$ [[b] b = $b$ ] }
+	}
+}
+
+# potential tooltips I may consider using
+#tooltip = brs_maxskill_exact_$a$
+#tooltip = brs_maxskill_atleast_$a$
+#tooltip = brs_maxskill_atmost_$b$
+
+# requires using brs_load_maxskill_locally
+# maxskill is exactly x ---> a=x b=(x+1)
+# maxskill is at least x --> a=x
+# maxskill is at most x ---> b=(x+1)
+brs_check_maxskill = {
+	hidden_effect = { #custom_trigger_tooltip = {
+		#tooltip = brs_maxskill_exact_$a$
+		if = { # show all options
+			limit = { has_country_flag = brs_showalloptions }
+			always = yes
+		}
+		else = {
+			1 = {
+				brs_check_var = { which = brs_maxskill [[a] a = $a$ ] [[b] b = $b$ ] }
+			}
+		}
 	}
 }
 

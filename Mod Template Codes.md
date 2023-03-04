@@ -17,5 +17,5 @@ The Following files contain have template related content:
 ## List
 | Mod Name | Steam Page | Git Link | Integer Code |
 | ---      | ---        | ---      | ---       |
-| Base Game | [Steam](https://store.steampowered.com/app/236850/Europa_Universalis_IV/) | - | 0 |
+| Detected Max Skill | - | - | 0 |
 | Anbennar Expanded | [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2422633137) | ? | 1 |

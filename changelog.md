@@ -1,6 +1,13 @@
 # Changelog
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
+## 1.1.0
+* The mod now automatically detects the maximum possible ruler stats.
+* Improved the running performance for options above 20 by splitting them into tiers
+* Added options 100 to 200
+* Added auto-detect max skill mechanic.
+  * This is automatically used and is forced to run at game start replacing the default static template of 6.
+
 ## 1.0.3a
 * Stat target now autocorrects itself to the game defines each time the hidden event fires.
 
