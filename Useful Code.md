@@ -17,6 +17,8 @@ namespace EU4_Generation_Code
             int start = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnd Value (number): ");
             int end = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nShow only options up to max skill (yes/no): ");
+            var maxskill = Console.ReadLine();
 
             Console.WriteLine("\n");
             Console.WriteLine("");
@@ -26,15 +28,17 @@ namespace EU4_Generation_Code
                 Console.WriteLine("");
                 Console.WriteLine("option = {");
                 Console.WriteLine("\tname = \"brs_change_" + x + "\"");
-                if (x == 0)
+                if (x == 0 || maxskill != "yes")
                 {
                     Console.WriteLine("\ttrigger = { NOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } } }");
                 }
                 else
                 {
                     Console.WriteLine("\ttrigger = {");
-                    Console.WriteLine("\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
-                    Console.WriteLine("\t\tNOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
+                    Console.WriteLine("\t\tAND = {");
+                    Console.WriteLine("\t\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
+                    Console.WriteLine("\t\t\tNOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
+                    Console.WriteLine("\t\t}");
                     Console.WriteLine("\t}");
                 }
                 Console.WriteLine("\tbrs_set_target = { a=" + x + " }");
@@ -44,15 +48,17 @@ namespace EU4_Generation_Code
                 Console.WriteLine("");
                 Console.WriteLine("option = {");
                 Console.WriteLine("\tname = \"brs_change_" + x + "\"");
-                if (x == 0)
+                if (x == 0 || maxskill != "yes")
                 {
-                    Console.WriteLine("\ttrigger = { NOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } } }");
+                    Console.WriteLine("\ttrigger = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
                 }
                 else
                 {
                     Console.WriteLine("\ttrigger = {");
-                    Console.WriteLine("\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
-                    Console.WriteLine("\t\tNOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
+                    Console.WriteLine("\t\tAND = {");
+                    Console.WriteLine("\t\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
+                    Console.WriteLine("\t\t\tbrs_check_target_setup = { a=" + x + " b=" + (x + 1) + " }");
+                    Console.WriteLine("\t\t}");
                     Console.WriteLine("\t}");
                 }
                 Console.WriteLine("\thighlight = yes");
