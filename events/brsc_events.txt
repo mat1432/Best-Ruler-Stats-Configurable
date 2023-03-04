@@ -304,24 +304,24 @@ country_event = {
 		country_event = { id = brs.2 }
 	}
 
-	option = {
-		name = "brs_change_showall"
-		trigger = { hidden_trigger = { NOT = { has_country_flag = brs_showalloptions } } }
-		hidden_effect = {
-			set_country_flag = brs_showalloptions
-			country_event = { id = brs.1010 }
-		}
-		tooltip = { country_event = { id = brs.10 } }
-	}
-	option = {
-		name = "brs_change_showmaxskill"
-		trigger = { hidden_trigger = { has_country_flag = brs_showalloptions } }
-		hidden_effect = {
-			clr_country_flag = brs_showalloptions
-			country_event = { id = brs.1010 }
-		}
-		tooltip = { country_event = { id = brs.10 } }
-	}
+	# option = {
+	# 	name = "brs_change_showall"
+	# 	trigger = { hidden_trigger = { NOT = { has_country_flag = brs_showalloptions } } }
+	# 	hidden_effect = {
+	# 		set_country_flag = brs_showalloptions
+	# 		country_event = { id = brs.1010 }
+	# 	}
+	# 	tooltip = { country_event = { id = brs.10 } }
+	# }
+	# option = {
+	# 	name = "brs_change_showmaxskill"
+	# 	trigger = { hidden_trigger = { has_country_flag = brs_showalloptions } }
+	# 	hidden_effect = {
+	# 		clr_country_flag = brs_showalloptions
+	# 		country_event = { id = brs.1010 }
+	# 	}
+	# 	tooltip = { country_event = { id = brs.10 } }
+	# }
 
 	option = {
 		name = "brs_change_0"
@@ -342,10 +342,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_1"
-		trigger = {
-			brs_check_maxskill = { b=2 }
-			NOT = { brs_check_target_setup = { a=1 b=2 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=1 b=2 } } }
 		brs_set_target = { a=1 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -353,10 +350,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_1"
-		trigger = {
-			brs_check_maxskill = { b=2 }
-			brs_check_target_setup = { a=1 b=2 }
-		}
+		trigger = { brs_check_target_setup = { a=1 b=2 } }
 		highlight = yes
 		brs_set_target = { a=1 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -365,10 +359,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_2"
-		trigger = {
-			brs_check_maxskill = { b=3 }
-			NOT = { brs_check_target_setup = { a=2 b=3 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=2 b=3 } } }
 		brs_set_target = { a=2 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -376,10 +367,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_2"
-		trigger = {
-			brs_check_maxskill = { b=3 }
-			brs_check_target_setup = { a=2 b=3 }
-		}
+		trigger = { brs_check_target_setup = { a=2 b=3 } }
 		highlight = yes
 		brs_set_target = { a=2 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -388,10 +376,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_3"
-		trigger = {
-			brs_check_maxskill = { b=4 }
-			NOT = { brs_check_target_setup = { a=3 b=4 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=3 b=4 } } }
 		brs_set_target = { a=3 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -399,10 +384,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_3"
-		trigger = {
-			brs_check_maxskill = { b=4 }
-			brs_check_target_setup = { a=3 b=4 }
-		}
+		trigger = { brs_check_target_setup = { a=3 b=4 } }
 		highlight = yes
 		brs_set_target = { a=3 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -411,10 +393,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_4"
-		trigger = {
-			brs_check_maxskill = { b=5 }
-			NOT = { brs_check_target_setup = { a=4 b=5 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=4 b=5 } } }
 		brs_set_target = { a=4 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -422,10 +401,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_4"
-		trigger = {
-			brs_check_maxskill = { b=5 }
-			brs_check_target_setup = { a=4 b=5 }
-		}
+		trigger = { brs_check_target_setup = { a=4 b=5 } }
 		highlight = yes
 		brs_set_target = { a=4 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -434,10 +410,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_5"
-		trigger = {
-			brs_check_maxskill = { b=6 }
-			NOT = { brs_check_target_setup = { a=5 b=6 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=5 b=6 } } }
 		brs_set_target = { a=5 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -445,10 +418,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_5"
-		trigger = {
-			brs_check_maxskill = { b=6 }
-			brs_check_target_setup = { a=5 b=6 }
-		}
+		trigger = { brs_check_target_setup = { a=5 b=6 } }
 		highlight = yes
 		brs_set_target = { a=5 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -457,10 +427,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_6"
-		trigger = {
-			brs_check_maxskill = { b=7 }
-			NOT = { brs_check_target_setup = { a=6 b=7 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=6 b=7 } } }
 		brs_set_target = { a=6 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -468,10 +435,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_6"
-		trigger = {
-			brs_check_maxskill = { b=7 }
-			brs_check_target_setup = { a=6 b=7 }
-		}
+		trigger = { brs_check_target_setup = { a=6 b=7 } }
 		highlight = yes
 		brs_set_target = { a=6 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -480,10 +444,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_7"
-		trigger = {
-			brs_check_maxskill = { b=8 }
-			NOT = { brs_check_target_setup = { a=7 b=8 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=7 b=8 } } }
 		brs_set_target = { a=7 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -491,10 +452,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_7"
-		trigger = {
-			brs_check_maxskill = { b=8 }
-			brs_check_target_setup = { a=7 b=8 }
-		}
+		trigger = { brs_check_target_setup = { a=7 b=8 } }
 		highlight = yes
 		brs_set_target = { a=7 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -503,10 +461,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_8"
-		trigger = {
-			brs_check_maxskill = { b=9 }
-			NOT = { brs_check_target_setup = { a=8 b=9 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=8 b=9 } } }
 		brs_set_target = { a=8 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -514,10 +469,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_8"
-		trigger = {
-			brs_check_maxskill = { b=9 }
-			brs_check_target_setup = { a=8 b=9 }
-		}
+		trigger = { brs_check_target_setup = { a=8 b=9 } }
 		highlight = yes
 		brs_set_target = { a=8 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -526,10 +478,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_9"
-		trigger = {
-			brs_check_maxskill = { b=10 }
-			NOT = { brs_check_target_setup = { a=9 b=10 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=9 b=10 } } }
 		brs_set_target = { a=9 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -537,10 +486,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_9"
-		trigger = {
-			brs_check_maxskill = { b=10 }
-			brs_check_target_setup = { a=9 b=10 }
-		}
+		trigger = { brs_check_target_setup = { a=9 b=10 } }
 		highlight = yes
 		brs_set_target = { a=9 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -549,10 +495,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_10"
-		trigger = {
-			brs_check_maxskill = { b=11 }
-			NOT = { brs_check_target_setup = { a=10 b=11 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=10 b=11 } } }
 		brs_set_target = { a=10 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -560,10 +503,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_10"
-		trigger = {
-			brs_check_maxskill = { b=11 }
-			brs_check_target_setup = { a=10 b=11 }
-		}
+		trigger = { brs_check_target_setup = { a=10 b=11 } }
 		highlight = yes
 		brs_set_target = { a=10 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -572,10 +512,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_11"
-		trigger = {
-			brs_check_maxskill = { b=12 }
-			NOT = { brs_check_target_setup = { a=11 b=12 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=11 b=12 } } }
 		brs_set_target = { a=11 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -583,10 +520,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_11"
-		trigger = {
-			brs_check_maxskill = { b=12 }
-			brs_check_target_setup = { a=11 b=12 }
-		}
+		trigger = { brs_check_target_setup = { a=11 b=12 } }
 		highlight = yes
 		brs_set_target = { a=11 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -595,10 +529,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_12"
-		trigger = {
-			brs_check_maxskill = { b=13 }
-			NOT = { brs_check_target_setup = { a=12 b=13 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=12 b=13 } } }
 		brs_set_target = { a=12 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -606,10 +537,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_12"
-		trigger = {
-			brs_check_maxskill = { b=13 }
-			brs_check_target_setup = { a=12 b=13 }
-		}
+		trigger = { brs_check_target_setup = { a=12 b=13 } }
 		highlight = yes
 		brs_set_target = { a=12 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -618,10 +546,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_13"
-		trigger = {
-			brs_check_maxskill = { b=14 }
-			NOT = { brs_check_target_setup = { a=13 b=14 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=13 b=14 } } }
 		brs_set_target = { a=13 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -629,10 +554,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_13"
-		trigger = {
-			brs_check_maxskill = { b=14 }
-			brs_check_target_setup = { a=13 b=14 }
-		}
+		trigger = { brs_check_target_setup = { a=13 b=14 } }
 		highlight = yes
 		brs_set_target = { a=13 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -641,10 +563,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_14"
-		trigger = {
-			brs_check_maxskill = { b=15 }
-			NOT = { brs_check_target_setup = { a=14 b=15 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=14 b=15 } } }
 		brs_set_target = { a=14 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -652,10 +571,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_14"
-		trigger = {
-			brs_check_maxskill = { b=15 }
-			brs_check_target_setup = { a=14 b=15 }
-		}
+		trigger = { brs_check_target_setup = { a=14 b=15 } }
 		highlight = yes
 		brs_set_target = { a=14 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -664,10 +580,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_15"
-		trigger = {
-			brs_check_maxskill = { b=16 }
-			NOT = { brs_check_target_setup = { a=15 b=16 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=15 b=16 } } }
 		brs_set_target = { a=15 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -675,10 +588,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_15"
-		trigger = {
-			brs_check_maxskill = { b=16 }
-			brs_check_target_setup = { a=15 b=16 }
-		}
+		trigger = { brs_check_target_setup = { a=15 b=16 } }
 		highlight = yes
 		brs_set_target = { a=15 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -687,10 +597,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_16"
-		trigger = {
-			brs_check_maxskill = { b=17 }
-			NOT = { brs_check_target_setup = { a=16 b=17 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=16 b=17 } } }
 		brs_set_target = { a=16 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -698,10 +605,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_16"
-		trigger = {
-			brs_check_maxskill = { b=17 }
-			brs_check_target_setup = { a=16 b=17 }
-		}
+		trigger = { brs_check_target_setup = { a=16 b=17 } }
 		highlight = yes
 		brs_set_target = { a=16 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -710,10 +614,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_17"
-		trigger = {
-			brs_check_maxskill = { b=18 }
-			NOT = { brs_check_target_setup = { a=17 b=18 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=17 b=18 } } }
 		brs_set_target = { a=17 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -721,10 +622,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_17"
-		trigger = {
-			brs_check_maxskill = { b=18 }
-			brs_check_target_setup = { a=17 b=18 }
-		}
+		trigger = { brs_check_target_setup = { a=17 b=18 } }
 		highlight = yes
 		brs_set_target = { a=17 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -733,10 +631,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_18"
-		trigger = {
-			brs_check_maxskill = { b=19 }
-			NOT = { brs_check_target_setup = { a=18 b=19 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=18 b=19 } } }
 		brs_set_target = { a=18 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -744,10 +639,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_18"
-		trigger = {
-			brs_check_maxskill = { b=19 }
-			brs_check_target_setup = { a=18 b=19 }
-		}
+		trigger = { brs_check_target_setup = { a=18 b=19 } }
 		highlight = yes
 		brs_set_target = { a=18 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -756,10 +648,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_19"
-		trigger = {
-			brs_check_maxskill = { b=20 }
-			NOT = { brs_check_target_setup = { a=19 b=20 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=19 b=20 } } }
 		brs_set_target = { a=19 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -767,10 +656,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_19"
-		trigger = {
-			brs_check_maxskill = { b=20 }
-			brs_check_target_setup = { a=19 b=20 }
-		}
+		trigger = { brs_check_target_setup = { a=19 b=20 } }
 		highlight = yes
 		brs_set_target = { a=19 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -779,10 +665,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_20"
-		trigger = {
-			brs_check_maxskill = { b=21 }
-			NOT = { brs_check_target_setup = { a=20 b=21 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=20 b=21 } } }
 		brs_set_target = { a=20 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -790,10 +673,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_20"
-		trigger = {
-			brs_check_maxskill = { b=21 }
-			brs_check_target_setup = { a=20 b=21 }
-		}
+		trigger = { brs_check_target_setup = { a=20 b=21 } }
 		highlight = yes
 		brs_set_target = { a=20 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -802,10 +682,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_21"
-		trigger = {
-			brs_check_maxskill = { b=22 }
-			NOT = { brs_check_target_setup = { a=21 b=22 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=21 b=22 } } }
 		brs_set_target = { a=21 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -813,10 +690,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_21"
-		trigger = {
-			brs_check_maxskill = { b=22 }
-			brs_check_target_setup = { a=21 b=22 }
-		}
+		trigger = { brs_check_target_setup = { a=21 b=22 } }
 		highlight = yes
 		brs_set_target = { a=21 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -825,10 +699,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_22"
-		trigger = {
-			brs_check_maxskill = { b=23 }
-			NOT = { brs_check_target_setup = { a=22 b=23 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=22 b=23 } } }
 		brs_set_target = { a=22 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -836,10 +707,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_22"
-		trigger = {
-			brs_check_maxskill = { b=23 }
-			brs_check_target_setup = { a=22 b=23 }
-		}
+		trigger = { brs_check_target_setup = { a=22 b=23 } }
 		highlight = yes
 		brs_set_target = { a=22 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -848,10 +716,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_23"
-		trigger = {
-			brs_check_maxskill = { b=24 }
-			NOT = { brs_check_target_setup = { a=23 b=24 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=23 b=24 } } }
 		brs_set_target = { a=23 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -859,10 +724,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_23"
-		trigger = {
-			brs_check_maxskill = { b=24 }
-			brs_check_target_setup = { a=23 b=24 }
-		}
+		trigger = { brs_check_target_setup = { a=23 b=24 } }
 		highlight = yes
 		brs_set_target = { a=23 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -871,10 +733,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_24"
-		trigger = {
-			brs_check_maxskill = { b=25 }
-			NOT = { brs_check_target_setup = { a=24 b=25 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=24 b=25 } } }
 		brs_set_target = { a=24 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -882,10 +741,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_24"
-		trigger = {
-			brs_check_maxskill = { b=25 }
-			brs_check_target_setup = { a=24 b=25 }
-		}
+		trigger = { brs_check_target_setup = { a=24 b=25 } }
 		highlight = yes
 		brs_set_target = { a=24 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -894,10 +750,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_25"
-		trigger = {
-			brs_check_maxskill = { b=26 }
-			NOT = { brs_check_target_setup = { a=25 b=26 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=25 b=26 } } }
 		brs_set_target = { a=25 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -905,10 +758,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_25"
-		trigger = {
-			brs_check_maxskill = { b=26 }
-			brs_check_target_setup = { a=25 b=26 }
-		}
+		trigger = { brs_check_target_setup = { a=25 b=26 } }
 		highlight = yes
 		brs_set_target = { a=25 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -917,10 +767,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_26"
-		trigger = {
-			brs_check_maxskill = { b=27 }
-			NOT = { brs_check_target_setup = { a=26 b=27 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=26 b=27 } } }
 		brs_set_target = { a=26 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -928,10 +775,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_26"
-		trigger = {
-			brs_check_maxskill = { b=27 }
-			brs_check_target_setup = { a=26 b=27 }
-		}
+		trigger = { brs_check_target_setup = { a=26 b=27 } }
 		highlight = yes
 		brs_set_target = { a=26 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -940,10 +784,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_27"
-		trigger = {
-			brs_check_maxskill = { b=28 }
-			NOT = { brs_check_target_setup = { a=27 b=28 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=27 b=28 } } }
 		brs_set_target = { a=27 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -951,10 +792,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_27"
-		trigger = {
-			brs_check_maxskill = { b=28 }
-			brs_check_target_setup = { a=27 b=28 }
-		}
+		trigger = { brs_check_target_setup = { a=27 b=28 } }
 		highlight = yes
 		brs_set_target = { a=27 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -963,10 +801,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_28"
-		trigger = {
-			brs_check_maxskill = { b=29 }
-			NOT = { brs_check_target_setup = { a=28 b=29 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=28 b=29 } } }
 		brs_set_target = { a=28 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -974,10 +809,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_28"
-		trigger = {
-			brs_check_maxskill = { b=29 }
-			brs_check_target_setup = { a=28 b=29 }
-		}
+		trigger = { brs_check_target_setup = { a=28 b=29 } }
 		highlight = yes
 		brs_set_target = { a=28 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -986,10 +818,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_29"
-		trigger = {
-			brs_check_maxskill = { b=30 }
-			NOT = { brs_check_target_setup = { a=29 b=30 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=29 b=30 } } }
 		brs_set_target = { a=29 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -997,10 +826,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_29"
-		trigger = {
-			brs_check_maxskill = { b=30 }
-			brs_check_target_setup = { a=29 b=30 }
-		}
+		trigger = { brs_check_target_setup = { a=29 b=30 } }
 		highlight = yes
 		brs_set_target = { a=29 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1009,10 +835,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_30"
-		trigger = {
-			brs_check_maxskill = { b=31 }
-			NOT = { brs_check_target_setup = { a=30 b=31 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=30 b=31 } } }
 		brs_set_target = { a=30 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1020,10 +843,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_30"
-		trigger = {
-			brs_check_maxskill = { b=31 }
-			brs_check_target_setup = { a=30 b=31 }
-		}
+		trigger = { brs_check_target_setup = { a=30 b=31 } }
 		highlight = yes
 		brs_set_target = { a=30 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1032,10 +852,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_31"
-		trigger = {
-			brs_check_maxskill = { b=32 }
-			NOT = { brs_check_target_setup = { a=31 b=32 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=31 b=32 } } }
 		brs_set_target = { a=31 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1043,10 +860,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_31"
-		trigger = {
-			brs_check_maxskill = { b=32 }
-			brs_check_target_setup = { a=31 b=32 }
-		}
+		trigger = { brs_check_target_setup = { a=31 b=32 } }
 		highlight = yes
 		brs_set_target = { a=31 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1055,10 +869,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_32"
-		trigger = {
-			brs_check_maxskill = { b=33 }
-			NOT = { brs_check_target_setup = { a=32 b=33 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=32 b=33 } } }
 		brs_set_target = { a=32 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1066,10 +877,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_32"
-		trigger = {
-			brs_check_maxskill = { b=33 }
-			brs_check_target_setup = { a=32 b=33 }
-		}
+		trigger = { brs_check_target_setup = { a=32 b=33 } }
 		highlight = yes
 		brs_set_target = { a=32 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1078,10 +886,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_33"
-		trigger = {
-			brs_check_maxskill = { b=34 }
-			NOT = { brs_check_target_setup = { a=33 b=34 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=33 b=34 } } }
 		brs_set_target = { a=33 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1089,10 +894,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_33"
-		trigger = {
-			brs_check_maxskill = { b=34 }
-			brs_check_target_setup = { a=33 b=34 }
-		}
+		trigger = { brs_check_target_setup = { a=33 b=34 } }
 		highlight = yes
 		brs_set_target = { a=33 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1101,10 +903,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_34"
-		trigger = {
-			brs_check_maxskill = { b=35 }
-			NOT = { brs_check_target_setup = { a=34 b=35 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=34 b=35 } } }
 		brs_set_target = { a=34 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1112,10 +911,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_34"
-		trigger = {
-			brs_check_maxskill = { b=35 }
-			brs_check_target_setup = { a=34 b=35 }
-		}
+		trigger = { brs_check_target_setup = { a=34 b=35 } }
 		highlight = yes
 		brs_set_target = { a=34 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1124,10 +920,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_35"
-		trigger = {
-			brs_check_maxskill = { b=36 }
-			NOT = { brs_check_target_setup = { a=35 b=36 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=35 b=36 } } }
 		brs_set_target = { a=35 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1135,10 +928,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_35"
-		trigger = {
-			brs_check_maxskill = { b=36 }
-			brs_check_target_setup = { a=35 b=36 }
-		}
+		trigger = { brs_check_target_setup = { a=35 b=36 } }
 		highlight = yes
 		brs_set_target = { a=35 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1147,10 +937,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_36"
-		trigger = {
-			brs_check_maxskill = { b=37 }
-			NOT = { brs_check_target_setup = { a=36 b=37 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=36 b=37 } } }
 		brs_set_target = { a=36 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1158,10 +945,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_36"
-		trigger = {
-			brs_check_maxskill = { b=37 }
-			brs_check_target_setup = { a=36 b=37 }
-		}
+		trigger = { brs_check_target_setup = { a=36 b=37 } }
 		highlight = yes
 		brs_set_target = { a=36 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1170,10 +954,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_37"
-		trigger = {
-			brs_check_maxskill = { b=38 }
-			NOT = { brs_check_target_setup = { a=37 b=38 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=37 b=38 } } }
 		brs_set_target = { a=37 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1181,10 +962,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_37"
-		trigger = {
-			brs_check_maxskill = { b=38 }
-			brs_check_target_setup = { a=37 b=38 }
-		}
+		trigger = { brs_check_target_setup = { a=37 b=38 } }
 		highlight = yes
 		brs_set_target = { a=37 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1193,10 +971,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_38"
-		trigger = {
-			brs_check_maxskill = { b=39 }
-			NOT = { brs_check_target_setup = { a=38 b=39 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=38 b=39 } } }
 		brs_set_target = { a=38 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1204,10 +979,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_38"
-		trigger = {
-			brs_check_maxskill = { b=39 }
-			brs_check_target_setup = { a=38 b=39 }
-		}
+		trigger = { brs_check_target_setup = { a=38 b=39 } }
 		highlight = yes
 		brs_set_target = { a=38 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1216,10 +988,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_39"
-		trigger = {
-			brs_check_maxskill = { b=40 }
-			NOT = { brs_check_target_setup = { a=39 b=40 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=39 b=40 } } }
 		brs_set_target = { a=39 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1227,10 +996,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_39"
-		trigger = {
-			brs_check_maxskill = { b=40 }
-			brs_check_target_setup = { a=39 b=40 }
-		}
+		trigger = { brs_check_target_setup = { a=39 b=40 } }
 		highlight = yes
 		brs_set_target = { a=39 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1239,10 +1005,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_40"
-		trigger = {
-			brs_check_maxskill = { b=41 }
-			NOT = { brs_check_target_setup = { a=40 b=41 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=40 b=41 } } }
 		brs_set_target = { a=40 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1250,10 +1013,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_40"
-		trigger = {
-			brs_check_maxskill = { b=41 }
-			brs_check_target_setup = { a=40 b=41 }
-		}
+		trigger = { brs_check_target_setup = { a=40 b=41 } }
 		highlight = yes
 		brs_set_target = { a=40 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1262,10 +1022,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_41"
-		trigger = {
-			brs_check_maxskill = { b=42 }
-			NOT = { brs_check_target_setup = { a=41 b=42 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=41 b=42 } } }
 		brs_set_target = { a=41 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1273,10 +1030,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_41"
-		trigger = {
-			brs_check_maxskill = { b=42 }
-			brs_check_target_setup = { a=41 b=42 }
-		}
+		trigger = { brs_check_target_setup = { a=41 b=42 } }
 		highlight = yes
 		brs_set_target = { a=41 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1285,10 +1039,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_42"
-		trigger = {
-			brs_check_maxskill = { b=43 }
-			NOT = { brs_check_target_setup = { a=42 b=43 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=42 b=43 } } }
 		brs_set_target = { a=42 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1296,10 +1047,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_42"
-		trigger = {
-			brs_check_maxskill = { b=43 }
-			brs_check_target_setup = { a=42 b=43 }
-		}
+		trigger = { brs_check_target_setup = { a=42 b=43 } }
 		highlight = yes
 		brs_set_target = { a=42 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1308,10 +1056,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_43"
-		trigger = {
-			brs_check_maxskill = { b=44 }
-			NOT = { brs_check_target_setup = { a=43 b=44 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=43 b=44 } } }
 		brs_set_target = { a=43 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1319,10 +1064,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_43"
-		trigger = {
-			brs_check_maxskill = { b=44 }
-			brs_check_target_setup = { a=43 b=44 }
-		}
+		trigger = { brs_check_target_setup = { a=43 b=44 } }
 		highlight = yes
 		brs_set_target = { a=43 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1331,10 +1073,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_44"
-		trigger = {
-			brs_check_maxskill = { b=45 }
-			NOT = { brs_check_target_setup = { a=44 b=45 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=44 b=45 } } }
 		brs_set_target = { a=44 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1342,10 +1081,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_44"
-		trigger = {
-			brs_check_maxskill = { b=45 }
-			brs_check_target_setup = { a=44 b=45 }
-		}
+		trigger = { brs_check_target_setup = { a=44 b=45 } }
 		highlight = yes
 		brs_set_target = { a=44 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1354,10 +1090,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_45"
-		trigger = {
-			brs_check_maxskill = { b=46 }
-			NOT = { brs_check_target_setup = { a=45 b=46 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=45 b=46 } } }
 		brs_set_target = { a=45 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1365,10 +1098,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_45"
-		trigger = {
-			brs_check_maxskill = { b=46 }
-			brs_check_target_setup = { a=45 b=46 }
-		}
+		trigger = { brs_check_target_setup = { a=45 b=46 } }
 		highlight = yes
 		brs_set_target = { a=45 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1377,10 +1107,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_46"
-		trigger = {
-			brs_check_maxskill = { b=47 }
-			NOT = { brs_check_target_setup = { a=46 b=47 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=46 b=47 } } }
 		brs_set_target = { a=46 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1388,10 +1115,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_46"
-		trigger = {
-			brs_check_maxskill = { b=47 }
-			brs_check_target_setup = { a=46 b=47 }
-		}
+		trigger = { brs_check_target_setup = { a=46 b=47 } }
 		highlight = yes
 		brs_set_target = { a=46 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1400,10 +1124,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_47"
-		trigger = {
-			brs_check_maxskill = { b=48 }
-			NOT = { brs_check_target_setup = { a=47 b=48 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=47 b=48 } } }
 		brs_set_target = { a=47 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1411,10 +1132,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_47"
-		trigger = {
-			brs_check_maxskill = { b=48 }
-			brs_check_target_setup = { a=47 b=48 }
-		}
+		trigger = { brs_check_target_setup = { a=47 b=48 } }
 		highlight = yes
 		brs_set_target = { a=47 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1423,10 +1141,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_48"
-		trigger = {
-			brs_check_maxskill = { b=49 }
-			NOT = { brs_check_target_setup = { a=48 b=49 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=48 b=49 } } }
 		brs_set_target = { a=48 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1434,10 +1149,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_48"
-		trigger = {
-			brs_check_maxskill = { b=49 }
-			brs_check_target_setup = { a=48 b=49 }
-		}
+		trigger = { brs_check_target_setup = { a=48 b=49 } }
 		highlight = yes
 		brs_set_target = { a=48 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1446,10 +1158,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_49"
-		trigger = {
-			brs_check_maxskill = { b=50 }
-			NOT = { brs_check_target_setup = { a=49 b=50 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=49 b=50 } } }
 		brs_set_target = { a=49 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1457,10 +1166,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_49"
-		trigger = {
-			brs_check_maxskill = { b=50 }
-			brs_check_target_setup = { a=49 b=50 }
-		}
+		trigger = { brs_check_target_setup = { a=49 b=50 } }
 		highlight = yes
 		brs_set_target = { a=49 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1469,10 +1175,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_50"
-		trigger = {
-			brs_check_maxskill = { b=51 }
-			NOT = { brs_check_target_setup = { a=50 b=51 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=50 b=51 } } }
 		brs_set_target = { a=50 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1480,10 +1183,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_50"
-		trigger = {
-			brs_check_maxskill = { b=51 }
-			brs_check_target_setup = { a=50 b=51 }
-		}
+		trigger = { brs_check_target_setup = { a=50 b=51 } }
 		highlight = yes
 		brs_set_target = { a=50 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1492,10 +1192,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_51"
-		trigger = {
-			brs_check_maxskill = { b=52 }
-			NOT = { brs_check_target_setup = { a=51 b=52 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=51 b=52 } } }
 		brs_set_target = { a=51 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1503,10 +1200,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_51"
-		trigger = {
-			brs_check_maxskill = { b=52 }
-			brs_check_target_setup = { a=51 b=52 }
-		}
+		trigger = { brs_check_target_setup = { a=51 b=52 } }
 		highlight = yes
 		brs_set_target = { a=51 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1515,10 +1209,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_52"
-		trigger = {
-			brs_check_maxskill = { b=53 }
-			NOT = { brs_check_target_setup = { a=52 b=53 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=52 b=53 } } }
 		brs_set_target = { a=52 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1526,10 +1217,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_52"
-		trigger = {
-			brs_check_maxskill = { b=53 }
-			brs_check_target_setup = { a=52 b=53 }
-		}
+		trigger = { brs_check_target_setup = { a=52 b=53 } }
 		highlight = yes
 		brs_set_target = { a=52 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1538,10 +1226,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_53"
-		trigger = {
-			brs_check_maxskill = { b=54 }
-			NOT = { brs_check_target_setup = { a=53 b=54 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=53 b=54 } } }
 		brs_set_target = { a=53 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1549,10 +1234,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_53"
-		trigger = {
-			brs_check_maxskill = { b=54 }
-			brs_check_target_setup = { a=53 b=54 }
-		}
+		trigger = { brs_check_target_setup = { a=53 b=54 } }
 		highlight = yes
 		brs_set_target = { a=53 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1561,10 +1243,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_54"
-		trigger = {
-			brs_check_maxskill = { b=55 }
-			NOT = { brs_check_target_setup = { a=54 b=55 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=54 b=55 } } }
 		brs_set_target = { a=54 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1572,10 +1251,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_54"
-		trigger = {
-			brs_check_maxskill = { b=55 }
-			brs_check_target_setup = { a=54 b=55 }
-		}
+		trigger = { brs_check_target_setup = { a=54 b=55 } }
 		highlight = yes
 		brs_set_target = { a=54 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1584,10 +1260,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_55"
-		trigger = {
-			brs_check_maxskill = { b=56 }
-			NOT = { brs_check_target_setup = { a=55 b=56 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=55 b=56 } } }
 		brs_set_target = { a=55 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1595,10 +1268,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_55"
-		trigger = {
-			brs_check_maxskill = { b=56 }
-			brs_check_target_setup = { a=55 b=56 }
-		}
+		trigger = { brs_check_target_setup = { a=55 b=56 } }
 		highlight = yes
 		brs_set_target = { a=55 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1607,10 +1277,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_56"
-		trigger = {
-			brs_check_maxskill = { b=57 }
-			NOT = { brs_check_target_setup = { a=56 b=57 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=56 b=57 } } }
 		brs_set_target = { a=56 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1618,10 +1285,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_56"
-		trigger = {
-			brs_check_maxskill = { b=57 }
-			brs_check_target_setup = { a=56 b=57 }
-		}
+		trigger = { brs_check_target_setup = { a=56 b=57 } }
 		highlight = yes
 		brs_set_target = { a=56 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1630,10 +1294,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_57"
-		trigger = {
-			brs_check_maxskill = { b=58 }
-			NOT = { brs_check_target_setup = { a=57 b=58 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=57 b=58 } } }
 		brs_set_target = { a=57 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1641,10 +1302,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_57"
-		trigger = {
-			brs_check_maxskill = { b=58 }
-			brs_check_target_setup = { a=57 b=58 }
-		}
+		trigger = { brs_check_target_setup = { a=57 b=58 } }
 		highlight = yes
 		brs_set_target = { a=57 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1653,10 +1311,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_58"
-		trigger = {
-			brs_check_maxskill = { b=59 }
-			NOT = { brs_check_target_setup = { a=58 b=59 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=58 b=59 } } }
 		brs_set_target = { a=58 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1664,10 +1319,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_58"
-		trigger = {
-			brs_check_maxskill = { b=59 }
-			brs_check_target_setup = { a=58 b=59 }
-		}
+		trigger = { brs_check_target_setup = { a=58 b=59 } }
 		highlight = yes
 		brs_set_target = { a=58 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1676,10 +1328,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_59"
-		trigger = {
-			brs_check_maxskill = { b=60 }
-			NOT = { brs_check_target_setup = { a=59 b=60 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=59 b=60 } } }
 		brs_set_target = { a=59 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1687,10 +1336,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_59"
-		trigger = {
-			brs_check_maxskill = { b=60 }
-			brs_check_target_setup = { a=59 b=60 }
-		}
+		trigger = { brs_check_target_setup = { a=59 b=60 } }
 		highlight = yes
 		brs_set_target = { a=59 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1699,10 +1345,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_60"
-		trigger = {
-			brs_check_maxskill = { b=61 }
-			NOT = { brs_check_target_setup = { a=60 b=61 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=60 b=61 } } }
 		brs_set_target = { a=60 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1710,10 +1353,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_60"
-		trigger = {
-			brs_check_maxskill = { b=61 }
-			brs_check_target_setup = { a=60 b=61 }
-		}
+		trigger = { brs_check_target_setup = { a=60 b=61 } }
 		highlight = yes
 		brs_set_target = { a=60 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1722,10 +1362,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_61"
-		trigger = {
-			brs_check_maxskill = { b=62 }
-			NOT = { brs_check_target_setup = { a=61 b=62 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=61 b=62 } } }
 		brs_set_target = { a=61 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1733,10 +1370,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_61"
-		trigger = {
-			brs_check_maxskill = { b=62 }
-			brs_check_target_setup = { a=61 b=62 }
-		}
+		trigger = { brs_check_target_setup = { a=61 b=62 } }
 		highlight = yes
 		brs_set_target = { a=61 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1745,10 +1379,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_62"
-		trigger = {
-			brs_check_maxskill = { b=63 }
-			NOT = { brs_check_target_setup = { a=62 b=63 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=62 b=63 } } }
 		brs_set_target = { a=62 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1756,10 +1387,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_62"
-		trigger = {
-			brs_check_maxskill = { b=63 }
-			brs_check_target_setup = { a=62 b=63 }
-		}
+		trigger = { brs_check_target_setup = { a=62 b=63 } }
 		highlight = yes
 		brs_set_target = { a=62 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1768,10 +1396,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_63"
-		trigger = {
-			brs_check_maxskill = { b=64 }
-			NOT = { brs_check_target_setup = { a=63 b=64 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=63 b=64 } } }
 		brs_set_target = { a=63 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1779,10 +1404,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_63"
-		trigger = {
-			brs_check_maxskill = { b=64 }
-			brs_check_target_setup = { a=63 b=64 }
-		}
+		trigger = { brs_check_target_setup = { a=63 b=64 } }
 		highlight = yes
 		brs_set_target = { a=63 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1791,10 +1413,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_64"
-		trigger = {
-			brs_check_maxskill = { b=65 }
-			NOT = { brs_check_target_setup = { a=64 b=65 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=64 b=65 } } }
 		brs_set_target = { a=64 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1802,10 +1421,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_64"
-		trigger = {
-			brs_check_maxskill = { b=65 }
-			brs_check_target_setup = { a=64 b=65 }
-		}
+		trigger = { brs_check_target_setup = { a=64 b=65 } }
 		highlight = yes
 		brs_set_target = { a=64 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1814,10 +1430,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_65"
-		trigger = {
-			brs_check_maxskill = { b=66 }
-			NOT = { brs_check_target_setup = { a=65 b=66 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=65 b=66 } } }
 		brs_set_target = { a=65 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1825,10 +1438,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_65"
-		trigger = {
-			brs_check_maxskill = { b=66 }
-			brs_check_target_setup = { a=65 b=66 }
-		}
+		trigger = { brs_check_target_setup = { a=65 b=66 } }
 		highlight = yes
 		brs_set_target = { a=65 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1837,10 +1447,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_66"
-		trigger = {
-			brs_check_maxskill = { b=67 }
-			NOT = { brs_check_target_setup = { a=66 b=67 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=66 b=67 } } }
 		brs_set_target = { a=66 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1848,10 +1455,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_66"
-		trigger = {
-			brs_check_maxskill = { b=67 }
-			brs_check_target_setup = { a=66 b=67 }
-		}
+		trigger = { brs_check_target_setup = { a=66 b=67 } }
 		highlight = yes
 		brs_set_target = { a=66 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1860,10 +1464,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_67"
-		trigger = {
-			brs_check_maxskill = { b=68 }
-			NOT = { brs_check_target_setup = { a=67 b=68 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=67 b=68 } } }
 		brs_set_target = { a=67 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1871,10 +1472,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_67"
-		trigger = {
-			brs_check_maxskill = { b=68 }
-			brs_check_target_setup = { a=67 b=68 }
-		}
+		trigger = { brs_check_target_setup = { a=67 b=68 } }
 		highlight = yes
 		brs_set_target = { a=67 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1883,10 +1481,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_68"
-		trigger = {
-			brs_check_maxskill = { b=69 }
-			NOT = { brs_check_target_setup = { a=68 b=69 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=68 b=69 } } }
 		brs_set_target = { a=68 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1894,10 +1489,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_68"
-		trigger = {
-			brs_check_maxskill = { b=69 }
-			brs_check_target_setup = { a=68 b=69 }
-		}
+		trigger = { brs_check_target_setup = { a=68 b=69 } }
 		highlight = yes
 		brs_set_target = { a=68 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1906,10 +1498,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_69"
-		trigger = {
-			brs_check_maxskill = { b=70 }
-			NOT = { brs_check_target_setup = { a=69 b=70 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=69 b=70 } } }
 		brs_set_target = { a=69 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1917,10 +1506,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_69"
-		trigger = {
-			brs_check_maxskill = { b=70 }
-			brs_check_target_setup = { a=69 b=70 }
-		}
+		trigger = { brs_check_target_setup = { a=69 b=70 } }
 		highlight = yes
 		brs_set_target = { a=69 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1929,10 +1515,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_70"
-		trigger = {
-			brs_check_maxskill = { b=71 }
-			NOT = { brs_check_target_setup = { a=70 b=71 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=70 b=71 } } }
 		brs_set_target = { a=70 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1940,10 +1523,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_70"
-		trigger = {
-			brs_check_maxskill = { b=71 }
-			brs_check_target_setup = { a=70 b=71 }
-		}
+		trigger = { brs_check_target_setup = { a=70 b=71 } }
 		highlight = yes
 		brs_set_target = { a=70 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1952,10 +1532,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_71"
-		trigger = {
-			brs_check_maxskill = { b=72 }
-			NOT = { brs_check_target_setup = { a=71 b=72 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=71 b=72 } } }
 		brs_set_target = { a=71 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1963,10 +1540,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_71"
-		trigger = {
-			brs_check_maxskill = { b=72 }
-			brs_check_target_setup = { a=71 b=72 }
-		}
+		trigger = { brs_check_target_setup = { a=71 b=72 } }
 		highlight = yes
 		brs_set_target = { a=71 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1975,10 +1549,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_72"
-		trigger = {
-			brs_check_maxskill = { b=73 }
-			NOT = { brs_check_target_setup = { a=72 b=73 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=72 b=73 } } }
 		brs_set_target = { a=72 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -1986,10 +1557,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_72"
-		trigger = {
-			brs_check_maxskill = { b=73 }
-			brs_check_target_setup = { a=72 b=73 }
-		}
+		trigger = { brs_check_target_setup = { a=72 b=73 } }
 		highlight = yes
 		brs_set_target = { a=72 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -1998,10 +1566,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_73"
-		trigger = {
-			brs_check_maxskill = { b=74 }
-			NOT = { brs_check_target_setup = { a=73 b=74 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=73 b=74 } } }
 		brs_set_target = { a=73 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2009,10 +1574,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_73"
-		trigger = {
-			brs_check_maxskill = { b=74 }
-			brs_check_target_setup = { a=73 b=74 }
-		}
+		trigger = { brs_check_target_setup = { a=73 b=74 } }
 		highlight = yes
 		brs_set_target = { a=73 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2021,10 +1583,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_74"
-		trigger = {
-			brs_check_maxskill = { b=75 }
-			NOT = { brs_check_target_setup = { a=74 b=75 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=74 b=75 } } }
 		brs_set_target = { a=74 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2032,10 +1591,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_74"
-		trigger = {
-			brs_check_maxskill = { b=75 }
-			brs_check_target_setup = { a=74 b=75 }
-		}
+		trigger = { brs_check_target_setup = { a=74 b=75 } }
 		highlight = yes
 		brs_set_target = { a=74 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2044,10 +1600,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_75"
-		trigger = {
-			brs_check_maxskill = { b=76 }
-			NOT = { brs_check_target_setup = { a=75 b=76 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=75 b=76 } } }
 		brs_set_target = { a=75 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2055,10 +1608,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_75"
-		trigger = {
-			brs_check_maxskill = { b=76 }
-			brs_check_target_setup = { a=75 b=76 }
-		}
+		trigger = { brs_check_target_setup = { a=75 b=76 } }
 		highlight = yes
 		brs_set_target = { a=75 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2067,10 +1617,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_76"
-		trigger = {
-			brs_check_maxskill = { b=77 }
-			NOT = { brs_check_target_setup = { a=76 b=77 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=76 b=77 } } }
 		brs_set_target = { a=76 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2078,10 +1625,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_76"
-		trigger = {
-			brs_check_maxskill = { b=77 }
-			brs_check_target_setup = { a=76 b=77 }
-		}
+		trigger = { brs_check_target_setup = { a=76 b=77 } }
 		highlight = yes
 		brs_set_target = { a=76 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2090,10 +1634,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_77"
-		trigger = {
-			brs_check_maxskill = { b=78 }
-			NOT = { brs_check_target_setup = { a=77 b=78 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=77 b=78 } } }
 		brs_set_target = { a=77 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2101,10 +1642,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_77"
-		trigger = {
-			brs_check_maxskill = { b=78 }
-			brs_check_target_setup = { a=77 b=78 }
-		}
+		trigger = { brs_check_target_setup = { a=77 b=78 } }
 		highlight = yes
 		brs_set_target = { a=77 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2113,10 +1651,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_78"
-		trigger = {
-			brs_check_maxskill = { b=79 }
-			NOT = { brs_check_target_setup = { a=78 b=79 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=78 b=79 } } }
 		brs_set_target = { a=78 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2124,10 +1659,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_78"
-		trigger = {
-			brs_check_maxskill = { b=79 }
-			brs_check_target_setup = { a=78 b=79 }
-		}
+		trigger = { brs_check_target_setup = { a=78 b=79 } }
 		highlight = yes
 		brs_set_target = { a=78 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2136,10 +1668,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_79"
-		trigger = {
-			brs_check_maxskill = { b=80 }
-			NOT = { brs_check_target_setup = { a=79 b=80 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=79 b=80 } } }
 		brs_set_target = { a=79 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2147,10 +1676,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_79"
-		trigger = {
-			brs_check_maxskill = { b=80 }
-			brs_check_target_setup = { a=79 b=80 }
-		}
+		trigger = { brs_check_target_setup = { a=79 b=80 } }
 		highlight = yes
 		brs_set_target = { a=79 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2159,10 +1685,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_80"
-		trigger = {
-			brs_check_maxskill = { b=81 }
-			NOT = { brs_check_target_setup = { a=80 b=81 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=80 b=81 } } }
 		brs_set_target = { a=80 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2170,10 +1693,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_80"
-		trigger = {
-			brs_check_maxskill = { b=81 }
-			brs_check_target_setup = { a=80 b=81 }
-		}
+		trigger = { brs_check_target_setup = { a=80 b=81 } }
 		highlight = yes
 		brs_set_target = { a=80 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2182,10 +1702,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_81"
-		trigger = {
-			brs_check_maxskill = { b=82 }
-			NOT = { brs_check_target_setup = { a=81 b=82 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=81 b=82 } } }
 		brs_set_target = { a=81 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2193,10 +1710,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_81"
-		trigger = {
-			brs_check_maxskill = { b=82 }
-			brs_check_target_setup = { a=81 b=82 }
-		}
+		trigger = { brs_check_target_setup = { a=81 b=82 } }
 		highlight = yes
 		brs_set_target = { a=81 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2205,10 +1719,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_82"
-		trigger = {
-			brs_check_maxskill = { b=83 }
-			NOT = { brs_check_target_setup = { a=82 b=83 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=82 b=83 } } }
 		brs_set_target = { a=82 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2216,10 +1727,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_82"
-		trigger = {
-			brs_check_maxskill = { b=83 }
-			brs_check_target_setup = { a=82 b=83 }
-		}
+		trigger = { brs_check_target_setup = { a=82 b=83 } }
 		highlight = yes
 		brs_set_target = { a=82 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2228,10 +1736,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_83"
-		trigger = {
-			brs_check_maxskill = { b=84 }
-			NOT = { brs_check_target_setup = { a=83 b=84 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=83 b=84 } } }
 		brs_set_target = { a=83 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2239,10 +1744,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_83"
-		trigger = {
-			brs_check_maxskill = { b=84 }
-			brs_check_target_setup = { a=83 b=84 }
-		}
+		trigger = { brs_check_target_setup = { a=83 b=84 } }
 		highlight = yes
 		brs_set_target = { a=83 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2251,10 +1753,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_84"
-		trigger = {
-			brs_check_maxskill = { b=85 }
-			NOT = { brs_check_target_setup = { a=84 b=85 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=84 b=85 } } }
 		brs_set_target = { a=84 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2262,10 +1761,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_84"
-		trigger = {
-			brs_check_maxskill = { b=85 }
-			brs_check_target_setup = { a=84 b=85 }
-		}
+		trigger = { brs_check_target_setup = { a=84 b=85 } }
 		highlight = yes
 		brs_set_target = { a=84 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2274,10 +1770,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_85"
-		trigger = {
-			brs_check_maxskill = { b=86 }
-			NOT = { brs_check_target_setup = { a=85 b=86 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=85 b=86 } } }
 		brs_set_target = { a=85 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2285,10 +1778,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_85"
-		trigger = {
-			brs_check_maxskill = { b=86 }
-			brs_check_target_setup = { a=85 b=86 }
-		}
+		trigger = { brs_check_target_setup = { a=85 b=86 } }
 		highlight = yes
 		brs_set_target = { a=85 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2297,10 +1787,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_86"
-		trigger = {
-			brs_check_maxskill = { b=87 }
-			NOT = { brs_check_target_setup = { a=86 b=87 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=86 b=87 } } }
 		brs_set_target = { a=86 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2308,10 +1795,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_86"
-		trigger = {
-			brs_check_maxskill = { b=87 }
-			brs_check_target_setup = { a=86 b=87 }
-		}
+		trigger = { brs_check_target_setup = { a=86 b=87 } }
 		highlight = yes
 		brs_set_target = { a=86 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2320,10 +1804,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_87"
-		trigger = {
-			brs_check_maxskill = { b=88 }
-			NOT = { brs_check_target_setup = { a=87 b=88 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=87 b=88 } } }
 		brs_set_target = { a=87 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2331,10 +1812,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_87"
-		trigger = {
-			brs_check_maxskill = { b=88 }
-			brs_check_target_setup = { a=87 b=88 }
-		}
+		trigger = { brs_check_target_setup = { a=87 b=88 } }
 		highlight = yes
 		brs_set_target = { a=87 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2343,10 +1821,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_88"
-		trigger = {
-			brs_check_maxskill = { b=89 }
-			NOT = { brs_check_target_setup = { a=88 b=89 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=88 b=89 } } }
 		brs_set_target = { a=88 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2354,10 +1829,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_88"
-		trigger = {
-			brs_check_maxskill = { b=89 }
-			brs_check_target_setup = { a=88 b=89 }
-		}
+		trigger = { brs_check_target_setup = { a=88 b=89 } }
 		highlight = yes
 		brs_set_target = { a=88 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2366,10 +1838,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_89"
-		trigger = {
-			brs_check_maxskill = { b=90 }
-			NOT = { brs_check_target_setup = { a=89 b=90 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=89 b=90 } } }
 		brs_set_target = { a=89 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2377,10 +1846,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_89"
-		trigger = {
-			brs_check_maxskill = { b=90 }
-			brs_check_target_setup = { a=89 b=90 }
-		}
+		trigger = { brs_check_target_setup = { a=89 b=90 } }
 		highlight = yes
 		brs_set_target = { a=89 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2389,10 +1855,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_90"
-		trigger = {
-			brs_check_maxskill = { b=91 }
-			NOT = { brs_check_target_setup = { a=90 b=91 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=90 b=91 } } }
 		brs_set_target = { a=90 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2400,10 +1863,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_90"
-		trigger = {
-			brs_check_maxskill = { b=91 }
-			brs_check_target_setup = { a=90 b=91 }
-		}
+		trigger = { brs_check_target_setup = { a=90 b=91 } }
 		highlight = yes
 		brs_set_target = { a=90 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2412,10 +1872,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_91"
-		trigger = {
-			brs_check_maxskill = { b=92 }
-			NOT = { brs_check_target_setup = { a=91 b=92 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=91 b=92 } } }
 		brs_set_target = { a=91 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2423,10 +1880,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_91"
-		trigger = {
-			brs_check_maxskill = { b=92 }
-			brs_check_target_setup = { a=91 b=92 }
-		}
+		trigger = { brs_check_target_setup = { a=91 b=92 } }
 		highlight = yes
 		brs_set_target = { a=91 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2435,10 +1889,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_92"
-		trigger = {
-			brs_check_maxskill = { b=93 }
-			NOT = { brs_check_target_setup = { a=92 b=93 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=92 b=93 } } }
 		brs_set_target = { a=92 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2446,10 +1897,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_92"
-		trigger = {
-			brs_check_maxskill = { b=93 }
-			brs_check_target_setup = { a=92 b=93 }
-		}
+		trigger = { brs_check_target_setup = { a=92 b=93 } }
 		highlight = yes
 		brs_set_target = { a=92 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2458,10 +1906,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_93"
-		trigger = {
-			brs_check_maxskill = { b=94 }
-			NOT = { brs_check_target_setup = { a=93 b=94 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=93 b=94 } } }
 		brs_set_target = { a=93 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2469,10 +1914,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_93"
-		trigger = {
-			brs_check_maxskill = { b=94 }
-			brs_check_target_setup = { a=93 b=94 }
-		}
+		trigger = { brs_check_target_setup = { a=93 b=94 } }
 		highlight = yes
 		brs_set_target = { a=93 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2481,10 +1923,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_94"
-		trigger = {
-			brs_check_maxskill = { b=95 }
-			NOT = { brs_check_target_setup = { a=94 b=95 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=94 b=95 } } }
 		brs_set_target = { a=94 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2492,10 +1931,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_94"
-		trigger = {
-			brs_check_maxskill = { b=95 }
-			brs_check_target_setup = { a=94 b=95 }
-		}
+		trigger = { brs_check_target_setup = { a=94 b=95 } }
 		highlight = yes
 		brs_set_target = { a=94 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2504,10 +1940,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_95"
-		trigger = {
-			brs_check_maxskill = { b=96 }
-			NOT = { brs_check_target_setup = { a=95 b=96 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=95 b=96 } } }
 		brs_set_target = { a=95 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2515,10 +1948,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_95"
-		trigger = {
-			brs_check_maxskill = { b=96 }
-			brs_check_target_setup = { a=95 b=96 }
-		}
+		trigger = { brs_check_target_setup = { a=95 b=96 } }
 		highlight = yes
 		brs_set_target = { a=95 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2527,10 +1957,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_96"
-		trigger = {
-			brs_check_maxskill = { b=97 }
-			NOT = { brs_check_target_setup = { a=96 b=97 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=96 b=97 } } }
 		brs_set_target = { a=96 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2538,10 +1965,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_96"
-		trigger = {
-			brs_check_maxskill = { b=97 }
-			brs_check_target_setup = { a=96 b=97 }
-		}
+		trigger = { brs_check_target_setup = { a=96 b=97 } }
 		highlight = yes
 		brs_set_target = { a=96 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2550,10 +1974,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_97"
-		trigger = {
-			brs_check_maxskill = { b=98 }
-			NOT = { brs_check_target_setup = { a=97 b=98 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=97 b=98 } } }
 		brs_set_target = { a=97 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2561,10 +1982,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_97"
-		trigger = {
-			brs_check_maxskill = { b=98 }
-			brs_check_target_setup = { a=97 b=98 }
-		}
+		trigger = { brs_check_target_setup = { a=97 b=98 } }
 		highlight = yes
 		brs_set_target = { a=97 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2573,10 +1991,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_98"
-		trigger = {
-			brs_check_maxskill = { b=99 }
-			NOT = { brs_check_target_setup = { a=98 b=99 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=98 b=99 } } }
 		brs_set_target = { a=98 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2584,10 +1999,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_98"
-		trigger = {
-			brs_check_maxskill = { b=99 }
-			brs_check_target_setup = { a=98 b=99 }
-		}
+		trigger = { brs_check_target_setup = { a=98 b=99 } }
 		highlight = yes
 		brs_set_target = { a=98 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2596,10 +2008,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_99"
-		trigger = {
-			brs_check_maxskill = { b=100 }
-			NOT = { brs_check_target_setup = { a=99 b=100 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=99 b=100 } } }
 		brs_set_target = { a=99 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2607,10 +2016,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_99"
-		trigger = {
-			brs_check_maxskill = { b=100 }
-			brs_check_target_setup = { a=99 b=100 }
-		}
+		trigger = { brs_check_target_setup = { a=99 b=100 } }
 		highlight = yes
 		brs_set_target = { a=99 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2619,10 +2025,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_100"
-		trigger = {
-			brs_check_maxskill = { b=101 }
-			NOT = { brs_check_target_setup = { a=100 b=101 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=100 b=101 } } }
 		brs_set_target = { a=100 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2630,10 +2033,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_100"
-		trigger = {
-			brs_check_maxskill = { b=101 }
-			brs_check_target_setup = { a=100 b=101 }
-		}
+		trigger = { brs_check_target_setup = { a=100 b=101 } }
 		highlight = yes
 		brs_set_target = { a=100 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2642,10 +2042,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_101"
-		trigger = {
-			brs_check_maxskill = { b=102 }
-			NOT = { brs_check_target_setup = { a=101 b=102 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=101 b=102 } } }
 		brs_set_target = { a=101 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2653,10 +2050,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_101"
-		trigger = {
-			brs_check_maxskill = { b=102 }
-			brs_check_target_setup = { a=101 b=102 }
-		}
+		trigger = { brs_check_target_setup = { a=101 b=102 } }
 		highlight = yes
 		brs_set_target = { a=101 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2665,10 +2059,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_102"
-		trigger = {
-			brs_check_maxskill = { b=103 }
-			NOT = { brs_check_target_setup = { a=102 b=103 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=102 b=103 } } }
 		brs_set_target = { a=102 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2676,10 +2067,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_102"
-		trigger = {
-			brs_check_maxskill = { b=103 }
-			brs_check_target_setup = { a=102 b=103 }
-		}
+		trigger = { brs_check_target_setup = { a=102 b=103 } }
 		highlight = yes
 		brs_set_target = { a=102 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2688,10 +2076,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_103"
-		trigger = {
-			brs_check_maxskill = { b=104 }
-			NOT = { brs_check_target_setup = { a=103 b=104 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=103 b=104 } } }
 		brs_set_target = { a=103 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2699,10 +2084,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_103"
-		trigger = {
-			brs_check_maxskill = { b=104 }
-			brs_check_target_setup = { a=103 b=104 }
-		}
+		trigger = { brs_check_target_setup = { a=103 b=104 } }
 		highlight = yes
 		brs_set_target = { a=103 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2711,10 +2093,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_104"
-		trigger = {
-			brs_check_maxskill = { b=105 }
-			NOT = { brs_check_target_setup = { a=104 b=105 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=104 b=105 } } }
 		brs_set_target = { a=104 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2722,10 +2101,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_104"
-		trigger = {
-			brs_check_maxskill = { b=105 }
-			brs_check_target_setup = { a=104 b=105 }
-		}
+		trigger = { brs_check_target_setup = { a=104 b=105 } }
 		highlight = yes
 		brs_set_target = { a=104 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2734,10 +2110,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_105"
-		trigger = {
-			brs_check_maxskill = { b=106 }
-			NOT = { brs_check_target_setup = { a=105 b=106 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=105 b=106 } } }
 		brs_set_target = { a=105 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2745,10 +2118,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_105"
-		trigger = {
-			brs_check_maxskill = { b=106 }
-			brs_check_target_setup = { a=105 b=106 }
-		}
+		trigger = { brs_check_target_setup = { a=105 b=106 } }
 		highlight = yes
 		brs_set_target = { a=105 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2757,10 +2127,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_106"
-		trigger = {
-			brs_check_maxskill = { b=107 }
-			NOT = { brs_check_target_setup = { a=106 b=107 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=106 b=107 } } }
 		brs_set_target = { a=106 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2768,10 +2135,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_106"
-		trigger = {
-			brs_check_maxskill = { b=107 }
-			brs_check_target_setup = { a=106 b=107 }
-		}
+		trigger = { brs_check_target_setup = { a=106 b=107 } }
 		highlight = yes
 		brs_set_target = { a=106 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2780,10 +2144,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_107"
-		trigger = {
-			brs_check_maxskill = { b=108 }
-			NOT = { brs_check_target_setup = { a=107 b=108 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=107 b=108 } } }
 		brs_set_target = { a=107 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2791,10 +2152,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_107"
-		trigger = {
-			brs_check_maxskill = { b=108 }
-			brs_check_target_setup = { a=107 b=108 }
-		}
+		trigger = { brs_check_target_setup = { a=107 b=108 } }
 		highlight = yes
 		brs_set_target = { a=107 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2803,10 +2161,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_108"
-		trigger = {
-			brs_check_maxskill = { b=109 }
-			NOT = { brs_check_target_setup = { a=108 b=109 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=108 b=109 } } }
 		brs_set_target = { a=108 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2814,10 +2169,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_108"
-		trigger = {
-			brs_check_maxskill = { b=109 }
-			brs_check_target_setup = { a=108 b=109 }
-		}
+		trigger = { brs_check_target_setup = { a=108 b=109 } }
 		highlight = yes
 		brs_set_target = { a=108 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2826,10 +2178,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_109"
-		trigger = {
-			brs_check_maxskill = { b=110 }
-			NOT = { brs_check_target_setup = { a=109 b=110 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=109 b=110 } } }
 		brs_set_target = { a=109 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2837,10 +2186,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_109"
-		trigger = {
-			brs_check_maxskill = { b=110 }
-			brs_check_target_setup = { a=109 b=110 }
-		}
+		trigger = { brs_check_target_setup = { a=109 b=110 } }
 		highlight = yes
 		brs_set_target = { a=109 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2849,10 +2195,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_110"
-		trigger = {
-			brs_check_maxskill = { b=111 }
-			NOT = { brs_check_target_setup = { a=110 b=111 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=110 b=111 } } }
 		brs_set_target = { a=110 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2860,10 +2203,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_110"
-		trigger = {
-			brs_check_maxskill = { b=111 }
-			brs_check_target_setup = { a=110 b=111 }
-		}
+		trigger = { brs_check_target_setup = { a=110 b=111 } }
 		highlight = yes
 		brs_set_target = { a=110 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2872,10 +2212,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_111"
-		trigger = {
-			brs_check_maxskill = { b=112 }
-			NOT = { brs_check_target_setup = { a=111 b=112 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=111 b=112 } } }
 		brs_set_target = { a=111 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2883,10 +2220,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_111"
-		trigger = {
-			brs_check_maxskill = { b=112 }
-			brs_check_target_setup = { a=111 b=112 }
-		}
+		trigger = { brs_check_target_setup = { a=111 b=112 } }
 		highlight = yes
 		brs_set_target = { a=111 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2895,10 +2229,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_112"
-		trigger = {
-			brs_check_maxskill = { b=113 }
-			NOT = { brs_check_target_setup = { a=112 b=113 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=112 b=113 } } }
 		brs_set_target = { a=112 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2906,10 +2237,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_112"
-		trigger = {
-			brs_check_maxskill = { b=113 }
-			brs_check_target_setup = { a=112 b=113 }
-		}
+		trigger = { brs_check_target_setup = { a=112 b=113 } }
 		highlight = yes
 		brs_set_target = { a=112 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2918,10 +2246,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_113"
-		trigger = {
-			brs_check_maxskill = { b=114 }
-			NOT = { brs_check_target_setup = { a=113 b=114 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=113 b=114 } } }
 		brs_set_target = { a=113 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2929,10 +2254,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_113"
-		trigger = {
-			brs_check_maxskill = { b=114 }
-			brs_check_target_setup = { a=113 b=114 }
-		}
+		trigger = { brs_check_target_setup = { a=113 b=114 } }
 		highlight = yes
 		brs_set_target = { a=113 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2941,10 +2263,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_114"
-		trigger = {
-			brs_check_maxskill = { b=115 }
-			NOT = { brs_check_target_setup = { a=114 b=115 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=114 b=115 } } }
 		brs_set_target = { a=114 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2952,10 +2271,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_114"
-		trigger = {
-			brs_check_maxskill = { b=115 }
-			brs_check_target_setup = { a=114 b=115 }
-		}
+		trigger = { brs_check_target_setup = { a=114 b=115 } }
 		highlight = yes
 		brs_set_target = { a=114 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2964,10 +2280,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_115"
-		trigger = {
-			brs_check_maxskill = { b=116 }
-			NOT = { brs_check_target_setup = { a=115 b=116 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=115 b=116 } } }
 		brs_set_target = { a=115 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2975,10 +2288,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_115"
-		trigger = {
-			brs_check_maxskill = { b=116 }
-			brs_check_target_setup = { a=115 b=116 }
-		}
+		trigger = { brs_check_target_setup = { a=115 b=116 } }
 		highlight = yes
 		brs_set_target = { a=115 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -2987,10 +2297,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_116"
-		trigger = {
-			brs_check_maxskill = { b=117 }
-			NOT = { brs_check_target_setup = { a=116 b=117 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=116 b=117 } } }
 		brs_set_target = { a=116 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -2998,10 +2305,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_116"
-		trigger = {
-			brs_check_maxskill = { b=117 }
-			brs_check_target_setup = { a=116 b=117 }
-		}
+		trigger = { brs_check_target_setup = { a=116 b=117 } }
 		highlight = yes
 		brs_set_target = { a=116 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3010,10 +2314,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_117"
-		trigger = {
-			brs_check_maxskill = { b=118 }
-			NOT = { brs_check_target_setup = { a=117 b=118 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=117 b=118 } } }
 		brs_set_target = { a=117 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3021,10 +2322,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_117"
-		trigger = {
-			brs_check_maxskill = { b=118 }
-			brs_check_target_setup = { a=117 b=118 }
-		}
+		trigger = { brs_check_target_setup = { a=117 b=118 } }
 		highlight = yes
 		brs_set_target = { a=117 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3033,10 +2331,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_118"
-		trigger = {
-			brs_check_maxskill = { b=119 }
-			NOT = { brs_check_target_setup = { a=118 b=119 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=118 b=119 } } }
 		brs_set_target = { a=118 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3044,10 +2339,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_118"
-		trigger = {
-			brs_check_maxskill = { b=119 }
-			brs_check_target_setup = { a=118 b=119 }
-		}
+		trigger = { brs_check_target_setup = { a=118 b=119 } }
 		highlight = yes
 		brs_set_target = { a=118 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3056,10 +2348,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_119"
-		trigger = {
-			brs_check_maxskill = { b=120 }
-			NOT = { brs_check_target_setup = { a=119 b=120 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=119 b=120 } } }
 		brs_set_target = { a=119 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3067,10 +2356,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_119"
-		trigger = {
-			brs_check_maxskill = { b=120 }
-			brs_check_target_setup = { a=119 b=120 }
-		}
+		trigger = { brs_check_target_setup = { a=119 b=120 } }
 		highlight = yes
 		brs_set_target = { a=119 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3079,10 +2365,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_120"
-		trigger = {
-			brs_check_maxskill = { b=121 }
-			NOT = { brs_check_target_setup = { a=120 b=121 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=120 b=121 } } }
 		brs_set_target = { a=120 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3090,10 +2373,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_120"
-		trigger = {
-			brs_check_maxskill = { b=121 }
-			brs_check_target_setup = { a=120 b=121 }
-		}
+		trigger = { brs_check_target_setup = { a=120 b=121 } }
 		highlight = yes
 		brs_set_target = { a=120 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3102,10 +2382,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_121"
-		trigger = {
-			brs_check_maxskill = { b=122 }
-			NOT = { brs_check_target_setup = { a=121 b=122 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=121 b=122 } } }
 		brs_set_target = { a=121 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3113,10 +2390,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_121"
-		trigger = {
-			brs_check_maxskill = { b=122 }
-			brs_check_target_setup = { a=121 b=122 }
-		}
+		trigger = { brs_check_target_setup = { a=121 b=122 } }
 		highlight = yes
 		brs_set_target = { a=121 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3125,10 +2399,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_122"
-		trigger = {
-			brs_check_maxskill = { b=123 }
-			NOT = { brs_check_target_setup = { a=122 b=123 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=122 b=123 } } }
 		brs_set_target = { a=122 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3136,10 +2407,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_122"
-		trigger = {
-			brs_check_maxskill = { b=123 }
-			brs_check_target_setup = { a=122 b=123 }
-		}
+		trigger = { brs_check_target_setup = { a=122 b=123 } }
 		highlight = yes
 		brs_set_target = { a=122 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3148,10 +2416,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_123"
-		trigger = {
-			brs_check_maxskill = { b=124 }
-			NOT = { brs_check_target_setup = { a=123 b=124 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=123 b=124 } } }
 		brs_set_target = { a=123 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3159,10 +2424,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_123"
-		trigger = {
-			brs_check_maxskill = { b=124 }
-			brs_check_target_setup = { a=123 b=124 }
-		}
+		trigger = { brs_check_target_setup = { a=123 b=124 } }
 		highlight = yes
 		brs_set_target = { a=123 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3171,10 +2433,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_124"
-		trigger = {
-			brs_check_maxskill = { b=125 }
-			NOT = { brs_check_target_setup = { a=124 b=125 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=124 b=125 } } }
 		brs_set_target = { a=124 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3182,10 +2441,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_124"
-		trigger = {
-			brs_check_maxskill = { b=125 }
-			brs_check_target_setup = { a=124 b=125 }
-		}
+		trigger = { brs_check_target_setup = { a=124 b=125 } }
 		highlight = yes
 		brs_set_target = { a=124 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3194,10 +2450,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_125"
-		trigger = {
-			brs_check_maxskill = { b=126 }
-			NOT = { brs_check_target_setup = { a=125 b=126 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=125 b=126 } } }
 		brs_set_target = { a=125 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3205,10 +2458,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_125"
-		trigger = {
-			brs_check_maxskill = { b=126 }
-			brs_check_target_setup = { a=125 b=126 }
-		}
+		trigger = { brs_check_target_setup = { a=125 b=126 } }
 		highlight = yes
 		brs_set_target = { a=125 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3217,10 +2467,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_126"
-		trigger = {
-			brs_check_maxskill = { b=127 }
-			NOT = { brs_check_target_setup = { a=126 b=127 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=126 b=127 } } }
 		brs_set_target = { a=126 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3228,10 +2475,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_126"
-		trigger = {
-			brs_check_maxskill = { b=127 }
-			brs_check_target_setup = { a=126 b=127 }
-		}
+		trigger = { brs_check_target_setup = { a=126 b=127 } }
 		highlight = yes
 		brs_set_target = { a=126 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3240,10 +2484,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_127"
-		trigger = {
-			brs_check_maxskill = { b=128 }
-			NOT = { brs_check_target_setup = { a=127 b=128 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=127 b=128 } } }
 		brs_set_target = { a=127 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3251,10 +2492,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_127"
-		trigger = {
-			brs_check_maxskill = { b=128 }
-			brs_check_target_setup = { a=127 b=128 }
-		}
+		trigger = { brs_check_target_setup = { a=127 b=128 } }
 		highlight = yes
 		brs_set_target = { a=127 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3263,10 +2501,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_128"
-		trigger = {
-			brs_check_maxskill = { b=129 }
-			NOT = { brs_check_target_setup = { a=128 b=129 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=128 b=129 } } }
 		brs_set_target = { a=128 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3274,10 +2509,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_128"
-		trigger = {
-			brs_check_maxskill = { b=129 }
-			brs_check_target_setup = { a=128 b=129 }
-		}
+		trigger = { brs_check_target_setup = { a=128 b=129 } }
 		highlight = yes
 		brs_set_target = { a=128 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3286,10 +2518,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_129"
-		trigger = {
-			brs_check_maxskill = { b=130 }
-			NOT = { brs_check_target_setup = { a=129 b=130 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=129 b=130 } } }
 		brs_set_target = { a=129 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3297,10 +2526,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_129"
-		trigger = {
-			brs_check_maxskill = { b=130 }
-			brs_check_target_setup = { a=129 b=130 }
-		}
+		trigger = { brs_check_target_setup = { a=129 b=130 } }
 		highlight = yes
 		brs_set_target = { a=129 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3309,10 +2535,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_130"
-		trigger = {
-			brs_check_maxskill = { b=131 }
-			NOT = { brs_check_target_setup = { a=130 b=131 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=130 b=131 } } }
 		brs_set_target = { a=130 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3320,10 +2543,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_130"
-		trigger = {
-			brs_check_maxskill = { b=131 }
-			brs_check_target_setup = { a=130 b=131 }
-		}
+		trigger = { brs_check_target_setup = { a=130 b=131 } }
 		highlight = yes
 		brs_set_target = { a=130 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3332,10 +2552,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_131"
-		trigger = {
-			brs_check_maxskill = { b=132 }
-			NOT = { brs_check_target_setup = { a=131 b=132 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=131 b=132 } } }
 		brs_set_target = { a=131 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3343,10 +2560,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_131"
-		trigger = {
-			brs_check_maxskill = { b=132 }
-			brs_check_target_setup = { a=131 b=132 }
-		}
+		trigger = { brs_check_target_setup = { a=131 b=132 } }
 		highlight = yes
 		brs_set_target = { a=131 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3355,10 +2569,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_132"
-		trigger = {
-			brs_check_maxskill = { b=133 }
-			NOT = { brs_check_target_setup = { a=132 b=133 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=132 b=133 } } }
 		brs_set_target = { a=132 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3366,10 +2577,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_132"
-		trigger = {
-			brs_check_maxskill = { b=133 }
-			brs_check_target_setup = { a=132 b=133 }
-		}
+		trigger = { brs_check_target_setup = { a=132 b=133 } }
 		highlight = yes
 		brs_set_target = { a=132 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3378,10 +2586,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_133"
-		trigger = {
-			brs_check_maxskill = { b=134 }
-			NOT = { brs_check_target_setup = { a=133 b=134 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=133 b=134 } } }
 		brs_set_target = { a=133 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3389,10 +2594,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_133"
-		trigger = {
-			brs_check_maxskill = { b=134 }
-			brs_check_target_setup = { a=133 b=134 }
-		}
+		trigger = { brs_check_target_setup = { a=133 b=134 } }
 		highlight = yes
 		brs_set_target = { a=133 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3401,10 +2603,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_134"
-		trigger = {
-			brs_check_maxskill = { b=135 }
-			NOT = { brs_check_target_setup = { a=134 b=135 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=134 b=135 } } }
 		brs_set_target = { a=134 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3412,10 +2611,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_134"
-		trigger = {
-			brs_check_maxskill = { b=135 }
-			brs_check_target_setup = { a=134 b=135 }
-		}
+		trigger = { brs_check_target_setup = { a=134 b=135 } }
 		highlight = yes
 		brs_set_target = { a=134 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3424,10 +2620,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_135"
-		trigger = {
-			brs_check_maxskill = { b=136 }
-			NOT = { brs_check_target_setup = { a=135 b=136 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=135 b=136 } } }
 		brs_set_target = { a=135 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3435,10 +2628,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_135"
-		trigger = {
-			brs_check_maxskill = { b=136 }
-			brs_check_target_setup = { a=135 b=136 }
-		}
+		trigger = { brs_check_target_setup = { a=135 b=136 } }
 		highlight = yes
 		brs_set_target = { a=135 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3447,10 +2637,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_136"
-		trigger = {
-			brs_check_maxskill = { b=137 }
-			NOT = { brs_check_target_setup = { a=136 b=137 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=136 b=137 } } }
 		brs_set_target = { a=136 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3458,10 +2645,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_136"
-		trigger = {
-			brs_check_maxskill = { b=137 }
-			brs_check_target_setup = { a=136 b=137 }
-		}
+		trigger = { brs_check_target_setup = { a=136 b=137 } }
 		highlight = yes
 		brs_set_target = { a=136 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3470,10 +2654,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_137"
-		trigger = {
-			brs_check_maxskill = { b=138 }
-			NOT = { brs_check_target_setup = { a=137 b=138 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=137 b=138 } } }
 		brs_set_target = { a=137 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3481,10 +2662,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_137"
-		trigger = {
-			brs_check_maxskill = { b=138 }
-			brs_check_target_setup = { a=137 b=138 }
-		}
+		trigger = { brs_check_target_setup = { a=137 b=138 } }
 		highlight = yes
 		brs_set_target = { a=137 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3493,10 +2671,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_138"
-		trigger = {
-			brs_check_maxskill = { b=139 }
-			NOT = { brs_check_target_setup = { a=138 b=139 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=138 b=139 } } }
 		brs_set_target = { a=138 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3504,10 +2679,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_138"
-		trigger = {
-			brs_check_maxskill = { b=139 }
-			brs_check_target_setup = { a=138 b=139 }
-		}
+		trigger = { brs_check_target_setup = { a=138 b=139 } }
 		highlight = yes
 		brs_set_target = { a=138 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3516,10 +2688,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_139"
-		trigger = {
-			brs_check_maxskill = { b=140 }
-			NOT = { brs_check_target_setup = { a=139 b=140 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=139 b=140 } } }
 		brs_set_target = { a=139 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3527,10 +2696,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_139"
-		trigger = {
-			brs_check_maxskill = { b=140 }
-			brs_check_target_setup = { a=139 b=140 }
-		}
+		trigger = { brs_check_target_setup = { a=139 b=140 } }
 		highlight = yes
 		brs_set_target = { a=139 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3539,10 +2705,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_140"
-		trigger = {
-			brs_check_maxskill = { b=141 }
-			NOT = { brs_check_target_setup = { a=140 b=141 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=140 b=141 } } }
 		brs_set_target = { a=140 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3550,10 +2713,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_140"
-		trigger = {
-			brs_check_maxskill = { b=141 }
-			brs_check_target_setup = { a=140 b=141 }
-		}
+		trigger = { brs_check_target_setup = { a=140 b=141 } }
 		highlight = yes
 		brs_set_target = { a=140 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3562,10 +2722,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_141"
-		trigger = {
-			brs_check_maxskill = { b=142 }
-			NOT = { brs_check_target_setup = { a=141 b=142 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=141 b=142 } } }
 		brs_set_target = { a=141 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3573,10 +2730,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_141"
-		trigger = {
-			brs_check_maxskill = { b=142 }
-			brs_check_target_setup = { a=141 b=142 }
-		}
+		trigger = { brs_check_target_setup = { a=141 b=142 } }
 		highlight = yes
 		brs_set_target = { a=141 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3585,10 +2739,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_142"
-		trigger = {
-			brs_check_maxskill = { b=143 }
-			NOT = { brs_check_target_setup = { a=142 b=143 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=142 b=143 } } }
 		brs_set_target = { a=142 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3596,10 +2747,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_142"
-		trigger = {
-			brs_check_maxskill = { b=143 }
-			brs_check_target_setup = { a=142 b=143 }
-		}
+		trigger = { brs_check_target_setup = { a=142 b=143 } }
 		highlight = yes
 		brs_set_target = { a=142 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3608,10 +2756,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_143"
-		trigger = {
-			brs_check_maxskill = { b=144 }
-			NOT = { brs_check_target_setup = { a=143 b=144 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=143 b=144 } } }
 		brs_set_target = { a=143 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3619,10 +2764,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_143"
-		trigger = {
-			brs_check_maxskill = { b=144 }
-			brs_check_target_setup = { a=143 b=144 }
-		}
+		trigger = { brs_check_target_setup = { a=143 b=144 } }
 		highlight = yes
 		brs_set_target = { a=143 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3631,10 +2773,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_144"
-		trigger = {
-			brs_check_maxskill = { b=145 }
-			NOT = { brs_check_target_setup = { a=144 b=145 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=144 b=145 } } }
 		brs_set_target = { a=144 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3642,10 +2781,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_144"
-		trigger = {
-			brs_check_maxskill = { b=145 }
-			brs_check_target_setup = { a=144 b=145 }
-		}
+		trigger = { brs_check_target_setup = { a=144 b=145 } }
 		highlight = yes
 		brs_set_target = { a=144 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3654,10 +2790,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_145"
-		trigger = {
-			brs_check_maxskill = { b=146 }
-			NOT = { brs_check_target_setup = { a=145 b=146 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=145 b=146 } } }
 		brs_set_target = { a=145 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3665,10 +2798,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_145"
-		trigger = {
-			brs_check_maxskill = { b=146 }
-			brs_check_target_setup = { a=145 b=146 }
-		}
+		trigger = { brs_check_target_setup = { a=145 b=146 } }
 		highlight = yes
 		brs_set_target = { a=145 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3677,10 +2807,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_146"
-		trigger = {
-			brs_check_maxskill = { b=147 }
-			NOT = { brs_check_target_setup = { a=146 b=147 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=146 b=147 } } }
 		brs_set_target = { a=146 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3688,10 +2815,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_146"
-		trigger = {
-			brs_check_maxskill = { b=147 }
-			brs_check_target_setup = { a=146 b=147 }
-		}
+		trigger = { brs_check_target_setup = { a=146 b=147 } }
 		highlight = yes
 		brs_set_target = { a=146 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3700,10 +2824,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_147"
-		trigger = {
-			brs_check_maxskill = { b=148 }
-			NOT = { brs_check_target_setup = { a=147 b=148 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=147 b=148 } } }
 		brs_set_target = { a=147 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3711,10 +2832,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_147"
-		trigger = {
-			brs_check_maxskill = { b=148 }
-			brs_check_target_setup = { a=147 b=148 }
-		}
+		trigger = { brs_check_target_setup = { a=147 b=148 } }
 		highlight = yes
 		brs_set_target = { a=147 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3723,10 +2841,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_148"
-		trigger = {
-			brs_check_maxskill = { b=149 }
-			NOT = { brs_check_target_setup = { a=148 b=149 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=148 b=149 } } }
 		brs_set_target = { a=148 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3734,10 +2849,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_148"
-		trigger = {
-			brs_check_maxskill = { b=149 }
-			brs_check_target_setup = { a=148 b=149 }
-		}
+		trigger = { brs_check_target_setup = { a=148 b=149 } }
 		highlight = yes
 		brs_set_target = { a=148 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3746,10 +2858,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_149"
-		trigger = {
-			brs_check_maxskill = { b=150 }
-			NOT = { brs_check_target_setup = { a=149 b=150 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=149 b=150 } } }
 		brs_set_target = { a=149 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3757,10 +2866,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_149"
-		trigger = {
-			brs_check_maxskill = { b=150 }
-			brs_check_target_setup = { a=149 b=150 }
-		}
+		trigger = { brs_check_target_setup = { a=149 b=150 } }
 		highlight = yes
 		brs_set_target = { a=149 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3769,10 +2875,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_150"
-		trigger = {
-			brs_check_maxskill = { b=151 }
-			NOT = { brs_check_target_setup = { a=150 b=151 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=150 b=151 } } }
 		brs_set_target = { a=150 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3780,10 +2883,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_150"
-		trigger = {
-			brs_check_maxskill = { b=151 }
-			brs_check_target_setup = { a=150 b=151 }
-		}
+		trigger = { brs_check_target_setup = { a=150 b=151 } }
 		highlight = yes
 		brs_set_target = { a=150 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3792,10 +2892,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_151"
-		trigger = {
-			brs_check_maxskill = { b=152 }
-			NOT = { brs_check_target_setup = { a=151 b=152 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=151 b=152 } } }
 		brs_set_target = { a=151 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3803,10 +2900,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_151"
-		trigger = {
-			brs_check_maxskill = { b=152 }
-			brs_check_target_setup = { a=151 b=152 }
-		}
+		trigger = { brs_check_target_setup = { a=151 b=152 } }
 		highlight = yes
 		brs_set_target = { a=151 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3815,10 +2909,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_152"
-		trigger = {
-			brs_check_maxskill = { b=153 }
-			NOT = { brs_check_target_setup = { a=152 b=153 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=152 b=153 } } }
 		brs_set_target = { a=152 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3826,10 +2917,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_152"
-		trigger = {
-			brs_check_maxskill = { b=153 }
-			brs_check_target_setup = { a=152 b=153 }
-		}
+		trigger = { brs_check_target_setup = { a=152 b=153 } }
 		highlight = yes
 		brs_set_target = { a=152 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3838,10 +2926,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_153"
-		trigger = {
-			brs_check_maxskill = { b=154 }
-			NOT = { brs_check_target_setup = { a=153 b=154 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=153 b=154 } } }
 		brs_set_target = { a=153 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3849,10 +2934,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_153"
-		trigger = {
-			brs_check_maxskill = { b=154 }
-			brs_check_target_setup = { a=153 b=154 }
-		}
+		trigger = { brs_check_target_setup = { a=153 b=154 } }
 		highlight = yes
 		brs_set_target = { a=153 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3861,10 +2943,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_154"
-		trigger = {
-			brs_check_maxskill = { b=155 }
-			NOT = { brs_check_target_setup = { a=154 b=155 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=154 b=155 } } }
 		brs_set_target = { a=154 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3872,10 +2951,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_154"
-		trigger = {
-			brs_check_maxskill = { b=155 }
-			brs_check_target_setup = { a=154 b=155 }
-		}
+		trigger = { brs_check_target_setup = { a=154 b=155 } }
 		highlight = yes
 		brs_set_target = { a=154 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3884,10 +2960,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_155"
-		trigger = {
-			brs_check_maxskill = { b=156 }
-			NOT = { brs_check_target_setup = { a=155 b=156 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=155 b=156 } } }
 		brs_set_target = { a=155 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3895,10 +2968,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_155"
-		trigger = {
-			brs_check_maxskill = { b=156 }
-			brs_check_target_setup = { a=155 b=156 }
-		}
+		trigger = { brs_check_target_setup = { a=155 b=156 } }
 		highlight = yes
 		brs_set_target = { a=155 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3907,10 +2977,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_156"
-		trigger = {
-			brs_check_maxskill = { b=157 }
-			NOT = { brs_check_target_setup = { a=156 b=157 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=156 b=157 } } }
 		brs_set_target = { a=156 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3918,10 +2985,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_156"
-		trigger = {
-			brs_check_maxskill = { b=157 }
-			brs_check_target_setup = { a=156 b=157 }
-		}
+		trigger = { brs_check_target_setup = { a=156 b=157 } }
 		highlight = yes
 		brs_set_target = { a=156 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3930,10 +2994,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_157"
-		trigger = {
-			brs_check_maxskill = { b=158 }
-			NOT = { brs_check_target_setup = { a=157 b=158 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=157 b=158 } } }
 		brs_set_target = { a=157 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3941,10 +3002,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_157"
-		trigger = {
-			brs_check_maxskill = { b=158 }
-			brs_check_target_setup = { a=157 b=158 }
-		}
+		trigger = { brs_check_target_setup = { a=157 b=158 } }
 		highlight = yes
 		brs_set_target = { a=157 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3953,10 +3011,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_158"
-		trigger = {
-			brs_check_maxskill = { b=159 }
-			NOT = { brs_check_target_setup = { a=158 b=159 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=158 b=159 } } }
 		brs_set_target = { a=158 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3964,10 +3019,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_158"
-		trigger = {
-			brs_check_maxskill = { b=159 }
-			brs_check_target_setup = { a=158 b=159 }
-		}
+		trigger = { brs_check_target_setup = { a=158 b=159 } }
 		highlight = yes
 		brs_set_target = { a=158 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3976,10 +3028,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_159"
-		trigger = {
-			brs_check_maxskill = { b=160 }
-			NOT = { brs_check_target_setup = { a=159 b=160 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=159 b=160 } } }
 		brs_set_target = { a=159 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -3987,10 +3036,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_159"
-		trigger = {
-			brs_check_maxskill = { b=160 }
-			brs_check_target_setup = { a=159 b=160 }
-		}
+		trigger = { brs_check_target_setup = { a=159 b=160 } }
 		highlight = yes
 		brs_set_target = { a=159 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -3999,10 +3045,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_160"
-		trigger = {
-			brs_check_maxskill = { b=161 }
-			NOT = { brs_check_target_setup = { a=160 b=161 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=160 b=161 } } }
 		brs_set_target = { a=160 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4010,10 +3053,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_160"
-		trigger = {
-			brs_check_maxskill = { b=161 }
-			brs_check_target_setup = { a=160 b=161 }
-		}
+		trigger = { brs_check_target_setup = { a=160 b=161 } }
 		highlight = yes
 		brs_set_target = { a=160 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4022,10 +3062,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_161"
-		trigger = {
-			brs_check_maxskill = { b=162 }
-			NOT = { brs_check_target_setup = { a=161 b=162 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=161 b=162 } } }
 		brs_set_target = { a=161 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4033,10 +3070,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_161"
-		trigger = {
-			brs_check_maxskill = { b=162 }
-			brs_check_target_setup = { a=161 b=162 }
-		}
+		trigger = { brs_check_target_setup = { a=161 b=162 } }
 		highlight = yes
 		brs_set_target = { a=161 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4045,10 +3079,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_162"
-		trigger = {
-			brs_check_maxskill = { b=163 }
-			NOT = { brs_check_target_setup = { a=162 b=163 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=162 b=163 } } }
 		brs_set_target = { a=162 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4056,10 +3087,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_162"
-		trigger = {
-			brs_check_maxskill = { b=163 }
-			brs_check_target_setup = { a=162 b=163 }
-		}
+		trigger = { brs_check_target_setup = { a=162 b=163 } }
 		highlight = yes
 		brs_set_target = { a=162 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4068,10 +3096,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_163"
-		trigger = {
-			brs_check_maxskill = { b=164 }
-			NOT = { brs_check_target_setup = { a=163 b=164 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=163 b=164 } } }
 		brs_set_target = { a=163 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4079,10 +3104,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_163"
-		trigger = {
-			brs_check_maxskill = { b=164 }
-			brs_check_target_setup = { a=163 b=164 }
-		}
+		trigger = { brs_check_target_setup = { a=163 b=164 } }
 		highlight = yes
 		brs_set_target = { a=163 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4091,10 +3113,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_164"
-		trigger = {
-			brs_check_maxskill = { b=165 }
-			NOT = { brs_check_target_setup = { a=164 b=165 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=164 b=165 } } }
 		brs_set_target = { a=164 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4102,10 +3121,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_164"
-		trigger = {
-			brs_check_maxskill = { b=165 }
-			brs_check_target_setup = { a=164 b=165 }
-		}
+		trigger = { brs_check_target_setup = { a=164 b=165 } }
 		highlight = yes
 		brs_set_target = { a=164 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4114,10 +3130,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_165"
-		trigger = {
-			brs_check_maxskill = { b=166 }
-			NOT = { brs_check_target_setup = { a=165 b=166 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=165 b=166 } } }
 		brs_set_target = { a=165 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4125,10 +3138,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_165"
-		trigger = {
-			brs_check_maxskill = { b=166 }
-			brs_check_target_setup = { a=165 b=166 }
-		}
+		trigger = { brs_check_target_setup = { a=165 b=166 } }
 		highlight = yes
 		brs_set_target = { a=165 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4137,10 +3147,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_166"
-		trigger = {
-			brs_check_maxskill = { b=167 }
-			NOT = { brs_check_target_setup = { a=166 b=167 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=166 b=167 } } }
 		brs_set_target = { a=166 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4148,10 +3155,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_166"
-		trigger = {
-			brs_check_maxskill = { b=167 }
-			brs_check_target_setup = { a=166 b=167 }
-		}
+		trigger = { brs_check_target_setup = { a=166 b=167 } }
 		highlight = yes
 		brs_set_target = { a=166 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4160,10 +3164,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_167"
-		trigger = {
-			brs_check_maxskill = { b=168 }
-			NOT = { brs_check_target_setup = { a=167 b=168 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=167 b=168 } } }
 		brs_set_target = { a=167 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4171,10 +3172,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_167"
-		trigger = {
-			brs_check_maxskill = { b=168 }
-			brs_check_target_setup = { a=167 b=168 }
-		}
+		trigger = { brs_check_target_setup = { a=167 b=168 } }
 		highlight = yes
 		brs_set_target = { a=167 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4183,10 +3181,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_168"
-		trigger = {
-			brs_check_maxskill = { b=169 }
-			NOT = { brs_check_target_setup = { a=168 b=169 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=168 b=169 } } }
 		brs_set_target = { a=168 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4194,10 +3189,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_168"
-		trigger = {
-			brs_check_maxskill = { b=169 }
-			brs_check_target_setup = { a=168 b=169 }
-		}
+		trigger = { brs_check_target_setup = { a=168 b=169 } }
 		highlight = yes
 		brs_set_target = { a=168 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4206,10 +3198,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_169"
-		trigger = {
-			brs_check_maxskill = { b=170 }
-			NOT = { brs_check_target_setup = { a=169 b=170 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=169 b=170 } } }
 		brs_set_target = { a=169 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4217,10 +3206,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_169"
-		trigger = {
-			brs_check_maxskill = { b=170 }
-			brs_check_target_setup = { a=169 b=170 }
-		}
+		trigger = { brs_check_target_setup = { a=169 b=170 } }
 		highlight = yes
 		brs_set_target = { a=169 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4229,10 +3215,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_170"
-		trigger = {
-			brs_check_maxskill = { b=171 }
-			NOT = { brs_check_target_setup = { a=170 b=171 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=170 b=171 } } }
 		brs_set_target = { a=170 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4240,10 +3223,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_170"
-		trigger = {
-			brs_check_maxskill = { b=171 }
-			brs_check_target_setup = { a=170 b=171 }
-		}
+		trigger = { brs_check_target_setup = { a=170 b=171 } }
 		highlight = yes
 		brs_set_target = { a=170 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4252,10 +3232,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_171"
-		trigger = {
-			brs_check_maxskill = { b=172 }
-			NOT = { brs_check_target_setup = { a=171 b=172 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=171 b=172 } } }
 		brs_set_target = { a=171 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4263,10 +3240,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_171"
-		trigger = {
-			brs_check_maxskill = { b=172 }
-			brs_check_target_setup = { a=171 b=172 }
-		}
+		trigger = { brs_check_target_setup = { a=171 b=172 } }
 		highlight = yes
 		brs_set_target = { a=171 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4275,10 +3249,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_172"
-		trigger = {
-			brs_check_maxskill = { b=173 }
-			NOT = { brs_check_target_setup = { a=172 b=173 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=172 b=173 } } }
 		brs_set_target = { a=172 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4286,10 +3257,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_172"
-		trigger = {
-			brs_check_maxskill = { b=173 }
-			brs_check_target_setup = { a=172 b=173 }
-		}
+		trigger = { brs_check_target_setup = { a=172 b=173 } }
 		highlight = yes
 		brs_set_target = { a=172 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4298,10 +3266,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_173"
-		trigger = {
-			brs_check_maxskill = { b=174 }
-			NOT = { brs_check_target_setup = { a=173 b=174 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=173 b=174 } } }
 		brs_set_target = { a=173 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4309,10 +3274,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_173"
-		trigger = {
-			brs_check_maxskill = { b=174 }
-			brs_check_target_setup = { a=173 b=174 }
-		}
+		trigger = { brs_check_target_setup = { a=173 b=174 } }
 		highlight = yes
 		brs_set_target = { a=173 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4321,10 +3283,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_174"
-		trigger = {
-			brs_check_maxskill = { b=175 }
-			NOT = { brs_check_target_setup = { a=174 b=175 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=174 b=175 } } }
 		brs_set_target = { a=174 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4332,10 +3291,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_174"
-		trigger = {
-			brs_check_maxskill = { b=175 }
-			brs_check_target_setup = { a=174 b=175 }
-		}
+		trigger = { brs_check_target_setup = { a=174 b=175 } }
 		highlight = yes
 		brs_set_target = { a=174 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4344,10 +3300,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_175"
-		trigger = {
-			brs_check_maxskill = { b=176 }
-			NOT = { brs_check_target_setup = { a=175 b=176 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=175 b=176 } } }
 		brs_set_target = { a=175 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4355,10 +3308,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_175"
-		trigger = {
-			brs_check_maxskill = { b=176 }
-			brs_check_target_setup = { a=175 b=176 }
-		}
+		trigger = { brs_check_target_setup = { a=175 b=176 } }
 		highlight = yes
 		brs_set_target = { a=175 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4367,10 +3317,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_176"
-		trigger = {
-			brs_check_maxskill = { b=177 }
-			NOT = { brs_check_target_setup = { a=176 b=177 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=176 b=177 } } }
 		brs_set_target = { a=176 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4378,10 +3325,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_176"
-		trigger = {
-			brs_check_maxskill = { b=177 }
-			brs_check_target_setup = { a=176 b=177 }
-		}
+		trigger = { brs_check_target_setup = { a=176 b=177 } }
 		highlight = yes
 		brs_set_target = { a=176 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4390,10 +3334,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_177"
-		trigger = {
-			brs_check_maxskill = { b=178 }
-			NOT = { brs_check_target_setup = { a=177 b=178 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=177 b=178 } } }
 		brs_set_target = { a=177 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4401,10 +3342,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_177"
-		trigger = {
-			brs_check_maxskill = { b=178 }
-			brs_check_target_setup = { a=177 b=178 }
-		}
+		trigger = { brs_check_target_setup = { a=177 b=178 } }
 		highlight = yes
 		brs_set_target = { a=177 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4413,10 +3351,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_178"
-		trigger = {
-			brs_check_maxskill = { b=179 }
-			NOT = { brs_check_target_setup = { a=178 b=179 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=178 b=179 } } }
 		brs_set_target = { a=178 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4424,10 +3359,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_178"
-		trigger = {
-			brs_check_maxskill = { b=179 }
-			brs_check_target_setup = { a=178 b=179 }
-		}
+		trigger = { brs_check_target_setup = { a=178 b=179 } }
 		highlight = yes
 		brs_set_target = { a=178 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4436,10 +3368,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_179"
-		trigger = {
-			brs_check_maxskill = { b=180 }
-			NOT = { brs_check_target_setup = { a=179 b=180 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=179 b=180 } } }
 		brs_set_target = { a=179 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4447,10 +3376,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_179"
-		trigger = {
-			brs_check_maxskill = { b=180 }
-			brs_check_target_setup = { a=179 b=180 }
-		}
+		trigger = { brs_check_target_setup = { a=179 b=180 } }
 		highlight = yes
 		brs_set_target = { a=179 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4459,10 +3385,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_180"
-		trigger = {
-			brs_check_maxskill = { b=181 }
-			NOT = { brs_check_target_setup = { a=180 b=181 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=180 b=181 } } }
 		brs_set_target = { a=180 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4470,10 +3393,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_180"
-		trigger = {
-			brs_check_maxskill = { b=181 }
-			brs_check_target_setup = { a=180 b=181 }
-		}
+		trigger = { brs_check_target_setup = { a=180 b=181 } }
 		highlight = yes
 		brs_set_target = { a=180 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4482,10 +3402,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_181"
-		trigger = {
-			brs_check_maxskill = { b=182 }
-			NOT = { brs_check_target_setup = { a=181 b=182 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=181 b=182 } } }
 		brs_set_target = { a=181 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4493,10 +3410,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_181"
-		trigger = {
-			brs_check_maxskill = { b=182 }
-			brs_check_target_setup = { a=181 b=182 }
-		}
+		trigger = { brs_check_target_setup = { a=181 b=182 } }
 		highlight = yes
 		brs_set_target = { a=181 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4505,10 +3419,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_182"
-		trigger = {
-			brs_check_maxskill = { b=183 }
-			NOT = { brs_check_target_setup = { a=182 b=183 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=182 b=183 } } }
 		brs_set_target = { a=182 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4516,10 +3427,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_182"
-		trigger = {
-			brs_check_maxskill = { b=183 }
-			brs_check_target_setup = { a=182 b=183 }
-		}
+		trigger = { brs_check_target_setup = { a=182 b=183 } }
 		highlight = yes
 		brs_set_target = { a=182 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4528,10 +3436,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_183"
-		trigger = {
-			brs_check_maxskill = { b=184 }
-			NOT = { brs_check_target_setup = { a=183 b=184 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=183 b=184 } } }
 		brs_set_target = { a=183 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4539,10 +3444,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_183"
-		trigger = {
-			brs_check_maxskill = { b=184 }
-			brs_check_target_setup = { a=183 b=184 }
-		}
+		trigger = { brs_check_target_setup = { a=183 b=184 } }
 		highlight = yes
 		brs_set_target = { a=183 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4551,10 +3453,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_184"
-		trigger = {
-			brs_check_maxskill = { b=185 }
-			NOT = { brs_check_target_setup = { a=184 b=185 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=184 b=185 } } }
 		brs_set_target = { a=184 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4562,10 +3461,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_184"
-		trigger = {
-			brs_check_maxskill = { b=185 }
-			brs_check_target_setup = { a=184 b=185 }
-		}
+		trigger = { brs_check_target_setup = { a=184 b=185 } }
 		highlight = yes
 		brs_set_target = { a=184 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4574,10 +3470,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_185"
-		trigger = {
-			brs_check_maxskill = { b=186 }
-			NOT = { brs_check_target_setup = { a=185 b=186 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=185 b=186 } } }
 		brs_set_target = { a=185 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4585,10 +3478,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_185"
-		trigger = {
-			brs_check_maxskill = { b=186 }
-			brs_check_target_setup = { a=185 b=186 }
-		}
+		trigger = { brs_check_target_setup = { a=185 b=186 } }
 		highlight = yes
 		brs_set_target = { a=185 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4597,10 +3487,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_186"
-		trigger = {
-			brs_check_maxskill = { b=187 }
-			NOT = { brs_check_target_setup = { a=186 b=187 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=186 b=187 } } }
 		brs_set_target = { a=186 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4608,10 +3495,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_186"
-		trigger = {
-			brs_check_maxskill = { b=187 }
-			brs_check_target_setup = { a=186 b=187 }
-		}
+		trigger = { brs_check_target_setup = { a=186 b=187 } }
 		highlight = yes
 		brs_set_target = { a=186 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4620,10 +3504,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_187"
-		trigger = {
-			brs_check_maxskill = { b=188 }
-			NOT = { brs_check_target_setup = { a=187 b=188 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=187 b=188 } } }
 		brs_set_target = { a=187 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4631,10 +3512,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_187"
-		trigger = {
-			brs_check_maxskill = { b=188 }
-			brs_check_target_setup = { a=187 b=188 }
-		}
+		trigger = { brs_check_target_setup = { a=187 b=188 } }
 		highlight = yes
 		brs_set_target = { a=187 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4643,10 +3521,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_188"
-		trigger = {
-			brs_check_maxskill = { b=189 }
-			NOT = { brs_check_target_setup = { a=188 b=189 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=188 b=189 } } }
 		brs_set_target = { a=188 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4654,10 +3529,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_188"
-		trigger = {
-			brs_check_maxskill = { b=189 }
-			brs_check_target_setup = { a=188 b=189 }
-		}
+		trigger = { brs_check_target_setup = { a=188 b=189 } }
 		highlight = yes
 		brs_set_target = { a=188 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4666,10 +3538,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_189"
-		trigger = {
-			brs_check_maxskill = { b=190 }
-			NOT = { brs_check_target_setup = { a=189 b=190 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=189 b=190 } } }
 		brs_set_target = { a=189 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4677,10 +3546,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_189"
-		trigger = {
-			brs_check_maxskill = { b=190 }
-			brs_check_target_setup = { a=189 b=190 }
-		}
+		trigger = { brs_check_target_setup = { a=189 b=190 } }
 		highlight = yes
 		brs_set_target = { a=189 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4689,10 +3555,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_190"
-		trigger = {
-			brs_check_maxskill = { b=191 }
-			NOT = { brs_check_target_setup = { a=190 b=191 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=190 b=191 } } }
 		brs_set_target = { a=190 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4700,10 +3563,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_190"
-		trigger = {
-			brs_check_maxskill = { b=191 }
-			brs_check_target_setup = { a=190 b=191 }
-		}
+		trigger = { brs_check_target_setup = { a=190 b=191 } }
 		highlight = yes
 		brs_set_target = { a=190 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4712,10 +3572,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_191"
-		trigger = {
-			brs_check_maxskill = { b=192 }
-			NOT = { brs_check_target_setup = { a=191 b=192 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=191 b=192 } } }
 		brs_set_target = { a=191 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4723,10 +3580,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_191"
-		trigger = {
-			brs_check_maxskill = { b=192 }
-			brs_check_target_setup = { a=191 b=192 }
-		}
+		trigger = { brs_check_target_setup = { a=191 b=192 } }
 		highlight = yes
 		brs_set_target = { a=191 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4735,10 +3589,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_192"
-		trigger = {
-			brs_check_maxskill = { b=193 }
-			NOT = { brs_check_target_setup = { a=192 b=193 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=192 b=193 } } }
 		brs_set_target = { a=192 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4746,10 +3597,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_192"
-		trigger = {
-			brs_check_maxskill = { b=193 }
-			brs_check_target_setup = { a=192 b=193 }
-		}
+		trigger = { brs_check_target_setup = { a=192 b=193 } }
 		highlight = yes
 		brs_set_target = { a=192 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4758,10 +3606,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_193"
-		trigger = {
-			brs_check_maxskill = { b=194 }
-			NOT = { brs_check_target_setup = { a=193 b=194 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=193 b=194 } } }
 		brs_set_target = { a=193 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4769,10 +3614,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_193"
-		trigger = {
-			brs_check_maxskill = { b=194 }
-			brs_check_target_setup = { a=193 b=194 }
-		}
+		trigger = { brs_check_target_setup = { a=193 b=194 } }
 		highlight = yes
 		brs_set_target = { a=193 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4781,10 +3623,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_194"
-		trigger = {
-			brs_check_maxskill = { b=195 }
-			NOT = { brs_check_target_setup = { a=194 b=195 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=194 b=195 } } }
 		brs_set_target = { a=194 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4792,10 +3631,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_194"
-		trigger = {
-			brs_check_maxskill = { b=195 }
-			brs_check_target_setup = { a=194 b=195 }
-		}
+		trigger = { brs_check_target_setup = { a=194 b=195 } }
 		highlight = yes
 		brs_set_target = { a=194 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4804,10 +3640,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_195"
-		trigger = {
-			brs_check_maxskill = { b=196 }
-			NOT = { brs_check_target_setup = { a=195 b=196 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=195 b=196 } } }
 		brs_set_target = { a=195 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4815,10 +3648,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_195"
-		trigger = {
-			brs_check_maxskill = { b=196 }
-			brs_check_target_setup = { a=195 b=196 }
-		}
+		trigger = { brs_check_target_setup = { a=195 b=196 } }
 		highlight = yes
 		brs_set_target = { a=195 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4827,10 +3657,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_196"
-		trigger = {
-			brs_check_maxskill = { b=197 }
-			NOT = { brs_check_target_setup = { a=196 b=197 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=196 b=197 } } }
 		brs_set_target = { a=196 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4838,10 +3665,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_196"
-		trigger = {
-			brs_check_maxskill = { b=197 }
-			brs_check_target_setup = { a=196 b=197 }
-		}
+		trigger = { brs_check_target_setup = { a=196 b=197 } }
 		highlight = yes
 		brs_set_target = { a=196 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4850,10 +3674,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_197"
-		trigger = {
-			brs_check_maxskill = { b=198 }
-			NOT = { brs_check_target_setup = { a=197 b=198 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=197 b=198 } } }
 		brs_set_target = { a=197 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4861,10 +3682,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_197"
-		trigger = {
-			brs_check_maxskill = { b=198 }
-			brs_check_target_setup = { a=197 b=198 }
-		}
+		trigger = { brs_check_target_setup = { a=197 b=198 } }
 		highlight = yes
 		brs_set_target = { a=197 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4873,10 +3691,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_198"
-		trigger = {
-			brs_check_maxskill = { b=199 }
-			NOT = { brs_check_target_setup = { a=198 b=199 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=198 b=199 } } }
 		brs_set_target = { a=198 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4884,10 +3699,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_198"
-		trigger = {
-			brs_check_maxskill = { b=199 }
-			brs_check_target_setup = { a=198 b=199 }
-		}
+		trigger = { brs_check_target_setup = { a=198 b=199 } }
 		highlight = yes
 		brs_set_target = { a=198 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4896,10 +3708,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_199"
-		trigger = {
-			brs_check_maxskill = { b=200 }
-			NOT = { brs_check_target_setup = { a=199 b=200 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=199 b=200 } } }
 		brs_set_target = { a=199 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4907,10 +3716,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_199"
-		trigger = {
-			brs_check_maxskill = { b=200 }
-			brs_check_target_setup = { a=199 b=200 }
-		}
+		trigger = { brs_check_target_setup = { a=199 b=200 } }
 		highlight = yes
 		brs_set_target = { a=199 }
 		hidden_effect = { country_event = { id = brs.1010 } }
@@ -4919,10 +3725,7 @@ country_event = {
 
 	option = {
 		name = "brs_change_200"
-		trigger = {
-			brs_check_maxskill = { b=201 }
-			NOT = { brs_check_target_setup = { a=200 b=201 } }
-		}
+		trigger = { NOT = { brs_check_target_setup = { a=200 b=201 } } }
 		brs_set_target = { a=200 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
@@ -4930,38 +3733,43 @@ country_event = {
 
 	option = {
 		name = "brs_change_200"
-		trigger = {
-			brs_check_maxskill = { b=201 }
-			brs_check_target_setup = { a=200 b=201 }
-		}
+		trigger = { brs_check_target_setup = { a=200 b=201 } }
 		highlight = yes
 		brs_set_target = { a=200 }
 		hidden_effect = { country_event = { id = brs.1010 } }
 		tooltip = { country_event = { id = brs.10 } }
 	}
 
-	option = {
-		name = "brs_change_maxskill"
-		trigger = {
-			NOT = { has_country_flag = brs_showalloptions }
-			brs_not_has_template = { a=0 b=1 }
-		}
-		brs_set_template = { m=0 }
-		hidden_effect = { country_event = { id = brs.1010 } }
-		tooltip = { country_event = { id = brs.10 } }
-	}
+	# option = {
+	# 	name = "brs_change_maxskill"
+	# 	trigger = {
+	# 		hidden_trigger = {
+	# 			AND = {
+	# 				NOT = { has_country_flag = brs_showalloptions }
+	# 				brs_not_has_template = { a=0 b=1 }
+	# 			}
+	# 		}
+	# 	}
+	# 	brs_set_template = { m=0 }
+	# 	hidden_effect = { country_event = { id = brs.1010 } }
+	# 	tooltip = { country_event = { id = brs.10 } }
+	# }
 
-	option = {
-		name = "brs_change_maxskill"
-		trigger = {
-			NOT = { has_country_flag = brs_showalloptions }
-			brs_has_template = { a=0 b=1 }
-		}
-		highlight = yes
-		brs_set_template = { m=0 }
-		hidden_effect = { country_event = { id = brs.1010 } }
-		tooltip = { country_event = { id = brs.10 } }
-	}
+	# option = {
+	# 	name = "brs_change_maxskill"
+	# 	trigger = {
+	# 		hidden_trigger = {
+	# 			AND = {
+	# 				NOT = { has_country_flag = brs_showalloptions }
+	# 				brs_has_template = { a=0 b=1 }
+	# 			}
+	# 		}
+	# 	}
+	# 	highlight = yes
+	# 	brs_set_template = { m=0 }
+	# 	hidden_effect = { country_event = { id = brs.1010 } }
+	# 	tooltip = { country_event = { id = brs.10 } }
+	# }
 }
 
 ####################################################################################################

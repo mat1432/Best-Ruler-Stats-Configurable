@@ -3,7 +3,7 @@
 
 ## 1.1.0
 * The mod now automatically detects the maximum possible ruler stats.
-* Collapsed ludicrous mode dynamically.
+* Improved the running performance for options above 20 by splitting them into tiers
 * Added options 100 to 200
 * Added auto-detect max skill mechanic.
   * This is automatically used and is forced to run at game start replacing the default static template of 6.

@@ -143,11 +143,15 @@ brs_check_template = {
 	}
 }
 
-# requires using brs_load_maxskill_locally
 # potential tooltips I may consider using
 #tooltip = brs_maxskill_exact_$a$
 #tooltip = brs_maxskill_atleast_$a$
-#tooltip = brs_maxskill_atmost_$a$
+#tooltip = brs_maxskill_atmost_$b$
+
+# requires using brs_load_maxskill_locally
+# maxskill is exactly x ---> a=x b=(x+1)
+# maxskill is at least x --> a=x
+# maxskill is at most x ---> b=(x+1)
 brs_check_maxskill = {
 	hidden_effect = { #custom_trigger_tooltip = {
 		#tooltip = brs_maxskill_exact_$a$
@@ -156,7 +160,9 @@ brs_check_maxskill = {
 			always = yes
 		}
 		else = {
-			brs_check_var = { which = brs_maxskill [[a] a = $a$ ] [[b] b = $b$ ] }
+			1 = {
+				brs_check_var = { which = brs_maxskill [[a] a = $a$ ] [[b] b = $b$ ] }
+			}
 		}
 	}
 }
