@@ -19,17 +19,19 @@
  brs_2_minimum_e: "Change §YStat Type§! setting to §YMinimum§!"
  brs_2_minimum_d: "Change §YStat Type§! setting to §YNormal§!"
  brs_2_templates: "§MKnown Mod Templates§!"
- brs_2_hometemplate_0: "[BRSBaseGameTemplate] §M(6)§!"
- brs_2_specific: "Set a specific §YStat Target§! between §Y0§! and §Y20§!"
- brs_2_specific_xt: "Set a specific §YStat Target§! between §Y0§! and §Y100§!"
+ brs_2_template_0: "[BRSBaseGameTemplate] §M([Root.brs_maxskill.GetValue])§!"
+ brs_2_specific: "Set a specific §YStat Target§! between §Y0§! and §Y[Root.GetChoiceMaximum]§!"
+ brs_2_maxskill_refresh: "Refresh Detected Max Skill (Globally)"
+
 
  brs_2_options_xt_enable: "§GEnable§! §MLudicrous Mode§!"
  brs_2_options_xt_disable: "§ODisable§! §MLudicrous Mode§!"
 
 # Stat target menu(s)
- brs_specific_t: "£brsdynasty££adm£ Set a specific Stat Target"
+ brs_specific_t: "£brsdynasty££adm£ Set a specific Stat Target - 0 to [Root.GetChoiceMaximum]"
  brs_specific_d: "This will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
- brs_specific_d_xt: "This will automatically remove any selected template.\n[Root.GetStatType]\n[Root.GetStatTarget][Root.GetTemplate]"
+ brs_change_showall: "Show All Options ([BRSMaxSupportedChoice])"
+ brs_change_showmaxskill: "Show All Options up to Max Skill ([Root.brs_maxskill.GetValue])"
  brs_change_0: "Set to §Y0§!"
  brs_change_1: "Set to §Y1§!"
  brs_change_2: "Set to §Y2§!"
@@ -237,10 +239,17 @@
  brs_change_200: "Set to §Y200§!"
 # 200
 
-# errors and auto menus
- brs_99_t: "£brsdynasty££adm£ Best Ruler Stats - Setup Event"
+
+# auto menus
+ brs_90_t: "£brsdynasty££adm£ Best Ruler Stats - Detect Max Skill Startup Event"
+ brs_90_d: ""
+ brs_90_a: "event brs.90"
+ brs_99_t: "£brsdynasty££adm£ Best Ruler Stats - Setup"
  brs_99_d: ""
  brs_99_a: ""
+ brs_change_maxskill: "Use Detected Max Skill - Set to §Y[Root.brs_maxskill.GetValue]§!"
+ brs_99_configure: "Open Configuration Menu"
+# errors
  brs_100_t: "Error"
  brs_100_d: "The Stat target value was out of bounds. To correct this, it was set to use the Base Game template!"
  brs_100_ok: "OK"

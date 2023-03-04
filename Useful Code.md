@@ -7,34 +7,35 @@ https://www.w3schools.com/cs/trycs.php?filename=demo_compiler
 ```c#
 using System;
 
-namespace OptionGenerator
+namespace EU4_Generation_Code
 {
     class Program
     {
         static void Main(string[] args)
         {
-        	Console.Write("Start Value (number): ");
-        	int start = Convert.ToInt32(Console.ReadLine());
-        	Console.Write("\nEnd Value (number): ");
-        	int end = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Start Value (number): ");
+            int start = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnd Value (number): ");
+            int end = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("\n");
             Console.WriteLine("");
             Console.WriteLine("Options Code\t\tevents/brsc_events.txt");
             for (int x = start; x <= end; x++)
             {
-            	Console.WriteLine("");
+                Console.WriteLine("");
                 Console.WriteLine("option = {");
                 Console.WriteLine("\tname = \"brs_change_" + x + "\"");
-                if (x>20)
+                if (x == 0)
+                {
+                    Console.WriteLine("\ttrigger = { NOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } } }");
+                }
+                else
                 {
                     Console.WriteLine("\ttrigger = {");
-                    Console.WriteLine("\t\tbrs_optionsxt_enabled = yes");
+                    Console.WriteLine("\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
                     Console.WriteLine("\t\tNOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
                     Console.WriteLine("\t}");
-                }
-                else {
-                    Console.WriteLine("\ttrigger = { NOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } } }");
                 }
                 Console.WriteLine("\tbrs_set_target = { a=" + x + " }");
                 Console.WriteLine("\thidden_effect = { country_event = { id = brs.1010 } }");
@@ -43,15 +44,16 @@ namespace OptionGenerator
                 Console.WriteLine("");
                 Console.WriteLine("option = {");
                 Console.WriteLine("\tname = \"brs_change_" + x + "\"");
-                if (x>20)
+                if (x == 0)
+                {
+                    Console.WriteLine("\ttrigger = { NOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } } }");
+                }
+                else
                 {
                     Console.WriteLine("\ttrigger = {");
-                    Console.WriteLine("\t\tbrs_optionsxt_enabled = yes");
-                    Console.WriteLine("\t\tbrs_check_target_setup = { a=" + x + " b=" + (x + 1) + " }");
+                    Console.WriteLine("\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
+                    Console.WriteLine("\t\tNOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
                     Console.WriteLine("\t}");
-                }
-                else {
-                    Console.WriteLine("\ttrigger = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
                 }
                 Console.WriteLine("\thighlight = yes");
                 Console.WriteLine("\tbrs_set_target = { a=" + x + " }");
@@ -86,107 +88,87 @@ namespace OptionGenerator
 
             Console.WriteLine("");
             Console.WriteLine("");
+            var cc = new statmap(end);
             Console.WriteLine("Consort Helper\tcommon/scripted_effects/brsc_scripted_effects.txt");
-            Console.WriteLine("if = { limit = { check_variable = { which = ruler_skill value = " + end + " } } change_consort_$value$ = " + end + " }");
-            for (int i = end-1; i >= 0; i--)
+            Console.WriteLine("if = { limit = { check_variable = { which = ruler_skill value = " + cc.buffer + " } } change_consort_$value$ = " + cc.buffer + " }");
+            for (int i = cc.buffer - 1; i >= cc.floor; i--)
             {
                 Console.WriteLine("else_if = { limit = { check_variable = { which = ruler_skill value = " + i + " } } change_consort_$value$ = " + i + " }");
             }
         }
     }
+
+    internal class statmap
+    {
+        public int value;
+
+        public statmap(int end)
+        {
+            value = end;
+        }
+
+        public int buffer
+        {
+            get {
+                if (value <= 20)
+                {
+                    return value + 6;
+                }
+                else if (value <= 40)
+                {
+                    return value + 10;
+                }
+                else if (value <= 70)
+                {
+                    return value + 15;
+                }
+                else if (value <= 100)
+                {
+                    return value + 20;
+                }
+                else if (value <= 200)
+                {
+                    return value + 30;
+                }
+                else if (value <= 500)
+                {
+                    return value + 40;
+                }
+                else
+                {
+                    return value + 50;
+                }
+            }
+        }
+        public int floor
+        {
+            get {
+                if (value >= 500)
+                {
+                    return 200;
+                }
+                else if (value >= 200)
+                {
+                    return 100;
+                }
+                else if (value >= 100)
+                {
+                    return 70;
+                }
+                else if (value >= 70)
+                {
+                    return 40;
+                }
+                else if (value >= 40)
+                {
+                    return 20;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+    }
 }
-```
-### Python
-*This python code is broken, it generates EU4 code in JSON format, not AMPL.*
-```python
-# does not generate correctly. Generated by ChatGPT.
-def generate_options(start, end):
-    options = []
-    for i in range(start, end + 1):
-        option1 = {
-            "name": f"brs_change_{i}",
-            "trigger": {
-                "NOT": {
-                    "brs_check_target_setup": {
-                        "a": [i],
-                        "b": [i + 1]
-                    }
-                }
-            },
-            "brs_set_target": {
-                "a": [i]
-            },
-            "hidden_effect": {
-                "country_event": {
-                    "id": "brs.1020"
-                }
-            },
-            "tooltip": {
-                "country_event": {
-                    "id": "brs.20"
-                }
-            }
-        }
-        option2 = {
-            "name": f"brs_change_{i}",
-            "trigger": {
-                "brs_check_target_setup": {
-                    "a": [i],
-                    "b": [i + 1]
-                }
-            },
-            "highlight": "yes",
-            "brs_set_target": {
-                "a": [i]
-            },
-            "hidden_effect": {
-                "country_event": {
-                    "id": "brs.1020"
-                }
-            },
-            "tooltip": {
-                "country_event": {
-                    "id": "brs.20"
-                }
-            }
-        }
-        options.append(option1)
-        options.append(option2)
-    return options
-
-def generate_localization_keys(start, end):
-    brs_set_target_tt_keys = []
-    brs_change_keys = []
-    brs_has_target_tt_keys = []
-    for i in range(start, end + 1):
-        brs_set_target_tt_key = f" brs_set_target_{i}_tt: \"§GSet Stat Target§! to §Y[{i}]§!\""
-        brs_change_key = f" brs_change_{i}: \"Set to §Y[{i}]§!\""
-        brs_has_target_tt_key = f" brs_has_target_{i}_tt: \"Has Stat Target §Y[{i}]§!\""
-        brs_set_target_tt_keys.append(brs_set_target_tt_key)
-        brs_change_keys.append(brs_change_key)
-        brs_has_target_tt_keys.append(brs_has_target_tt_key)
-    return brs_set_target_tt_keys, brs_change_keys, brs_has_target_tt_keys
-
-
-options = generate_options(STARTING_VALUE, ENDING_VALUE)
-brs_set_target_tt_keys, brs_change_keys, brs_has_target_tt_keys = generate_localization_keys(STARTING_VALUE, ENDING_VALUE)
-
-
-for option in options:
-    print("option = {")
-    for key, value in option.items():
-        print(f"\t{key} = {value}")
-    print("}")
-
-print("brs_set_target_tt keys:")
-for key in brs_set_target_tt_keys:
-    print(key)
-
-print("\nbrs_change keys:")
-for key in brs_change_keys:
-    print(key)
-
-print("\nbrs_has_target_tt keys:")
-for key in brs_has_target_tt_keys:
-    print(key)
 ```

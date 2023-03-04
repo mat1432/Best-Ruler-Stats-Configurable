@@ -1,6 +1,6 @@
 # Written by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
-# Global keys
+# Static keys
 defined_text = {
 	name = BRSBaseGameTemplate
 	text = {
@@ -9,19 +9,32 @@ defined_text = {
 	}
 }
 
-defined_text = { # might be unnecessary
-	name = GetDetectedMaxSkill
+defined_text = {
+	name = BRSMaxSupportedChoice
 	text = {
-		localisation_key = brs_GetDetectedMaxSkill
-		trigger = { has_global_flag = brs_setup }
-	}
-	text = {
-		localisation_key = brs_GetDetectedMaxSkill_0
-		trigger = { NOT = { has_global_flag = brs_setup } }
+		localisation_key = brs_MaxSupportedChoice
+		trigger = { always = yes }
 	}
 }
 
 # Country keys
+
+defined_text = {
+	name = GetChoiceMaximum
+	text = {
+		localisation_key = brs_GetChoiceMaximum_maxskill
+		trigger = {
+			has_global_flag = brs_setup
+			brs_has_template = { a=0 b=1 }
+		}
+	}
+	text = {
+		localisation_key = brs_GetChoiceMaximum
+		trigger = {
+			brs_not_has_template = { a=0 b=1 }
+		}
+	}
+}
 
 ### Get Setup text
 defined_text = {

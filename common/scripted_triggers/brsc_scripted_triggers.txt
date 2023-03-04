@@ -143,6 +143,25 @@ brs_check_template = {
 	}
 }
 
+# potential tooltips I may consider using
+#tooltip = brs_maxskill_exact_$a$
+#tooltip = brs_maxskill_atleast_$a$
+#tooltip = brs_maxskill_atmost_$a$
+brs_check_maxskill = {
+	hidden_effect = { #custom_trigger_tooltip = {
+		#tooltip = brs_maxskill_exact_$a$
+		if = { # show all options
+			limit = { has_country_flag = brs_showalloptions }
+			always = yes
+		}
+		else = { 
+			1 = {
+				brs_check_var = { which = brs_template_var [[a] a = $a$ ] [[b] b = $b$ ] }
+			}
+		}
+	}
+}
+
 # why are there two?
 # When the game parses an empty argument (no argument) in a trigger, if it is the first character of a value, the game will throw an error and ignore the command!
 

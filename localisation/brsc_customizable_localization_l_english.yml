@@ -2,14 +2,15 @@
 # Written by mat1432 (Steam) https://steamcommunity.com/id/mat1432/ or https://github.com/mat1432 (GitHub)
 
 ##########
-# Global Keys
+# Static Keys
+ brs_MaxSupportedChoice: "200"
 ##########
 # Country Keys
  brs_GetSetupDone_notdone: "§BFirst time Setup: Please select a stat target\nThe Exit button will appear after a Stat Target is chosen§!\n\n"
  brs_GetSetupDone_done: ""
 
- brs_GetDetectedMaxSkill: ""
- brs_GetDetectedMaxSkill_0: "[Root.GetStatTarget]"
+ brs_GetChoiceMaximum_maxskill: "[Root.brs_maxskill.GetValue]"
+ brs_GetChoiceMaximum: "[BRSMaxSupportedChoice]"
 
  brs_GetStatType_add: "\nCurrent Stat Type: §YAddative§!"
  brs_GetStatType_min: "\nCurrent Stat Type: §YMinimum§!"

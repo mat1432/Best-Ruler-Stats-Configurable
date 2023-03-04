@@ -23,7 +23,7 @@ brs_clr_minimum = {
 brs_validate = {
 	hidden_effect = {
 		# EDIT: Templates
-		# checks if variable is negative, or above [1+] the maximum
+		# checks if variable is negative, or above the maximum + 1
 		if = {
 			limit = {
 				OR = {
@@ -42,6 +42,10 @@ brs_validate = {
 			country_event = { id = brs.101 }
 		}
 
+		if = {
+			limit = { has_global_flag = brs_setup }
+			brs_load_maxskill_locally = yes
+		}
 		# update local stat target with global max skill
 		if = {
 			limit = { brs_has_template = { m=0 } }
@@ -186,6 +190,19 @@ brs_set_target_onlyset = {
 	}
 }
 
+brs_load_maxskill_locally = {
+	hidden_effect = {
+		1 = {
+			root = {
+				set_variable = {
+					which = brs_maxskill
+					which = PREV
+				}
+			}
+		}
+	}
+}
+
 brs_set_target_maxskill = {
 	custom_tooltip = brs_set_target_maxskill_tt
 	hidden_effect = {
@@ -194,7 +211,7 @@ brs_set_target_maxskill = {
 			root = {
 				set_variable = {
 					which = brs_target_var
-					value = PREV
+					which = PREV
 				}
 			}
 		}
