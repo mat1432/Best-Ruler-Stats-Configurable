@@ -28,19 +28,19 @@ namespace EU4_Generation_Code
                 Console.WriteLine("");
                 Console.WriteLine("option = {");
                 Console.WriteLine("\tname = \"brs_change_" + x + "\"");
-                if (x == 0 || maxskill != "yes")
-                {
+                // if (x == 0 || maxskill != "yes")
+                // {
                     Console.WriteLine("\ttrigger = { NOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } } }");
-                }
-                else
-                {
-                    Console.WriteLine("\ttrigger = {");
-                    Console.WriteLine("\t\tAND = {");
-                    Console.WriteLine("\t\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
-                    Console.WriteLine("\t\t\tNOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
-                    Console.WriteLine("\t\t}");
-                    Console.WriteLine("\t}");
-                }
+                // }
+                // else
+                // {
+                //     Console.WriteLine("\ttrigger = {");
+                //     Console.WriteLine("\t\tAND = {");
+                //     Console.WriteLine("\t\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
+                //     Console.WriteLine("\t\t\tNOT = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
+                //     Console.WriteLine("\t\t}");
+                //     Console.WriteLine("\t}");
+                // }
                 Console.WriteLine("\tbrs_set_target = { a=" + x + " }");
                 Console.WriteLine("\thidden_effect = { country_event = { id = brs.1010 } }");
                 Console.WriteLine("\ttooltip = { country_event = { id = brs.10 } }");
@@ -48,19 +48,19 @@ namespace EU4_Generation_Code
                 Console.WriteLine("");
                 Console.WriteLine("option = {");
                 Console.WriteLine("\tname = \"brs_change_" + x + "\"");
-                if (x == 0 || maxskill != "yes")
-                {
+                // if (x == 0 || maxskill != "yes")
+                // {
                     Console.WriteLine("\ttrigger = { brs_check_target_setup = { a=" + x + " b=" + (x + 1) + " } }");
-                }
-                else
-                {
-                    Console.WriteLine("\ttrigger = {");
-                    Console.WriteLine("\t\tAND = {");
-                    Console.WriteLine("\t\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
-                    Console.WriteLine("\t\t\tbrs_check_target_setup = { a=" + x + " b=" + (x + 1) + " }");
-                    Console.WriteLine("\t\t}");
-                    Console.WriteLine("\t}");
-                }
+                // }
+                // else
+                // {
+                //     Console.WriteLine("\ttrigger = {");
+                //     Console.WriteLine("\t\tAND = {");
+                //     Console.WriteLine("\t\t\tbrs_check_maxskill = { b=" + (x + 1) + " }");
+                //     Console.WriteLine("\t\t\tbrs_check_target_setup = { a=" + x + " b=" + (x + 1) + " }");
+                //     Console.WriteLine("\t\t}");
+                //     Console.WriteLine("\t}");
+                // }
                 Console.WriteLine("\thighlight = yes");
                 Console.WriteLine("\tbrs_set_target = { a=" + x + " }");
                 Console.WriteLine("\thidden_effect = { country_event = { id = brs.1010 } }");

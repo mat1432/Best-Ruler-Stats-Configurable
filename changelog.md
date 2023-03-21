@@ -1,6 +1,9 @@
 # Changelog
 *Made by mat1432 [Steam](https://steamcommunity.com/id/mat1432/) [GitHub](https://github.com/mat1432/)*
 
+## 1.1.1
+* Bug Fix: Choosing a stat target manually works now. (Thanks [Di Dae Mao]https://steamcommunity.com/profiles/76561198032514717)
+
 ## 1.1.0
 * The mod now automatically detects the maximum possible ruler stats.
 * Improved the running performance for options above 20 by splitting them into tiers

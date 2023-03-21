@@ -26,6 +26,7 @@ brs_validate = {
 		# checks if variable is negative, or above the maximum + 1
 		if = {
 			limit = {
+				has_country_flag = brs_template_used
 				OR = {
 					NOT = {
 						check_variable = {
@@ -48,7 +49,7 @@ brs_validate = {
 		}
 		# update local stat target with global max skill
 		if = {
-			limit = { brs_has_template = { m=0 } }
+			limit = { brs_has_template = { a=0 b=1 } }
 			brs_set_target_maxskill = yes
 		}
 
@@ -165,8 +166,11 @@ brs_clr_template = {
 # Arguments:
 # a = <0|1|2|3|4|...|14|15>
 brs_set_target = {
-	if = {
+	if = { # hide tooltip if not using a template
 		limit = { brs_has_any_template = yes }
+		custom_tooltip = brs_clr_template_tt
+	}
+	hidden_effect = { # clear variable is not optional
 		brs_clr_template = yes
 	}
 	custom_tooltip = brs_set_target_$a$_tt
